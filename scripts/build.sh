@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-jekyll new figgy-docs
 
+bundle install
 bundle exec jekyll build
