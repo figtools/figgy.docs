@@ -6,7 +6,13 @@ search_enabled: true
 ga_tracking: UA-168748263-1
 highlighter: none
 repository: mancej/figgy.docs
-exclude: [".idea/"]
-
 plugins:
   - jekyll-seo-tag
+    
+exclude:
+  - vendor
+  - Gemfile.lock
+  - Gemfile
+  - tools
+  - README.md
+  - .idea/
