@@ -8,7 +8,7 @@ highlighter: none
 repository: mancej/figgy.docs
 plugins:
   - jekyll-seo-tag
-    
+
 exclude:
   - vendor
   - Gemfile.lock
