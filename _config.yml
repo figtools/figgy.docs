@@ -1,8 +1,12 @@
-title: "ping's cookbook"
+title: "Figgy Docs"
+baseurl: "/docs/"
 theme: just-the-docs
 color_scheme: "dark"
 search_enabled: true
-ga_tracking: UA-114525654-1
+ga_tracking: UA-168748263-1
 highlighter: none
-repository: PixelToast/flutter-recipes
+repository: mancej/figgy.docs
 exclude: [".idea/"]
+
+plugins:
+  - jekyll-seo-tag
