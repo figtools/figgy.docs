@@ -55,7 +55,7 @@ jobs:
 
       - name: Build Site
         run: |
-          bash tools/build.sh
+          bash scripts/build.sh
 
       - name: Setup python
         uses: actions/setup-python@v2
@@ -69,4 +69,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           pip install awscli
-          bash tools/deploy.sh
+          bash scripts/deploy.sh
