@@ -55,7 +55,6 @@ jobs:
 
       - name: Build Site
         run: |
-          pip install
           bash tools/build.sh
 
       - name: Setup python
