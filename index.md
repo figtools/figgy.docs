@@ -18,4 +18,3 @@ permalink: /
 [Architecture](/docs/architecture/){: .btn-primary }
 [FAQ](/docs/faq/){: .btn-primary }
 
-
