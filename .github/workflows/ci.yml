@@ -40,6 +40,7 @@ jobs:
 
       - name: Bundle config
         run: |
+          gem install jekyll
           gem install bundler -v 2.1.4
           bundle config path vendor/bundle
 
