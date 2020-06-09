@@ -7,4 +7,4 @@ parent: Config
 
 # List
 
-Foo bar foo bar
+<br/>![List]({{ '/docs/assets/images/gifs/list.gif' | relative-url }})<br/>

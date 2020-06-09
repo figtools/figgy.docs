@@ -5,6 +5,6 @@ nav_order: 2
 parent: Config
 ---
 
-# Get
+# Put
 
-Foo bar foo bar
+![Get]({{ '/docs/assets/images/gifs/put.gif' | relative-url }})

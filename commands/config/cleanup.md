@@ -7,4 +7,4 @@ parent: Config
 
 # Cleanup
 
-Foo bar foo bar
+<br/>![Cleanup]({{ '/docs/assets/images/gifs/cleanup.gif' | relative-url }})<br/>

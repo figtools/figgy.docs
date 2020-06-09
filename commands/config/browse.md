@@ -7,4 +7,4 @@ parent: Config
 
 # Browse
 
-Foo bar foo bar
+<br/>![Browse]({{ '/docs/assets/images/gifs/browse.gif' | relative-url }})<br/>

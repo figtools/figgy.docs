@@ -7,4 +7,4 @@ parent: Config
 
 # Audit
 
-Foo bar foo bar
+<br/>![Audit]({{ '/docs/assets/images/gifs/audit.gif' | relative-url }})<br/>

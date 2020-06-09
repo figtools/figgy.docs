@@ -62,6 +62,7 @@ h6 {
 
 p {
   margin-bottom: 2em;
+  letter-spacing: 0.05em;
 }
 
 a {
@@ -111,4 +112,8 @@ hr {
   margin: $sp-6 0;
   background-color: $border-color;
   border: 0;
+}
+
+b {
+  font-weight: bold;
 }

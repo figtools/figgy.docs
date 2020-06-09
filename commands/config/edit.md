@@ -5,6 +5,6 @@ nav_order: 4
 parent: Config
 ---
 
-# Get
+# Edit
 
-Foo bar foo bar
+<br/>![Edit]({{ '/docs/assets/images/gifs/edit.gif' | relative-url }})<br/>

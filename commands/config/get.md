@@ -7,4 +7,4 @@ parent: Config
 
 # Get
 
-Foo bar foo bar
+<br/>![Get]({{ '/docs/assets/images/gifs/get.gif' | relative-url }})</br>

@@ -7,4 +7,7 @@ parent: Architecture
 
 # Events
 
-Foo bar foo bar
+<br/>![PutOrSync]({{ '/docs/assets/images/architecture/events-put-sync.png' | relative-url }})<br/>
+
+
+<br/>![Replication Flow]({{ '/docs/assets/images/architecture/events-replication.png' | relative-url }})<br/>

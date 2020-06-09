@@ -5,6 +5,7 @@ nav_order: 4
 parent: Architecture
 ---
 
-# Authentication
+# Caching
 
-Foo bar foo bar
+
+<br/>![Caching]({{ '/docs/assets/images/architecture/caching.png' | relative-url }})<br/>

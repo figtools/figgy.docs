@@ -6,4 +6,5 @@ nav_order: 5
 
 # Architecture
 
-Everything related to state management, networking, organization, etc.
+
+<br/>![Browse]({{ '/docs/assets/images/architecture/ecosystem.png' | relative-url }})<br/>

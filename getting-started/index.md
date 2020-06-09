@@ -4,6 +4,6 @@ has_children: true
 nav_order: 2
 ---
 
-# Resources
+## Getting Started
 
-Foo bar foo bar
+Figgy is designed to 

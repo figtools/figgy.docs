@@ -5,6 +5,6 @@ nav_order: 3
 parent: Config
 ---
 
-# Get
+# Delete
 
-Foo bar foo bar
+<br/>![Delete]({{ '/docs/assets/images/gifs/delete.gif' | relative-url }})<br/>

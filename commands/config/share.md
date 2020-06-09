@@ -7,4 +7,4 @@ parent: Config
 
 # Share
 
-Foo bar foo bar
+<br/>![Share]({{ '/docs/assets/images/gifs/share.gif' | relative-url }})<br/>
