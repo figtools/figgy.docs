@@ -7,9 +7,10 @@ parent: Getting Started
 
 ## **Figgy Concepts**:
 
-Configuration management is best handled by hierarchies of key-value pairs in a configuration tree. AWS ParameterStore
-natively supports managing access to hierarchies of configurations through IAM policies. Figgy is built on top of 
-ParameterStore to ensure maximum configurability and access control based on your business's needs.   
+Application config management is best managed through hierarchies of key-value pairs in a configuration tree. AWS ParameterStore
+natively supports managing access to hierarchies of configurations through IAM policies. Figgy is a suite of tools
+built on AWS ParameterStore designed to add additional functionality around config management without affecting
+the great AWS native integrations that ParameterStore.
 
 In the Figgy documentation you may see the following nomenclature when referencing configurations and configuration 
 hierarchies. 

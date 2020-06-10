@@ -12,7 +12,7 @@ your AWS accounts. Since you should never take provisioning resources in your AW
 _exactly_ what to expect when deploying Figgy into your environment. 
 
 Below is a diagram of the entire Figgy Ecosystem. You will see OKTA, Google, and AWS as Identity Providers in this 
-diagram; however, depending on your configuration two of those will not exist for your deployment.
+diagram; however, depending on your configuration, two of those will not exist for your deployment.
 
 <br/>![Figgy Ecosystem]({{ '/docs/assets/images/deployment/figgy-ecosystem.png' | relative-url }})<br/>
 
@@ -22,7 +22,7 @@ code in our public repository to see what to expect. You can find it here:
 <a href="https://github.com/mancej/figgy/tree/master/terraform/figgy" target="_blank">Figgy Infrastructure Code</a>
 
 ### Resources required for Figgy operation:
-* 7 AWS Lambdas
+* 6 AWS Lambdas
 * 3 AWS DynamoDB Tables
 * AWS Cloudwatch Log Groups
 * AWS IAM Roles & Polices required by the above Lambdas

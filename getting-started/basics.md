@@ -117,12 +117,20 @@ That's it, you now know the basic features of Figgy.
 
 ### Learn more:
 DevOps / Software Architects:
+
 [Advanced Figgy](/docs/getting-started/advanced.html)
+
 [Installation](/docs/getting-started/install.html)
+
 [Architecture](/docs/architecture/index.html)
 
+<br/>
 Figgy Users:
+
 [Figgy Playground](/docs/getting-started/sandbox.html)
+
 [Installation](/docs/getting-started/install.html)
+
 [Commands](/docs/commands/config/index.html)
+
 [User Guides](/docs/user-guides/index.html)
