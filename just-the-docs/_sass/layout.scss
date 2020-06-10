@@ -31,8 +31,8 @@
   }
 
   @include mq(lg) {
-    //width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
-    width: 300px;
+    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    //width: 300px;
     min-width: $nav-width;
   }
 }
@@ -53,13 +53,16 @@
 .main-content {
   @include mq(md) {
     position: relative;
-    max-width: calc((100% - #{$content-width} / 2) + #{$content-width});
-    //max-width: $content-width;
+    //max-width: calc((100% - #{$content-width} / 2) + #{$content-width});
+    max-width: $content-width;
     margin-left: $nav-width-md;
   }
 
   @include mq(lg) {
-    margin-left: 350px;
+    margin-left: calc(
+      (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
+    );
+    //margin-left: 350px;
   }
 }
 

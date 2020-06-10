@@ -2,10 +2,8 @@
 title: IAM
 has_children: true
 nav_order: 2
-wip: true
 parent: Commands
 ---
 
-# Design
+# IAM
 
-My uninformed opinions on design.
