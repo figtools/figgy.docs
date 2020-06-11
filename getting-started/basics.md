@@ -114,23 +114,16 @@ prompt you to clean-up unused configurations to prevent unused config sprawl.
 
 
 That's it, you now know the basic features of Figgy. 
-
+__
 ### Learn more:
 DevOps / Software Architects:
-
-[Advanced Figgy](/docs/getting-started/advanced.html)
-
-[Installation](/docs/getting-started/install.html)
-
-[Architecture](/docs/architecture/index.html)
+1. [Advanced Figgy](/docs/getting-started/advanced.html)
+1. [Installation](/docs/getting-started/install.html)
+1. [Architecture](/docs/architecture/index.html)
 
 <br/>
 Figgy Users:
-
-[Figgy Playground](/docs/getting-started/sandbox.html)
-
-[Installation](/docs/getting-started/install.html)
-
-[Commands](/docs/commands/config/index.html)
-
-[User Guides](/docs/user-guides/index.html)
+1. [Figgy Playground](/docs/getting-started/sandbox.html)
+1. [Installation](/docs/getting-started/install.html)
+1. [Commands](/docs/commands/config/index.html)
+1. [User Guides](/docs/user-guides/index.html)

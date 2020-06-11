@@ -15,9 +15,8 @@ the great AWS native integrations that ParameterStore.
 In the Figgy documentation you may see the following nomenclature when referencing configurations and configuration 
 hierarchies. 
 
-## Figgy Naming
 
-### **Fig Orchard** 
+## **Fig Orchard** 
 #### All con**fig**urations under all figgy-managed namespaces. 
       - /app/*
       - /shared/*
@@ -29,13 +28,13 @@ hierarchies.
       
 <br/>
 
-### Fig Tree
+## Fig Tree
 #### A hierarchy of configs under a high-level figgy-managed namespace.
     - e.g. - /app/*    
     
 <br/>
 
-### Twig
+## Twig
 #### A hierarchy of configs under a **Fig Tree** that is owned by a single service
     - /app/hello-world/*
     
@@ -43,7 +42,7 @@ hierarchies.
     
 <br/>
 
-### Fig
+## Fig
 #### A single con**fig**uration stored `/under/a/named/path` and on a **Twig**
     - e.g. - /app/hello-world/log-level
   

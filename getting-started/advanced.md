@@ -55,7 +55,7 @@ purposes, here are some _minimum_ recommended default keys:
 As you can see, in this _minimum_ example, each key maps to a single user-group. It's easy, tidy, and adds an extra
 layer of security on top of access-control. But the magic is with the **replication key**.
 
-## The replication key
+### **The replication key**
 The **replication key** is a special key used by Figgy that enables the secure sharing of secrets between secret-owners
 and application owners. 
 
@@ -70,14 +70,14 @@ and password Jim needs. First Mariah stores the values in the `/devops` namespac
 
 <br/>
 
-### **Store the value**
+## **Store the value**
 <br/><img src="/docs/assets/images/gifs/basics-put.gif" alt="Basic Put" class="gif"><br/>
 <br/>
 
 Next Mariah will share the value directly to Jim's `message-fetcher` service. Jim will not have access to this
 secret in higher environments, but the `message-fetcher` will. 
 
-### **Share the value**
+## **Share the value**
 <br/><img src="/docs/assets/images/gifs/basics-share.gif" alt="Basic Share" class="gif"><br/>
 
 **The secret will now be shared**

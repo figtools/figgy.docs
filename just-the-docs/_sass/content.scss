@@ -183,6 +183,21 @@
     margin-top: 1rem;
     margin-bottom: 2.5rem;
   }
+
+  h3 {
+    border-spacing: 20px;
+    margin-left: 12px;
+    border-left: 3px $blue-300 solid;
+    padding-bottom: 5px;
+    padding-left: 24px;
+    font-weight: normal;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  hr {
+    border-bottom: 2px $blue-300 solid;
+  }
 }
 
 /* width */

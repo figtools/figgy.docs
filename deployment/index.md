@@ -15,7 +15,7 @@ The different deployment options available are:
 ### Bastion Authentication
 
 A Figgy Bastion configuration turns one of your AWS accounts into your Figgy 'SSO' provider. It's the simplest configuration
-and can be installed in a few minutes. Users who authenticate with Figgy will authenticate with this account and will have 
+and can be installed in under an hour. Users who authenticate with Figgy will authenticate with this account and will have 
 no access, except permissions to assume roles in _other_ Figgy-enabled accounts through temporary AWS STS sessions.
 
 <br/>![Bastion Auth]({{ '/docs/assets/images/deployment/bastion-auth.png' | relative-url }})<br/>

@@ -5,13 +5,13 @@ parent: Deploying Figgy
 nav_order: 3
 ---
 
-## AWS Bastion Account authorization.
+## AWS Bastion as your Identity Provider
 
 The AWS Bastion account configuration is the simplest configuration for deploying Figgy across your AWS stack. Deploying
 a Bastion configuration will provision the following resources across your AWS Accounts.
 
 Resources Provisioned:
-- [Standard Figgy Stack](/docs/getting-started/figgy-stack.html)
+- [Standard Figgy Stack](/docs/getting-started/figgy-footprint.html)
 
 Plus some extra resources in your selected Bastion account:
 - IAM Users (this is what your Figgy users will authenticate with)
@@ -79,12 +79,12 @@ This file serves as the _source of truth_ for your bastion users. *ALL USERS OF 
 
 Remember that list of accounts I asked you to 'coalesce' earlier? Back when you thought, 
 "I'm surprised he used the word coalesce in this context". Yeah, that was intentional, and you remembered. Now grab that list.
-Here you will need to map each account you want to integrated with Figgy alongside its account id.
+Here you will need to map each account you want to integrate with Figgy alongside its account id.
 
 **Important**
 
-The name you give each account in the map will be how your users will reference accounts when running commands like 
-`figgy config get --env dev`. So it's a good idea to select short aliases for each environment. 
+The name you give each account in the map is how your users will reference accounts when running commands like 
+`figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
 
 Next, wire up your `bastion_users` and the roles they should have access to. As you give more users access to Figgy going forward 
 you will return to this file, add the user, wire up their roles, and then re-run `terraform apply`
