@@ -57,7 +57,7 @@ Microservices are great, but configuration management just got a *lot* harder. H
 
 ### **Bind application configs to your code**
 - Easily integrate your CICD process with Figgy
-- *BREAK THE BUILD* if the deploying application is missing a required config its targeted environment. 
+- *BREAK THE BUILD* if the deploying application is missing a required config in its targeted environment. 
 - Give Developers confidence their code bootstrap properly if Figgy gives the thumbs-up! 
     
 ### **The Figgy Vault**
@@ -65,7 +65,7 @@ Microservices are great, but configuration management just got a *lot* harder. H
 - These temporary credentials can be used for local development by decrypting & pulling them from the "Figgy Vault"
 
 ### **Figgy integrations**
-- Get automated Slack notifications when secrets are changed or updated, and know how made them.
+- Get automated Slack notifications when secrets are changed or updated, and know who made them.
 - And more to come!
 
 ---

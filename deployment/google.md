@@ -9,10 +9,10 @@ nav_order: 3
 
 Figgy can help you integrate your accounts with the [Google Admin Console](https://admin.google.com). If your company uses
 Gmail you can feel confident this integration will work for you. This guide will walk you through setting Google up as an 
-identity provider for your AWS accounts. Users will be able to authenticate with your AWS accounts with their Google
-credentials when this is complete. 
+identity provider for your AWS accounts. When complete, users will be able to authenticate with your AWS accounts via their Google
+credentials.
 
-With this configuration you will have 0 users provisioned in your AWS account. Instead all access will be provided through
+With this configuration you will have 0 users provisioned in your AWS accounts. Instead all access will be provided through
 [AWS Account Federation](https://aws.amazon.com/identity/federation/) and a trust configure between your AWS accounts and 
 your Google account.
 
@@ -145,9 +145,8 @@ should make it fairly clear what each option means.
 Don't forget to set `sso_type = "google"`
 
 Next, look in your `vars/` directory. There are some `*.tfvars` files already in this directory that can serve as a template.
-You will need 1 var file configured for each account you wish to deploy to. 
-
-#### If you are using Terraform Cloud or remote variable storage, you will not need these files and will know what to do here.
+You will need 1 var file configured for each account you wish to deploy to. If you are using Terraform Cloud or 
+remote variable storage, you will not need these files and will know what to do here.
 
 Be thoughtful, if you are reusing a bucket and set `create_deploy_bucket = false` in `01_configure_figgy.tf`, you will
 want to put the appropriate bucket name in each of these files for each account.
@@ -204,12 +203,12 @@ This establishes a trust with Google based on that metadata file you downloaded.
 
 1. Head back over to your Google Admin Console -> Directory -> <a href="https://admin.google.com/u/2/ac/users" target="_blank">Users</a>.
 2. Find & Open your user.
-3. User Information -> AWS SAML. (This is the custom attribute you added earlier.)
+3. User Information -> AWS SAML (This is the custom attribute you added earlier).
 
 The AWS SAML Attribute is used to provide the selected user access to various mapped-up accounts. The following input
 will depend on how you named your figgy user-types in `01_configure_figgy.tf`. 
 
-The template you nee to follow is this:
+The template you will need to follow is this:
 
 `arn:aws:iam::${AWS_ACCOUNT_ID}:role/figgy-${RUN_ENV}-${ROLE_NAME},arn:aws:iam::${AWS_ACCOUNT_ID}:saml-provider/google`
 
@@ -243,7 +242,8 @@ Follow the prompts - read carefully. You will be prompted to input your Identity
     figgy config get
     
 
-Now that you have your Identity Provider Id and Service Provider ID you can set these in a generic Figgy Config file and 
+### Roll it out to more people
+Now that you have your Identity Provider Id and Service Provider ID, you can set these in a generic Figgy config file and 
 distribute it to all of your users. This will save them the trouble of having to manage these two ids.
 
 To do this: See [Distributing Figgy](/docs/getting-started/install.html#distributing-figgy)

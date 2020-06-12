@@ -29,14 +29,16 @@ I'll just *restore* them to how they were at some in time - to the second - in t
 
 ## Declarative Configuration
 'GitOps' is about defining the _desired state_ of your infrastructure in a versioned Git repository. Figgy's goal is to
-bring this same approach to configuration management but without the need to store your configs and secrets in your Git 
-repositories. Instead you will 'declare' what your application needs to run. This definition can even be dynamically generated 
-through static code analysis or reflection. In other words, let your code tell your CICD process what configurations it needs. 
+bring this same approach to application config management. Git repositories aren't the place for loads of Key/Value
+pairs though, so With Figgy, you will first 'declare' what your application needs to run. Next you'll use the
+Figgy CLI to ensure your configs are where they need to be. Finally your CICD pipeline can perform additional validation
+at deployment time. This declarative definition can be dynamically generated through static code analysis or reflection. 
+In other words, let your code tell your CICD process what configurations it needs. 
 
 > Figgy can break the build if you're missing a required configuration. Don't deploy a service destined to fail initialization.
 
-By declaratively defining (or generating) our required configurations for a particular code base and commit,
-we can feel confident we didn't forget that last pesky configuration our service needs to run.
+By declaratively defining (or generating) required configurations for a particular code base and commit,
+you can feel confident you didn't forget that last pesky configuration you service needs to run.
 
 Figgy accomplishes this through a `figgy.json` file that defines the required configurations for a codebase. Before developers
 check-in their code, or before a PR is merged, users (or automation) can run the [sync](/docs/commands/config/sync.html) command
@@ -102,7 +104,7 @@ We won't get into how you can configure replication here, but understanding how 
 ## Combat config sprawl
 
 Ever had a config you were too terrified to delete because you didn't know if _something_ was still using it? 
-Yup Figgy has got a solution for that too.  
+Yup Figgy has a solution for that too.  
 
 
 Declarative configuration provides a definitive answer on whether or not a *fig* living out there is used anymore. 
@@ -113,8 +115,8 @@ The [sync](/docs/commands/config/sync.html) and [cleanup](/docs/commands/config/
 prompt you to clean-up unused configurations to prevent unused config sprawl. 
 
 
-That's it, you now know the basic features of Figgy. 
-__
+That's it, you now know the basic features of Figgy.
+
 ### Learn more:
 DevOps / Software Architects:
 1. [Advanced Figgy](/docs/getting-started/advanced.html)

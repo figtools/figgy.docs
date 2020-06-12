@@ -26,4 +26,17 @@ when you log in to Figgy, Figgy can pull your password from your keychain on you
 
 <br/>
 
-### 
+### What metrics am I opting into sharing with Figgy?
+
+In order to provide the best Figgy experience, users can optionally enable anonymous usage data collection. **This is
+entirely optional and can be defaulted to off**. 
+
+The data collected is the following:
+- Current installed Figgy Version
+- Command types run: [get, put, delete, sync, etc], and the # of times each command has been run.
+- A random GUUID associated with your user. No personal data is collected.
+
+The data is cached in a file at this location: `~/.figgy/cache/other/usage-metrics-cache.json`. Feel free to take a look.
+The data is reported to `https://api.figgy.dev/v1/log-metrics` once per day.
+You can find the code for usage tracking here: [Anonymouse Usage Tracking](https://github.com/mancej/figgy/blob/master/cli/figgy/svcs/observability/anonymous_usage_tracker.py)
+

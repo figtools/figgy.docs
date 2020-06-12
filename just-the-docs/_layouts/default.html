@@ -76,16 +76,16 @@ layout: table_wrappers
               {{ content }}
             {% endif %}
 
-          {% if page.has_children == true and page.has_toc != false %}
-            <hr>
-            <h2>See also</h2>
-            {% assign children_list = site.pages | sort:"nav_order" %}
-            {% for child in children_list %}
-              {% if child.parent == page.title and child.title != page.title %}
-                <a class="btn-primary" href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
-              {% endif %}
-            {% endfor %}
-          {% endif %}
+<!--          {% if page.has_children == true and page.has_toc != false %}-->
+<!--            <hr>-->
+<!--            <h2>See also</h2>-->
+<!--            {% assign children_list = site.pages | sort:"nav_order" %}-->
+<!--            {% for child in children_list %}-->
+<!--              {% if child.parent == page.title and child.title != page.title %}-->
+<!--                <a class="btn-primary" href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}-->
+<!--              {% endif %}-->
+<!--            {% endfor %}-->
+<!--          {% endif %}-->
 
           {% if site.footer_content != nil %}
             <hr>
