@@ -5,6 +5,6 @@ nav_order: 13
 parent: Config
 ---
 
-# Validate
+## Validate
 
 To be implemented.

@@ -117,14 +117,15 @@ With your new SAML Application open, look in your URL bar:
 
 **To prepare Figgy for deployment you're going to need to these files:**
 
+Files are located in `REPO_ROOT/terraform/figgy/` directory. 
 1. 00_main.tf
 1. 01_configure_figgy.tf
 1. vars/{env}.tfvars files
 
 ### Lets' start with `00_main.tf`
 
-If you have any familiarity with Terraform this should be a cinch. All you need to do is configure this file 
-as you normally would any other Terraform file. One important distinction is that this code base is a Terraform 
+If you have any familiarity with [Terraform](https://www.terraform.io/) this should be a cinch. All you need to do is configure this file 
+as you normally would any other Terraform `main.tf` file. One important distinction is that this code base is a Terraform 
 multi-environment codebase. We will be using this same Terraform configuration to deploy Figgy across
 every account you want to integrate with Figgy. Keep that in mind -- hard-coding a single profile or access key is
 probably not a good idea.
@@ -140,9 +141,19 @@ Depend on your selected Terraform configuration these commands might differ slig
 ### Configure Figgy
 
 Open up your `01_configure_figgy.tf` file. There are some important options in here. The comments in the file
-should make it fairly clear what each option means.
+should make it fairly clear what each option means
 
-Don't forget to set `sso_type = "google"`
+Once you have selected your Figgy role types, copy those types and set them aside:
+
+The default role types are these. You may choose as many or few as make sense to you.
+```hcl
+    role_types = ["devops", "data", "dba", "sre", "dev"]
+```
+
+Don't forget to set:
+```hcl
+    sso_type = "google"
+```
 
 Next, look in your `vars/` directory. There are some `*.tfvars` files already in this directory that can serve as a template.
 You will need 1 var file configured for each account you wish to deploy to. If you are using Terraform Cloud or 
@@ -151,7 +162,8 @@ remote variable storage, you will not need these files and will know what to do 
 Be thoughtful, if you are reusing a bucket and set `create_deploy_bucket = false` in `01_configure_figgy.tf`, you will
 want to put the appropriate bucket name in each of these files for each account.
 
-`run_env` must match to the environment names you set in your `02_configure_bastion` file in the `env -> accountId` map.
+`run_env` - This is the environment name users will be referencing your account by when running commands like 
+`figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
 
 `webhook_url` is optional, but if you want you can add a Slack webhook url where Figgy can post notifications for configuration changes.
 
@@ -206,7 +218,7 @@ This establishes a trust with Google based on that metadata file you downloaded.
 3. User Information -> AWS SAML (This is the custom attribute you added earlier).
 
 The AWS SAML Attribute is used to provide the selected user access to various mapped-up accounts. The following input
-will depend on how you named your figgy user-types in `01_configure_figgy.tf`. 
+will depend on how you named your figgy role-types in `01_configure_figgy.tf`. 
 
 The template you will need to follow is this:
 
@@ -234,12 +246,12 @@ By now you should have already installed the Figgy CLI. Before you get started, 
 
 Configuring your CLI is as simple as running
 
-        figgy --configure
+    $   figgy --configure
         
 
 Follow the prompts - read carefully. You will be prompted to input your Identity Provider ID and Service Provider Id.
 
-    figgy config get
+    $   figgy config get
     
 
 ### Roll it out to more people

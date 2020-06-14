@@ -5,6 +5,8 @@ nav_order: 1
 parent: Config
 ---
 
-# Get
+## Get
+
+Retrieve a value from ParameterStore
 
 <br/>![Get]({{ '/docs/assets/images/gifs/get.gif' | relative-url }})<br/>

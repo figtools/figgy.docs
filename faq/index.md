@@ -1,7 +1,7 @@
 ---
 title: FAQ
 has_children: false
-nav_order: 6
+nav_order: 10
 ---
 
 ## FAQ
@@ -17,6 +17,11 @@ avoid common mistakes in config management pre-deployment. AppConfig kicks-in af
 
 <br/>
 
+### What about AWS Secrets Manager? Isn't it designed for managing secrets like Figgy?
+
+Yup! AWS Secrets manager has some added functionality allow automated rotation of secrets. Like AWS AppConfig, AWS 
+Secrets Manager is also built on top of ParameterStore and as such is completely compatible with Figgy. 
+
 ### Why does Figgy need access to my laptop keychain?
 
 Figgy _only_ needs access to the `figgy` namespace of your laptop keychain. Figgy does not have access to any other
@@ -31,8 +36,8 @@ when you log in to Figgy, Figgy can pull your password from your keychain on you
 In order to provide the best Figgy experience, users can optionally enable anonymous usage data collection. **This is
 entirely optional and can be defaulted to off**. 
 
-The data collected is the following:
-- Current installed Figgy Version
+The following data is collected:
+- Current installed Figgy version
 - Command types run: [get, put, delete, sync, etc], and the # of times each command has been run.
 - A random GUUID associated with your user. No personal data is collected.
 

@@ -24,13 +24,13 @@ _right now_ in our Figgy Sandbox. Someone (or something) is _meddling_ with conf
 
 The purpose of this is to demonstrate one of the most powerful features of Figgy. Figgy is _driven by events_. 
 Every change is an event, which means every change, *ever*, is logged and stored. Figgy stores a complete history 
-of every change in our Figgy sandbox. Now come at me bro! Do some damage! Mess up my configs - I dare you! 
-I'll just *restore* them to how they were at some in time - to the second - in the past. Not-a-thing you can do about it! ;)
+of every change in our Figgy sandbox. Do your worse, I dare you to mess up my **Fig Orchard**! 
+I'll just *restore* my figs to how they were at some in time - to the second - in the past. Not-a-thing you can do about it! ;)
 
 ## Declarative Configuration
 'GitOps' is about defining the _desired state_ of your infrastructure in a versioned Git repository. Figgy's goal is to
 bring this same approach to application config management. Git repositories aren't the place for loads of Key/Value
-pairs though, so With Figgy, you will first 'declare' what your application needs to run. Next you'll use the
+pairs though, so with Figgy, you will first 'declare' what your application needs to run. Next you'll use the
 Figgy CLI to ensure your configs are where they need to be. Finally your CICD pipeline can perform additional validation
 at deployment time. This declarative definition can be dynamically generated through static code analysis or reflection. 
 In other words, let your code tell your CICD process what configurations it needs. 
@@ -67,7 +67,7 @@ service's configuration. This is can be very helpful when trying to answer the q
 talk to?"`.
 
 It also GREATLY simplifies IAM access control for our service. `/app-message-fetcher` will need an IAM policy as simple as this:
-```
+```json
 {
     ...
     "Statement": [
@@ -84,14 +84,15 @@ It also GREATLY simplifies IAM access control for our service. `/app-message-fet
 }
 ```
 
-In Figgy we want configurations to have a single source of truth, but we also don't want figs to be repeated by
-5 different services and stored in 5 different places. The problem with having all configurations stored under twigs
-is that it assumes there aren't "global" or "shared" configurations.
+In Figgy we want configurations to have a single source of truth but avoid unnecessary fig duplication. 
+The problem with having all configurations stored under twigs is that it assumes there aren't 
+"global" or "shared" configurations.
 
 ### The solution: Config Replication
 
 The `/shared` **fig tree** is a special configuration tree where you can store configurations that are shared
-among numerous services. This is great for DNS names, database names, and anything else that is used in more than one place.
+among numerous services. This is great for DNS names, database names, and anything else that is used in more than 
+one place.
 
 #### As with all Figgy concepts, the /shared tree is a recommendation. It is not enforced by Figgy.
 

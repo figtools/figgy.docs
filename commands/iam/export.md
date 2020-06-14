@@ -5,6 +5,11 @@ nav_order: 1
 parent: IAM
 ---
 
-# Export
+## Export
 
-Foo bar foo bar
+Command:
+
+    $   figgy iam export
+    
+Generates a set of temporary AWS Session Credentials and saves them under the `[default]` profile in your 
+`~/.aws/credentials` file.

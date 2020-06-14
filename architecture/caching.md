@@ -7,52 +7,45 @@ parent: Architecture
 
 ## Caching
 
-Figgy leverages multiple levels of cache to maximize performance. 
+Figgy implements multiple levels of cache to maximize performance. 
 
 
 <br/>![Caching]({{ '/docs/assets/images/architecture/caching.png' | relative-url }})<br/>
 
 ### Remote cache:
 
-DynamoDB is leveraged as a remote cache for Figgy. It is deployed as part of your standard Figgy deployment. 
+DynamoDB is leveraged as a remote cache for Figgy and is deployed as part of of the standard [Figgy Footprint](/docs/getting-started/figgy-footprint.html). 
 
 DynamoDB was chosen for the following reasons:
-- Highly performant
 - Serverless
-- Supports native IAM authentication & authorization
+- Highly performant
+- Supports native AWS IAM authentication & authorization
 - Native streaming data integrations which are useful for our use cases
 - Supports record TTLs for auto-cache expiration
 - Inexpensive and immensely scalable
 
 The `figgy-config-cache` DyanmoDB Table will be provisioned in every Figgy integrated AWS environment and is required. 
-Without this cache Figgy would be required to continually query the AWS ParameterStore APIs which are rate-limited by default.
+Without this cache Figgy would be required to continually query AWS ParameterStore APIs which are rate-limited by default.
 Paginating these APIs is a very slow operation and would greatly affect Figgy CLI performance.
 
-Like the Figgy audit log, the remote `figgy-config-cache` is maintained and updated by a series of CloudTrail events triggered
-by change operations on ParameterStore values. 
+Like the Figgy audit log, the remote `figgy-config-cache` table is maintained and updated by Lambdas triggered by AWS CloudTrail events.
+These events are triggered by change operations on ParameterStore values. 
 
 
 ### Local cache: `~/.figgy/cache/`
 
-Figgy leverages a local cache for storing various user configured preferences and and non-secret data such as a 
-list of currently active Parameter Names. On each execution, the Figgy CLI consults the remote ParameterStore configuration 
-cache to query a list of updates that have occurred since the last time the Figgy CLI was executed. Only new changes are
-selected and returned. The local cache is then updated with these new values. These values are used to inform the auto-complete
-recommendations while using Figgy and the [Browse](/docs/commands/config/browse.html) Tree.
+A local cache is used for storing various user-configured preferences and non-secret data; including a list of 
+currently active parameter names in each environment. On each run, the Figgy CLI queries a remote cache to retrieve a
+list of updates since the last Figgy CLI execution before applying these changes to local cache. These values inform auto-complete
+recommendations and the [Browse](/docs/commands/config/browse.html) Tree.
 
 Anonymous usage metrics are also logged in a local cache. These metrics are always logged locally, but are only reported if the 
 user has enabled anonymous usage metric reporting. 
 
 ### Local encrypted cache: `~/.figgy/vault/`
 
-Also known as the "Figgy vault", the Figgy CLI caches SSO and AWS STS temporary session credentials in a local encrypted
-cache so they may be used for subsequent Figgy executions. STS credentials expire in 12 hours or less and will be renewed.
-SSO session duration is based on the remote parties session duration configurations (OKTA / Google), and will be refreshed
-as needed.
-
-
-A cache of all known ParameterStore paths (e.g. /app/foo/value1) is cached in ~/.figgy/devops/cache/other/config-cache.json.
-This cache is continually updated for every Figgy config resource execution and refreshed clean once every week. 
-This cache is used to populate auto-complete prompts in the Figgy and build the Browse Tree
+Also known as the "Figgy Vault", the Figgy CLI caches SSO and AWS STS temporary session credentials in a local encrypted
+cache. This encrypted cache is tapped as-needed subsequent Figgy executions. SSO session duration is based on the 
+remote party's (OKTA / Google) session duration configurations, and will be refreshed as needed.
 
 

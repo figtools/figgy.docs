@@ -21,8 +21,8 @@ no access, except permissions to assume roles in _other_ Figgy-enabled accounts 
 <br/>![Bastion Auth]({{ '/docs/assets/images/deployment/bastion-auth.png' | relative-url }})<br/>
 
 There is no limit to the number of accounts you can integrate with your Bastion account. Users will be provided
-a single long-lived AWS Keypair to authenicate with the bastion account. From there, MFA can be enabled and they
-will need to input an MFA token to generate temporary sessions other accounts.
+a single long-lived AWS Keypair to authenticate with the bastion account. From there, MFA can be enabled and user
+will will be required input an MFA token when generating temporary sessions other accounts.
 [Sign me up!](/docs/deployment/bastion.html)
 <br/>
 <br/>
