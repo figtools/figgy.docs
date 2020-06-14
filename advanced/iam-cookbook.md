@@ -10,8 +10,8 @@ parent: Advanced Usage
 On this page you will find some recommendations on how you can appropriately expand and customize your existing
 Figgy deployment.
 
-1. Expanding User Access
-1. Give your service **twig** access.
+1. [Expanding User Access](#expanding-user-access)
+1. [Give your service's **twig** access.](#grant-appropriate-access-to-your-services)
 
 
 ## Expanding user access
@@ -72,11 +72,61 @@ IAM RBAC.
 Glad to see you're all-in on Figgy and want to provide the appropriate level of IAM access to your services. Below is an example
 policy for providing a service named `message-fetcher` the exact access it needs to read its configurations under: `/app/message-fetcher`.
 
-You may use this as a template all other services.
-```hcl
+Below there is a JSON and a HCL (Terraform) example.
 
+You will need to replace `twig`, `replication_key_arn`, and `app_key_arn` with the appropriate references to KMS keys.
+In this example. `twig` should be `/app/message-fetcher`
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "KmsDecryptPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "kms:DescribeKey",
+                "kms:Decrypt"
+            ],
+            "Resource": [
+               "${replication_key_arn}", 
+               "${app_key_arn}"
+           ]
+        },
+        {
+            "Sid": "ListKeys",
+            "Effect": "Allow",
+            "Action": [
+                "kms:ListKeys"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "SSMPerms",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:GetParameter",
+                "ssm:GetParameters",
+                "ssm:GetParameterHistory",
+                "ssm:GetParametersByPath",
+                "ssm:DescribeParameters"
+            ],
+            "Resource": [
+                "arn:aws:ssm:*:${account_id}:parameter/${twig}/*",
+                "arn:aws:ssm:*:${account_id}:parameter/${twig}/*"
+            ]
+        }
+    ]
+}
+
+
+```
+
+Here is the equivalent of doing this through terraform
+```hcl
 resource "aws_iam_policy" "service_ssm_read" {
-  name = "${var.my_service_name}-read-parameters"
+  name = "${var.my_service_name}-read-figs"
   policy = data.aws_iam_policy_document.aws_iam_policy_document.json
 }
 

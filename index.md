@@ -7,7 +7,7 @@ permalink: /
 ---
 
 
-Figgy is designed to bring developers, devOps engineers, and secret owners together around an ecosystem designed for
+Figgy is designed to bring developers, DevOps engineers, and secret owners together around an ecosystem designed for
 simple and secure configuration and secret management. Figgy has features designed around each user story, so there's a 
 little bit for everyone to appreciate!
 
