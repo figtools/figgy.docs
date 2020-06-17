@@ -38,7 +38,7 @@ All changes you make in the Figgy Sandbox will be broadcast to all people perusi
  
 ### Login 
  
-<br/><img src="/docs/assets/images/gifs/login.gif" alt="Login Sandbox" class="gif"><br/>
+<br/><img src="/docs/assets/images/gifs/login-sandbox.gif" alt="Login Sandbox" class="gif"><br/>
 
 > You can always run `figgy --help` or `figgy config --help` to see what Figgy can do
 

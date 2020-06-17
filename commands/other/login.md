@@ -19,14 +19,15 @@ throughout the day.
 
 <br/><br/>
 
-Special command:
+### Login Sandbox
 
     $   figgy login sandbox
     
 Logs the user into the he [Figgy Sandbox](/docs/getting-started/sandbox.html). This command will overwrite any existing
-local configuration to your own environment. 
+local figgy configuration - meaning, after running this command you'll have to rerun `figgy --configure` to 
+reconnect to your own environment.
 
-If you want a playground but don't want to lose your local configuration from being overwritten, backup the following files
+If you want a playground but don't want to lose your local figgy configurations, backup the following files
 before running `figgy login sandbox`
 
         ~/.figgy/config

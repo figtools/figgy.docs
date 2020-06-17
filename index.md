@@ -49,7 +49,6 @@ Microservices are great, but configuration management just got a *lot* harder. H
 - Figgy is free, open source, and installs directly in your environment.
 - No SaaS or 3rd parties here, just a serverless application deployed directly in your AWS account.
 
-
 ### **Security**
 - Create Figgy 'roles' that allow different user types access to different sections of your ParameterStore tree.
 - Easily control access between different configuration trees.

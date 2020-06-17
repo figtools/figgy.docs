@@ -43,5 +43,5 @@ The following data is collected:
 
 The data is cached in a file at this location: `~/.figgy/cache/other/usage-metrics-cache.json`. Feel free to take a look.
 The data is reported to `https://api.figgy.dev/v1/log-metrics` once per day.
-You can find the code for usage tracking here: [Anonymouse Usage Tracking](https://github.com/mancej/figgy/blob/master/cli/figgy/svcs/observability/anonymous_usage_tracker.py)
+You can find the code for usage tracking here: [Anonymous Usage Tracking](https://github.com/mancej/figgy/blob/master/cli/figgy/svcs/observability/anonymous_usage_tracker.py)
 

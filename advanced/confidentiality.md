@@ -65,7 +65,7 @@ RabbitMQ password but doesn't have access to it. Mariah, our glorious DevOps eng
 and password Jim needs. First Mariah stores the values in the `/devops` namespace and encrypts the values with the 
 `devops` KMS key.
 
-#### Miriah stores these values
+#### Mariah stores these values
     /devops/secrets/services/message-fetcher/rabbitmq/user
     /devops/secrets/services/message-fetcher/rabbitmq/password
 

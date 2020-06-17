@@ -9,4 +9,4 @@ nav_no_fold: true
 ## Config Resource
 
 The `config` resource is the primary resource Figgy users should be operating against. This resource represents application
-configurations provisioned in the targed AWS account. 
+configurations provisioned in the targeted AWS account. 

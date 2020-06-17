@@ -178,8 +178,8 @@ Sample replicate_from config block:
 ```json
    "twig": "/app/message-processor-test/", 
    "replicate_from": {
-      "source_namespace": "/app/message-processor/", 
-      "parameters": [
+      "source_twig": "/app/message-processor/", 
+      "figs": [
           "person_name", 
           "secret_admirer", 
           "maintenance_enabled"
@@ -209,7 +209,7 @@ Sample replicate_from config block:
         "replicated/mongo/options"
     ], 
     "replicate_from": {
-        "source_namespace": "/app/potato-processor/", 
+        "source_twig": "/app/potato-processor/", 
         "figs": [
             "person_name",
             "secret_admirer",
