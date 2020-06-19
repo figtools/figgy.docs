@@ -2,7 +2,7 @@
 title: Google
 has_children: false
 parent: Deploying Figgy
-nav_order: 3
+nav_order: 2
 ---
 
 ## Google as your Identity Provider
@@ -152,7 +152,7 @@ The default role types are these. You may choose as many or few as make sense to
 
 Don't forget to set:
 ```hcl
-    sso_type = "google"
+    auth_type = "google"
 ```
 
 Next, look in your `vars/` directory. There are some `*.tfvars` files already in this directory that can serve as a template.

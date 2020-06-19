@@ -49,7 +49,10 @@ table {
 h1,
 h2,
 h3,
-h4,
+h4 {
+  font-weight: bold;
+  border-bottom: $grey-lt-000;
+}
 h5,
 h6 {
   margin: 0;

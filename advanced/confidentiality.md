@@ -98,5 +98,3 @@ When Figgy performs the share, the parameter is decrypted and re-encrypted with 
 In this example, Jim, the developer, does not have access to the replication key in production. We have now successfully shared a secret 
 directly with the interested party and cut-out the middle-man. For IAM policy examples to support this example, 
 see the [IAM Cookbook](/docs/advanced/iam-cookbook.html)
-
-The concept of replication is a core concept in leveraging Figgy to the fullest extent. 

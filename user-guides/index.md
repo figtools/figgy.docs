@@ -6,4 +6,3 @@ nav_order: 5
 
 # User Guides
 
-Foo bar foo bar

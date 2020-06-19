@@ -9,3 +9,4 @@ nav_no_fold: true
 ## How To Guides
 
 1. [Manage & Share Secrets](/docs/user-guides/how-to/share-secrets.html)
+1. [Manage Application Configs](/docs/user-guides/how-to/manage-application-configs.html)

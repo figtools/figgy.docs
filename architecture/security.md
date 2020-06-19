@@ -18,12 +18,12 @@ Here are some high-level guidelines on how Figgy supports these objectives.
 
 ## Availability & Resiliency
 
-- Figgy is built on top of highly available AWS services that have their own [AWS Supported SLAs](https://aws.amazon.com/legal/service-level-agreements/).
+- Figgy is built on top of highly available AWS services that have their own [AWS supported SLAs](https://aws.amazon.com/legal/service-level-agreements/).
 Figgy does not required any custom infrastructure that has to be monitored.
 
-- Figgy is a Serverless solution which removes the need to manage, maintain, or patch infrastructure. The default 
-configurations of Figgy are designed for pay-per-request or pay-as-you-go. The net of this decision is 
-AWS will manage the scaling of the components required to support Figgy and maintain high availability.
+- Figgy is serverless, which removes the need to manage, maintain, or patch infrastructure. The default 
+configurations of Figgy are designed for pay-per-request or pay-as-you-go. As a result,
+AWS will manage the scaling of components required to support Figgy and maintain high availability.
 
 - All non-cache database tables are configured with point-in-time recovery enabled by default.
 
@@ -36,8 +36,8 @@ AWS will manage the scaling of the components required to support Figgy and main
 <br/>
 <br/>
 
-- Figgy has built-in Cloudwatch Alarms that will trigger and notify a configured user of any exceptions encountered while 
-Figgy performs its duties.
+- Figgy has built-in Cloudwatch Alarms that will trigger and notify a configured users through Slack or Email
+ of any exceptions encountered while Figgy performs its duties.
 
 - Figgy's configuration & secret store is built on AWS Parameter Store which maintains its own versioned history for every stored value.
 

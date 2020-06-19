@@ -17,7 +17,7 @@ the CLI to interact with AWS ParameterStore across many different accounts.
 
 There's a free <a href="https://www.figgy.dev/tabs/sandbox/" target="_blank">Figgy Sandbox</a> 
 you can use to experiment with Figgy. Go ahead, click that Sandbox link, let's have some fun!  
-  
+ 
 ## Figgy Events
 Look again at the Sandbox page. Do you notice some notifications popping up? Those are *live events* happening
 _right now_ in our Figgy Sandbox. Someone (or something) is _meddling_ with configurations in our Figgy Sandbox.
@@ -66,7 +66,7 @@ One great thing about **twigs** is that we can look at a **twig** and know _ever
 service's configuration. This is can be very helpful when trying to answer the question `What does the message-fetcher 
 talk to?"`.
 
-It also GREATLY simplifies IAM access control for our service. `/app-message-fetcher` will need an IAM policy as simple as this:
+It also GREATLY simplifies IAM access control for our service. `message-fetcher` will need an IAM policy as simple as this:
 ```json
 {
     ...
@@ -118,7 +118,7 @@ prompt you to clean-up unused configurations to prevent unused config sprawl.
 
 That's it, you now know the basic features of Figgy.
 
-### Learn more:
+#### Learn more:
 DevOps / Software Architects:
 1. [Advanced Figgy](/docs/getting-started/advanced.html)
 1. [Installation](/docs/getting-started/install.html)

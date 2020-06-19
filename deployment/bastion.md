@@ -2,7 +2,7 @@
 title: Bastion
 has_children: false
 parent: Deploying Figgy
-nav_order: 3
+nav_order: 1
 ---
 
 ## AWS Bastion as your Identity Provider
@@ -89,9 +89,10 @@ The name you give each account in the map is how your users will reference accou
 Next, wire up your `bastion_users` and the roles they should have access to. As you give more users access to Figgy going forward 
 you will return to this file, add the user, wire up their roles, and then re-run `terraform apply`
 
-## Step 4: Fill out vars files
+## Step 4: Fill out vars/ files
 This step could vary depending on how you use Terraform. These variables may need to be wired up in Terraform Enterprise or elsewhere.
-Regardless, if you look in the `vars/` directory you will see sample `.tfvars` files that you will need to fill in.
+Regardless, if you look in the `vars/` directory you will see sample `.tfvars` files that you will need to fill in. There
+will be one `.tfvars` file for each account you are integrating. If there are extras, delete them.
 
 Be thoughtful, if you are reusing a bucket and set `create_deploy_bucket = false` in `01_configure_figgy.tf` then you will
 want to put the appropriate bucket name in each of these files for each account.

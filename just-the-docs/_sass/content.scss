@@ -198,6 +198,24 @@
   hr {
     border-bottom: 2px $blue-300 solid;
   }
+
+  blockquote {
+    font-weight: normal;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: $yellow-000;
+  }
+
+  h4 {
+    margin-top: 1rem;
+    margin-bottom: .75rem;
+  }
+
+  h5 {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    color: $red-100;
+  }
 }
 
 /* width */

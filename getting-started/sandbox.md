@@ -10,16 +10,7 @@ parent: Getting Started
 There's a free <a href="https://www.figgy.dev/tabs/sandbox/" target="_blank">Figgy Sandbox</a> you can use to 
 experiment with Figgy. Go ahead, open up that Sandbox link, lets' have some fun!
 
-> First, let's make sure your Figgy CLI is installed:
-
-*MacOs*
-
-    $    brew install mancej/figgy/figgy
-        
-*Windows & Linux* (requires Python 3)
-
-    $    pip3 install figgy-cli
-
+Don't forget: [Install Figgy First](/docs/getting-started/install.html)
 
 ## Login to the Sandbox
     $   figgy login sandbox

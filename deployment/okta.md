@@ -107,7 +107,7 @@ Default role types are these. You may choose as many or few as make sense to you
 
 Don't forget to set:
 ```hcl
-    sso_type = "okta"
+    auth_type = "okta"
 ```
 
 Next, look in your `vars/` directory. There are some `*.tfvars` files already in this directory that can serve as a template.
@@ -252,7 +252,7 @@ aws_3333333333_figgy-dev-dev
 ![Assign Button](/docs/assets/images/deployment/okta/app-assign.png)
 
 1. Scroll down and assign ALL the groups you just created.
-![Assign Groups](/docs/assets/images/deployment/okta/assign-groups.png)
+<img src="/docs/assets/images/deployment/okta/assign-groups.png" style="max-width: 700px" alt="Assign Groups">
 
 <br/>
 

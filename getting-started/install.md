@@ -52,7 +52,7 @@ report_errors = true
 aws_region = us-east-1
 
 [OKTA]
-app_link = https://your-domain.okta.com/home/amazon_aws/0oaaqxeiciFzAVassP4x6/123
+app_link = https://your-domain.okta.com/home/amazon_aws/FaKeStUfF123145faf11zf/123
 factor_type = GOOGLE
 
 [GOOGLE]

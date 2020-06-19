@@ -38,7 +38,7 @@ hierarchies.
 #### A hierarchy of configs under a **Fig Tree** that is owned by a single service
     - /app/hello-world/*
     
->**Recommendation: Write your service IAM policies to ONLY access the *twig* namespace**
+> Recommendation: Write your service IAM policies to ONLY access the *twig* namespace
     
 <br/>
 
@@ -46,7 +46,7 @@ hierarchies.
 #### A single con**fig**uration stored `/under/a/named/path` and on a **Twig**
     - e.g. - /app/hello-world/log-level
   
-> **These namespaces are all examples. You can name your Figs / Twigs / Trees, and Orchards however you like!**
+> These namespaces are all examples. You can name your Figs / Twigs / Trees, and Orchards however you like!
 
 ### So for these configurations:
     /app/bird-feeder/log-level

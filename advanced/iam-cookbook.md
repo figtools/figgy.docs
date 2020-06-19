@@ -53,7 +53,7 @@ Next lets attach this policy to all existing roles.
 ```hcl
 resource "aws_iam_role_policy_attachment" "s3_read_all_roles" {
   count = length(local.role_types)
-  role = local.sso_type == "bastion"? aws_iam_role.bastion_user_role[count.index].name: aws_iam_role.sso_user_role[count.index].name
+  role = local.auth_type == "bastion"? aws_iam_role.bastion_user_role[count.index].name: aws_iam_role.sso_user_role[count.index].name
   policy_arn = data.aws_iam_policy.s3_read.arn
 }
 ```
