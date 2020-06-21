@@ -24,7 +24,7 @@ _right now_ in our Figgy Sandbox. Someone (or something) is _meddling_ with conf
 
 The purpose of this is to demonstrate one of the most powerful features of Figgy. Figgy is _driven by events_. 
 Every change is an event, which means every change, *ever*, is logged and stored. Figgy stores a complete history 
-of every change in our Figgy sandbox. Do your worse, I dare you to mess up my **Fig Orchard**! 
+of every change in our Figgy sandbox. Do your worst, I dare you to mess up my **Fig Orchard**! 
 I'll just *restore* my figs to how they were at some in time - to the second - in the past. Not-a-thing you can do about it! ;)
 
 ## Declarative Configuration
@@ -120,9 +120,9 @@ That's it, you now know the basic features of Figgy.
 
 #### Learn more:
 DevOps / Software Architects:
-1. [Advanced Figgy](/docs/getting-started/advanced.html)
+1. [Advanced Figgy](/docs/advanced/)
 1. [Installation](/docs/getting-started/install.html)
-1. [Architecture](/docs/architecture/index.html)
+1. [Architecture](/docs/architecture/)
 
 <br/>
 Figgy Users:

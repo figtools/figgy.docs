@@ -153,6 +153,11 @@ The resulting value at `/app/message-processor/replicated/sql/conn_string` will 
 **Requirements:**
 The destination, in this case `/app/message-processor`, must be in your service's **twig** as defined above.
 
+Figgy will maintain this merged configuration for you and will ensure your merged configuration is synchronized with
+all of the configurations that it depends on.
+
+<img src="/docs/assets/images/advanced/merge-template.png" style="max-width:800px; display: block;" alt="Merge Template">
+
 <br/><br/>
 ## replicate_from
 

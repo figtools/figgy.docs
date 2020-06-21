@@ -77,5 +77,5 @@ Standard AWS authentication essentially bypasses the following Figgy security an
 Instead this integration relies *entirely* on the user's locally configured AWS profiles. This integration was originally
 designed to simplify and support CICD pipeline deployments. 
 
-[I understand that this isn't ideal, but Sign me up!](/docs/deployment/okta.html)
+[I understand that this isn't ideal, but Sign me up!](/docs/deployment/standard.html)
 

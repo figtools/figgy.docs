@@ -71,4 +71,4 @@ Browse the Fig orchard to see what's out there.
 <br/><img src="/docs/assets/images/gifs/browse.gif" alt="Login Sandbox" class="gif"><br/>
 
 
-### And so much more. See our Commands section to see all figgy can offer!
+### And so much more. See our [Commands](/docs/commands/) section to see all figgy can offer!

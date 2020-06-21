@@ -14,7 +14,7 @@ Figgy implements multiple levels of cache to maximize performance.
 
 ### Remote cache:
 
-DynamoDB is leveraged as a remote cache for Figgy and is deployed as part of of the standard [Figgy Footprint](/docs/getting-started/figgy-footprint.html). 
+DynamoDB is leveraged as a remote cache for Figgy and is deployed as part of the standard [Figgy Footprint](/docs/getting-started/figgy-footprint.html). 
 
 DynamoDB was chosen for the following reasons:
 - Serverless
