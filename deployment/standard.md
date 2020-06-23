@@ -12,10 +12,10 @@ nav_order: 4
 ## Figgy Standard
 
 If you've already read through [Deploying Figgy](/docs/deployment/index.html) and you understand what you're giving up 
-when using Figgy standard, continue reading here. No judgement, here, let's get you set-up. 
+when using Figgy standard, continue reading here. No judgement here, let's get you set-up. 
 
 The Figgy AWS Standard deployment by far the simplest deployment configuration. Figgy offloads all user-management to you.
-Figgy will provision a set of groups, one for each selected role-type you configure. You will be responsible for 
+As part of this deployment, Figgy will provision a set of groups -- one for each selected role-type you configure. You will be responsible for 
 adding individuals to each group based on their desired role(s). Each users will need a set of long-lived AWS Access Keys
 for each integrated account. 
 

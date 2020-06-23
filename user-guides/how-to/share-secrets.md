@@ -1,7 +1,7 @@
 ---
 title: Manage & Share Secrets
 has_children: false
-nav_order: 1
+nav_order: 3
 parent: How To
 ---
 

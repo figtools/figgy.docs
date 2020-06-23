@@ -1,7 +1,7 @@
 ---
 title: Rotating Secrets
 has_children: false
-parent: Advanced Usage
+parent: How to
 nav_order: 4
 ---
 
