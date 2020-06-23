@@ -9,21 +9,73 @@ parent: Getting Started
 # Installation
 Installing Figgy is _easy_.
 
-*MacOs*
+
+#### Automatic Install
+
+**MacOs**
 
     $    brew install figtools/figgy/figgy
         
-*Windows, Linux, or Mac* (requires Python 3)
+**Windows, Linux, or Mac** (requires Python 3.7)
 
     $    pip3 install figgy-cli
 
+**Any OS - Install from .zip file**
+
+- [Download Mac](https://www.figgy.dev/releases/cli/latest/darwin/figgy.zip)
+- [Download Linux](https://www.figgy.dev/releases/cli/latest/linux/figgy.zip)
+- [Download Windows](https://www.figgy.dev/releases/cli/latest/windows/figgy.zip)
 
 
-The homebrew installation is a little slow because it requires installing a brand new virtual environment and all dependencies. 
-I hope to make this experience better in the future. 
+#### Manual Install (Still easy)
 
+**MacOs / Linux**
+```console
+    # Linux Example (change download URL for MacOs)
+    mkdir -p ~/tools/figgy
+    
+    # Download Figgy
+    cd tools/figgy/ && curl https://www.figgy.dev/releases/cli/latest/linux/figgy.zip > figgy.zip
 
+    # Unzip Figgy
+    unzip figgy.zip
 
+    # Add figgy to path
+    export PATH=$PATH:$(pwd)
+
+    # Test Figgy
+    figgy --version
+```
+
+You will want to update your PATH in ~/.bashrc or ~/.zshrc as well. Done!
+
+**Windows**
+```powershell 
+    # powershell
+    
+    # Create install directory
+    mkdir figgy
+    cd figgy
+    
+    # Download Figgy
+    Invoke-WebRequest -Uri https://www.figgy.dev/releases/cli/latest/windows/figgy.zip -OutFile figgy.zip 
+
+    # Unzip
+    Expand-Archive .\figgy.zip 
+    $DIR=pwd
+
+    # Add Dir to pathcd ..
+    $ENV:PATH="$ENV:PATH;$DIR"
+
+    # Test Figgy
+    figgy --version
+```
+
+You'll want to add the installation directory to your path [permanently](https://codingbee.net/powershell/powershell-make-a-permanent-change-to-the-path-environment-variable): 
+> Be sure to use standard x86 Powershell or the Windows Command Prompt. The Powershell Integrated Scripting Environment 
+> experiences issue with receiving Figgy user input. 
+
+<br/>
 
 ## Configuring Figgy
 Configuring the Figgy CLI is as simple as running.
@@ -34,6 +86,7 @@ Configuring the Figgy CLI is as simple as running.
 You will be guided through configuration. Before running `--configure` you'll need to know what type of authentication 
 you'll be using: Bastion, Google SSO, or OKTA SSO. See [Figgy Deployment](/docs/deployment/index.html)
 
+<br/>
 
 ## Distributing Figgy
 
