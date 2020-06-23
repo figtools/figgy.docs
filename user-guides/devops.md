@@ -15,7 +15,7 @@ Below you will find a collection of docs that may be helpful for DevOps engineer
 1. [Deploying Figgy](/docs/getting-started/deployment/index.html)
 1. [Creating & Sharing Secrets](/docs/user-guides/how-to/share-secrets.html)
 1. [Configuring CICD Validation](/docs/user-guides/how-to/cicd-validation.html)
-1. [Example Dockerized Application](https://github.com/mancej/figgy.python-reference)
+1. [Example Dockerized Application](https://github.com/figtools/figgy.python-reference)
 1. [Managing Application Configs](/docs/user-guides/how-to/manage-application-configs.html)
 1. [IAM Cookbook](/docs/advanced/iam-cookbook.html)
 

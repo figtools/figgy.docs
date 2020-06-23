@@ -16,7 +16,7 @@ Below you will find a collection of docs and examples that may be helpful for se
 1. [Keeping Secrets Confidential](/docs/advanced/confidentiality.html)
 1. [Sharing Secrets](/docs/user-guides/how-to/share-secrets.html)
 1. [Secret Rotation](/docs/user-guides/how-to/secret-rotation.html)
-1. [Hands-on exercise](https://github.com/mancej/figgy.python-reference) (Optional)
+1. [Hands-on exercise](https://github.com/figtools/figgy.python-reference) (Optional)
 
 
 

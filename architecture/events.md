@@ -12,12 +12,12 @@ types of events that Figgy respects are:
 
 ### The following event types are tracked:
 
-1. CloudTrail SSM Events: [Source](https://github.com/mancej/figgy/blob/0e007cf28f882995855fac2d94204998ac48c411/terraform/figgy/lambda_ssm_stream_replicator.tf#L18)
+1. CloudTrail SSM Events: [Source](https://github.com/figtools/figgy/blob/0e007cf28f882995855fac2d94204998ac48c411/terraform/figgy/lambda_ssm_stream_replicator.tf#L18)
     - PutParameter
     - DeleteParameter
     - DeleteParameters
 
-1. DynamoDb Stream Events: [Source](https://github.com/mancej/figgy/blob/0e007cf28f882995855fac2d94204998ac48c411/terraform/figgy/lambda_dynamo_stream_replicator.tf#L17)
+1. DynamoDb Stream Events: [Source](https://github.com/figtools/figgy/blob/0e007cf28f882995855fac2d94204998ac48c411/terraform/figgy/lambda_dynamo_stream_replicator.tf#L17)
     - Any change to `FiggyConfigReplication` DyanmoDB Table.
     
 These event streams trigger a number of features in Figgy including:

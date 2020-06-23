@@ -34,7 +34,7 @@ been integrated with AWS. If you have already integrated OKTA with AWS, you can 
 
 ## Step 1: Fork Figgy
 
-- Make a private fork of <a href="https://github.com/mancej/figgy/tree/master" target="_blank">Figgy</a> and clone it locally. 
+- Make a private fork of <a href="https://github.com/figtools/figgy/tree/master" target="_blank">Figgy</a> and clone it locally. 
 - Take notice of the figgy/terraform/figgy/saml directory. You will need to place a file here shortly. 
 
 <br/>

@@ -13,7 +13,7 @@ Below you will find a collection of docs and examples that may be helpful for de
 
 1. [Figgy Concepts](/docs/getting-started/concepts.html)
 1. [Figgy Basics](/docs/getting-started/basics.html) (Optional)
-1. [Dockerized Figgy Demo](https://github.com/mancej/figgy.python-reference)
+1. [Dockerized Figgy Demo](https://github.com/figtools/figgy.python-reference)
 1. [Managing Application Configs](/docs/user-guides/how-to/manage-application-configs.html)
 1. [Declarative Configuration](/docs/advanced/declarative-configuration.html)
 

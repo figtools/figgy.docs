@@ -5,7 +5,7 @@ color_scheme: "dark"
 search_enabled: true
 ga_tracking: UA-168748263-1
 highlighter: none
-repository: mancej/figgy.docs
+repository: figtools/figgy.docs
 plugins:
   - jekyll-seo-tag
 

@@ -19,7 +19,7 @@ diagram; however, depending on your configuration, two of those will not exist f
 Your _ecosystem_ depends on how you configure Figgy. Every Figgy deployment will require the following
 resources to be provisioned in each integrated AWS account. As always, you can and **should** look over the Terraform
 code in our public repository to see what to expect. You can find it here: 
-<a href="https://github.com/mancej/figgy/tree/master/terraform/figgy" target="_blank">Figgy Infrastructure Code</a>
+<a href="https://github.com/figtools/figgy/tree/master/terraform/figgy" target="_blank">Figgy Infrastructure Code</a>
 
 ### Resources required for Figgy operation:
 * 6 AWS Lambdas
@@ -62,5 +62,5 @@ The data collected is the following:
 
 The data is cached in a file at this location: `~/.figgy/cache/other/usage-metrics-cache.json`. Feel free to take a look.
 The data is reported to `https://api.figgy.dev/v1/log-metrics` once per day.
-You can find the code for usage tracking here: [Anonymouse Usage Tracking](https://github.com/mancej/figgy/blob/master/cli/figgy/svcs/observability/anonymous_usage_tracker.py)
+You can find the code for usage tracking here: [Anonymouse Usage Tracking](https://github.com/figtools/figgy/blob/master/cli/figgy/svcs/observability/anonymous_usage_tracker.py)
 

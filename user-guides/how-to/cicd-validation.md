@@ -62,6 +62,6 @@ You will get output something like this:
 <br/>![Validate]({{ '/docs/assets/images/gifs/validate-fail.gif' | relative-url }})<br/>
 
 
-[Example Validation with Github Action](https://github.com/mancej/figgy.python-reference/blob/master/.github/workflows/validate-cicd.yml)
+[Example Validation with Github Action](https://github.com/figtools/figgy.python-reference/blob/master/.github/workflows/validate-cicd.yml)
 
-[See Validate Working](https://github.com/mancej/figgy.python-reference/actions)
+[See Validate Working](https://github.com/figtools/figgy.python-reference/actions)

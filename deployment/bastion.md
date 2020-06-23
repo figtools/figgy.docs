@@ -32,7 +32,7 @@ First, coalesce a list of accounts you'd like to integrate with Figgy. **Note th
 already leveraged as your primary authentication account, select this account to be your bastion. If not, consider 
 creating a new AWS account specifically for the purpose of serving as your AWS SSO bastion account. 
 
-Next, head over to the <a href="https://github.com/mancej/figgy/tree/master" target="_blank">Figgy Github Repository</a>. 
+Next, head over to the <a href="https://github.com/figtools/figgy/tree/master" target="_blank">Figgy Github Repository</a>. 
 You're going to want to fork this repository and keep your own version. Once you have the repository locally, open
 it up in your favorite IDE and lets get to selecting options!
 

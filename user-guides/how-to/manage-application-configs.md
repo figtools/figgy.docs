@@ -25,7 +25,7 @@ that specific commit to the exact configurations your application needs to run.
 In fact, we've already got libraries out there to do this exact thing!
 
 #### Integrated Figgy Libraries by Language:
-- [Python](https://github.com/mancej/figgy.python.lib)
+- [Python](https://github.com/figtools/figgy.python.lib)
 - More to come, please consider contributing!
 
 These libraries will dynamically generate your `figgy.json` file. This is a nice-to-have and will save you time, 
@@ -84,7 +84,7 @@ The validate command can be easily integrated into your CICD build process to br
 defined configuration state is not in sync with the current remote configuration state. Validate will exit with a 
 non 0 exit code if any configurations are missing that your application needs to run.
 
-Bonus: Integrate `validate` into your git pre-commit hook! [Example](https://github.com/mancej/figgy.python-reference/blob/master/pre-commit.hook)
+Bonus: Integrate `validate` into your git pre-commit hook! [Example](https://github.com/figtools/figgy.python-reference/blob/master/pre-commit.hook)
 
 ```console
     $   figgy config validate --config figgy.json --env dev

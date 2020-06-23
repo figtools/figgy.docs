@@ -8,7 +8,7 @@ has_toc: true
 
 ## Getting Started
 
-Got 15 minutes or less? I can't save you on car insurance, but you can complete our quick-and-easy [Figgy Demo & Walkthrough](https://github.com/mancej/figgy.python-reference). 
+Got 15 minutes or less? I can't save you on car insurance, but you can complete our quick-and-easy [Figgy Demo & Walkthrough](https://github.com/figtools/figgy.python-reference). 
 
 #### Learn these core Figgy concepts:
 - Use the Figgy CLI to log in and swap between up to 5 different AWS Accounts.

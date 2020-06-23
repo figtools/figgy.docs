@@ -32,10 +32,10 @@ Steps:
 
 ## Configure Figgy
 
-First, clone [Figgy](https://github.com/mancej/figgy) locally.
+First, clone [Figgy](https://github.com/figtools/figgy) locally.
 
 ```console
-    $   git clone https://github.com/mancej/figgy.git
+    $   git clone https://github.com/figtools/figgy.git
 ```
 
 Next change directory into `figgy/terraform/figgy`

@@ -41,11 +41,11 @@ Authentication Flow:
 
 ## 1. Fork Figgy.
 
-Header over to <a href="https://github.com/mancej/figgy/tree/master" target="_blank">Figgy Github Repository</a>. 
+Header over to <a href="https://github.com/figtools/figgy/tree/master" target="_blank">Figgy Github Repository</a>. 
 You're going to want to fork this repository and keep your own version. Once you have the repository locally.
 
 Go ahead and change directory into your new forked repository to  `figgy/terraform/figgy/`. This is where all of your Figgy terraform
-code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](https://github.com/mancej/figgy/tree/develop/terraform/figgy/saml) in GITHUB. 
+code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](https://github.com/figtools/figgy/tree/develop/terraform/figgy/saml) in GITHUB. 
 
 ## 2. Prep Google Admin Console
 

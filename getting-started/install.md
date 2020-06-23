@@ -11,7 +11,7 @@ Installing Figgy is _easy_.
 
 *MacOs*
 
-    $    brew install mancej/figgy/figgy
+    $    brew install figtools/figgy/figgy
         
 *Windows, Linux, or Mac* (requires Python 3)
 
