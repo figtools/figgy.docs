@@ -16,7 +16,7 @@ At this time there are two main resources.
 
 - [config](/docs/commands/config/index.html)
 - [iam](/docs/commands/iam/index.html)
-
+- [--optional-parameters](/docs/commands/flags/index.html)
 
 
 This convention is not absolute. There are a few exceptions, including `figgy --configure` or `figgy --version`.  These

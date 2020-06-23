@@ -8,7 +8,6 @@ nav_order: 6
 
 Below are some documents on some more advanced figgy use cases.
 
-1. [Keeping secrets confidential](/docs/advanced/confidentiality.html)
-1. [Declaratively configuring your application](/docs/advanced/declarative-configuration.html)
-1. [IAM Cookbook - User & Service Access](/docs/advanced/iam-cookbook.html)
-1. [Rotating Secrets](/docs/advanced/secret-rotation.html)
+1. [Keeping Secrets Confidential](/docs/advanced/confidentiality.html)
+1. [Declarative Application Configuration](/docs/advanced/declarative-configuration.html)
+1. [AWS IAM: User & Service Access Policies](/docs/advanced/iam-cookbook.html)

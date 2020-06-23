@@ -36,11 +36,11 @@
 }
 
 .navigation-list-item {
-  @include fs-4;
+  @include nav-item-md;
   margin: 0;
 
   @include mq(md) {
-    @include fs-3;
+    @include nav-item-sm;
   }
 
   .navigation-list-child-list {

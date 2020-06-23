@@ -2,7 +2,7 @@
 title: Declarative Configuration
 has_children: false
 parent: Advanced Usage
-nav_order: 2
+nav_order: 3
 ---
 <br/>
 ## Configuring your figgy.json file

@@ -24,6 +24,22 @@
   }
 }
 
+@mixin nav-item-sm {
+  font-size: 12px !important;
+
+  @include mq(sm) {
+    font-size: 14px !important;
+  }
+}
+
+@mixin  nav-item-md {
+  font-size: 12px !important;
+
+  @include mq(sm) {
+    font-size: 14px !important;
+  }
+}
+
 @mixin fs-4 {
   font-size: 14px !important;
 

@@ -84,6 +84,8 @@ The validate command can be easily integrated into your CICD build process to br
 defined configuration state is not in sync with the current remote configuration state. Validate will exit with a 
 non 0 exit code if any configurations are missing that your application needs to run.
 
+Bonus: Integrate `validate` into your git pre-commit hook! [Example](https://github.com/mancej/figgy.python-reference/blob/master/pre-commit.hook)
+
 ```console
     $   figgy config validate --config figgy.json --env dev
 ```
