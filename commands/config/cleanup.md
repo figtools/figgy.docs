@@ -3,6 +3,7 @@ title: Cleanup
 has_children: false
 nav_order: 7
 parent: Config
+grand_parent: Commands
 nav_no_fold: true
 ---
 

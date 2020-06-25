@@ -3,6 +3,7 @@ title: Version
 has_children: false
 nav_order: 1
 parent: Other
+grand_parent: Commands
 ---
 
 ## Version

@@ -5,7 +5,7 @@ nav_order: 7
 has_toc: true
 ---
 
-## Architecture
+# Architecture
 
 Figgy is a lot more than just a CLI, it's part of a larger config management ecosystem that must be deployed across
 all integrated AWS accounts.  Below is a diagram of the entire Figgy Ecosystem. You will see OKTA, Google, 

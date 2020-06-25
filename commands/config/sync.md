@@ -3,6 +3,7 @@ title: Sync
 has_children: false
 nav_order: 6
 parent: Config
+grand_parent: Commands
 ---
 
 ## Sync

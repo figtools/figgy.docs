@@ -3,6 +3,7 @@ title: List
 has_children: false
 nav_order: 5
 parent: Config
+grand_parent: Commands
 ---
 
 ## List

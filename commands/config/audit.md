@@ -3,6 +3,7 @@ title: Audit
 has_children: false
 nav_order: 10
 parent: Config
+grand_parent: Commands
 nav_no_fold: true
 ---
 

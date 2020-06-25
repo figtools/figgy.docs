@@ -3,6 +3,7 @@ title: --profile
 has_children: false
 nav_order: 3
 parent: Flags
+grand_parent: Commands
 ---
 
 ## --profile flag

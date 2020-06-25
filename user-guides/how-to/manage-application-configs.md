@@ -3,6 +3,7 @@ title: Manage Application Configs
 has_children: false
 nav_order: 1
 parent: How To
+grand_parent: User Guides
 ---
 
 ## Manage your Application Configs

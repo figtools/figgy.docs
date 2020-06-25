@@ -3,6 +3,7 @@ title: Share
 has_children: false
 nav_order: 8
 parent: Config
+grand_parent: Commands
 ---
 
 ## Share

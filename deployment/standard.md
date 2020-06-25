@@ -2,13 +2,15 @@
 title: Standard
 has_children: false
 parent: Deploying Figgy
+grand_parent: Getting Started
 nav_order: 4
 ---
 
-
-#### Figgy is designed for deep and convenient SSO integrations with OKTA, Google, or through AWS Bastion accounts. We **strongly** recommend selecting one of these other options for virtually ALL use cases. 
-
 <br/>
+
+> Figgy is designed for deep and convenient SSO integrations with OKTA, Google, or through AWS Bastion accounts. We **strongly** recommend selecting one of these other options for virtually ALL use cases. 
+
+
 ## Figgy Standard
 
 If you've already read through [Deploying Figgy](/docs/deployment/index.html) and you understand what you're giving up 

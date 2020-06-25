@@ -5,7 +5,7 @@ parent: Getting Started
 nav_order: 6
 ---
 
-## Deploying Figgy
+# Deploying Figgy
 
 Before you deploy Figgy into your environment you must decide which authentication method works best for your
 organization. Once you have selected, continue to the associated setup guide based on your selection.

@@ -3,6 +3,7 @@ title: Configure CICD Validation
 has_children: false
 nav_order: 2
 parent: How To
+grand_parent: User Guides
 ---
 
 ## Configuring CICD Validation

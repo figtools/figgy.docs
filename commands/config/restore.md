@@ -3,6 +3,7 @@ title: Restore
 has_children: false
 nav_order: 11
 parent: Config
+grand_parent: Commands
 ---
 
 ## Restore

@@ -4,7 +4,7 @@ has_children: true
 nav_order: 6
 ---
 
-## Advanced Figgy
+# Advanced Figgy
 
 Below are some documents on some more advanced figgy use cases.
 

@@ -6,7 +6,7 @@ has_toc: true
 ---
 
 
-## Getting Started
+# Getting Started
 
 Got 15 minutes or less? I can't save you on car insurance, but you can complete our quick-and-easy [Figgy Demo & Walkthrough](https://github.com/figtools/figgy.python-reference). 
 

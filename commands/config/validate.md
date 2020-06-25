@@ -3,6 +3,7 @@ title: Validate
 has_children: false
 nav_order: 13
 parent: Config
+grand_parent: Commands
 ---
 
 ## Validate

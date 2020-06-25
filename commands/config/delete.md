@@ -3,6 +3,7 @@ title: Delete
 has_children: false
 nav_order: 3
 parent: Config
+grand_parent: Commands
 ---
 
 ## Delete

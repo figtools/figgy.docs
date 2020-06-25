@@ -4,7 +4,7 @@ has_children: true
 nav_order: 4
 ---
 
-# Resources
+# Commands
 
 The FiggyCLI follows the following convention:
 

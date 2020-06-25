@@ -3,6 +3,7 @@ title: Get
 has_children: false
 nav_order: 1
 parent: Config
+grand_parent: Commands
 ---
 
 ## Get

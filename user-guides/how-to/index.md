@@ -10,3 +10,4 @@ nav_no_fold: true
 
 1. [Manage & Share Secrets](/docs/user-guides/how-to/share-secrets.html)
 1. [Manage Application Configs](/docs/user-guides/how-to/manage-application-configs.html)
+1. [Configure CICD Build Validation](/docs/user-guides/how-to/cicd-validation.html)

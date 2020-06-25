@@ -3,6 +3,7 @@ title: --role
 has_children: false
 nav_order: 2
 parent: Flags
+grand_parent: Commands
 ---
 
 ## --role flag

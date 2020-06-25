@@ -3,6 +3,7 @@ title: Configure
 has_children: false
 nav_order: 1
 parent: Other
+grand_parent: Commands
 ---
 
 ## Configure

@@ -3,6 +3,7 @@ title: Manage & Share Secrets
 has_children: false
 nav_order: 3
 parent: How To
+grand_parent: User Guides
 ---
 
 ## Manage & Share Secrets

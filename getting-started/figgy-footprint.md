@@ -2,6 +2,7 @@
 title: Figgy Footprint
 has_children: false
 parent: Deploying Figgy
+grand_parent: Getting Started
 nav_order: 5
 ---
 

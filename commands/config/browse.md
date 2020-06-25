@@ -3,6 +3,7 @@ title: Browse
 has_children: false
 nav_order: 5
 parent: Config
+grand_parent: Commands
 nav_no_fold: true
 ---
 

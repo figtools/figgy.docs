@@ -2,6 +2,7 @@
 title: Rotating Secrets
 has_children: false
 parent: How to
+grand_parent: User Guides
 nav_order: 4
 ---
 
