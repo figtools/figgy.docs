@@ -64,7 +64,7 @@ You will want to update your PATH in ~/.bashrc or ~/.zshrc as well. Done!
     Expand-Archive .\figgy.zip 
     $DIR=pwd
 
-    # Add Dir to pathcd ..
+    # Add Dir to path
     $ENV:PATH="$ENV:PATH;$DIR"
 
     # Test Figgy
