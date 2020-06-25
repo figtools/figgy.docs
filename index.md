@@ -22,13 +22,11 @@ around each user story, so there's a little bit for everyone to appreciate.
 - Practice configuration 'GitOps' without _actually_ storing your configurations in Git. 
 - Make users happy :)
 
-Depending on who you are your Figgy Docs experience may differ. If your organization already uses's Figgy and you're looking
+Depending on who you are, your Figgy Docs experience may differ. If your organization already uses's Figgy and you're looking
 to install the CLI and get started, then I recommend you skip over to [Install](/docs/getting-started/install.html)
 then browse one of the [Guides](/docs/user-guides/)
 
-Want to know what Figgy does? Read below, then head over to [Figgy Basics](/docs/getting-started/basics.html)
-then [Figgy Advanced](/docs/getting-started/advanced.html)
-
+Want to know what Figgy does? Read below, then head over to [Getting Started](/docs/getting-started/index.html)
 
 ## Why Figgy?
 
@@ -71,15 +69,3 @@ Microservices are great, but configuration management just got a *lot* harder. H
 ### **Figgy integrations**
 - Get automated Slack notifications when secrets are changed or updated, and know who made them.
 - And more to come!
-
----
-
-## Categories
-
-[Getting Started](/docs/getting-started/){: .btn-primary }
-[Deploying Figgy](/docs/deployment/){: .btn-primary }
-[Commands](/docs/commands/){: .btn-primary }
-[User Guides](/docs/user-guides/){: .btn-primary }
-[Architecture](/docs/architecture/){: .btn-primary }
-[FAQ](/docs/faq/){: .btn-primary }
-

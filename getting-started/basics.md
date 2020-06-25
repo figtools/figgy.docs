@@ -17,6 +17,7 @@ the CLI to interact with AWS ParameterStore across many different accounts.
 
 There's a free <a href="https://www.figgy.dev/tabs/sandbox/" target="_blank">Figgy Sandbox</a> 
 you can use to experiment with Figgy. Go ahead, click that Sandbox link, let's have some fun!  
+<br/>
  
 ## Figgy Events
 Look again at the Sandbox page. Do you notice some notifications popping up? Those are *live events* happening
@@ -26,6 +27,7 @@ The purpose of this is to demonstrate one of the most powerful features of Figgy
 Every change is an event, which means every change, *ever*, is logged and stored. Figgy stores a complete history 
 of every change in our Figgy sandbox. Do your worst, I dare you to mess up my **Fig Orchard**! 
 I'll just *restore* my figs to how they were at some in time - to the second - in the past. Not-a-thing you can do about it! ;)
+<br/>
 
 ## Declarative Configuration
 'GitOps' is about defining the _desired state_ of your infrastructure in a versioned Git repository. Figgy's goal is to
@@ -44,6 +46,7 @@ Figgy accomplishes this through a `figgy.json` file that defines the required co
 check-in their code, or before a PR is merged, users (or automation) can run the [sync](/docs/commands/config/sync.html) command
 to validate the defined configurations all exist in the targeted environment. Figgy will give you confidence
 that you aren't rolling out a new release and missing a required configuration.
+<br/>
 
 ## Twigs - An application's sole configuration provider
 While Figgy doesn't enforce this policy, we **strongly recommend** you store all configurations for each service under
@@ -101,6 +104,7 @@ Figgy will keep the destination in sync with the source. Whenever the source is 
 automatically update all destinations within about 1 second.
 
 We won't get into how you can configure replication here, but understanding how **sharing** works is important. 
+<br/>
 
 ## Combat config sprawl
 

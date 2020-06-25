@@ -13,4 +13,5 @@ Example:
     $   figgy config get --env ${ENV}
 ```
 
-Allows user to easily target the current command a specific AWS environments without having to reconfigure the FiggyCLI utility. 
+Allows user to easily target different figgy-integrated AWS environments by passing in that environment's alias when
+running the command. 
