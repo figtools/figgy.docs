@@ -4,7 +4,7 @@
 There's a free <a href="https://www.figgy.dev/tabs/sandbox/" target="_blank">Figgy Sandbox</a> you can use to 
 experiment with Figgy. Go ahead, open up that Sandbox link, lets' have some fun!
 
-Don't forget: [Install Figgy First](/getting-started/install.html)
+Don't forget: [Install Figgy First](/getting-started/install/)
 
 ## Login to the Sandbox
     $   figgy login sandbox
@@ -49,20 +49,6 @@ Store a new configurations in our DEV environment.
 
 Browse the Fig orchard to see what's out there. 
 
-<dl>
-<dt><b>`e`</b></dt>
-<dd>Expands fig trees and twigs</dd>
-<dt><b>`s`</b></dt>
-<dd>Select a fig to retrieve (alias: Enter)</dd>
-<dt><b>`d`</b></dt>
-<dd>Mark a fig or twig for deletion</dd>
-<dt><b>`tab`</b></dt>
-<dd>Select the OK button</dd>
-<dt><b>`⬆` + `tab`</b></dt>
-<dd>Select the Fig Orchard (shift + tab)</dd>
-</dl>
-
 <br/><img src="/images/gifs/browse.gif" alt="Login Sandbox" class="gif"><br/>
 
-
-### And so much more. See our [Commands](/commands/) section to see all figgy can offer!
+And so much more. See our [Commands](/commands/) section to see all figgy can offer!

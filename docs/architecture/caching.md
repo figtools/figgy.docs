@@ -9,7 +9,7 @@ Figgy implements multiple levels of cache to maximize performance.
 
 ### Remote cache:
 
-DynamoDB is leveraged as a remote cache for Figgy and is deployed as part of the standard [Figgy Footprint](/getting-started/figgy-footprint.html). 
+DynamoDB is leveraged as a remote cache for Figgy and is deployed as part of the standard [Figgy Footprint](/getting-started/figgy-footprint/). 
 
 DynamoDB was chosen for the following reasons:
 - Serverless
@@ -32,7 +32,7 @@ These events are triggered by change operations on ParameterStore values.
 A local cache is used for storing various user-configured preferences and non-secret data; including a list of 
 currently active parameter names in each environment. On each run, the Figgy CLI queries a remote cache to retrieve a
 list of updates since the last Figgy CLI execution before applying these changes to local cache. These values inform auto-complete
-recommendations and the [Browse](/commands/config/browse.html) Tree.
+recommendations and the [Browse](/commands/config/browse/) Tree.
 
 Anonymous usage metrics are also logged in a local cache. These metrics are always logged locally, but are only reported if the 
 user has enabled anonymous usage metric reporting. 

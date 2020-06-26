@@ -17,9 +17,9 @@ theme:
     tabs: true
   include_search_page: false
   search_index_only: true
-extra_css:
-  - stylesheets/dark-theme.css
-  - stylesheets/dark-theme-system.css
+#extra_css:
+#  - stylesheets/dark-theme.css
+#  - stylesheets/dark-theme-system.css
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -39,19 +39,39 @@ markdown_extensions:
       permalink: '#'
   - admonition
   - codehilite:
-      guess_lang: false
+      guess_lang: False
+#      use_pygments: True
+#      noclasses: True
+#      pygments_style: murphy
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+
 
 nav:
   - Overview: 'index.md'
   - Getting Started:
-    - Installing Figgy: getting-started/install.md
+    - Installing FiggyCLI: getting-started/install.md
     - Sandbox: getting-started/sandbox.md
     - Concepts: getting-started/concepts.md
     - Basics: getting-started/basics.md
-    - Deploying Figgy:
+  - Deploying Figgy Cloud:
+      - Select Deployment Type: getting-started/deployment/select-type.md
       - Bastion: getting-started/deployment/bastion.md
       - Google: getting-started/deployment/google.md
       - Okta: getting-started/deployment/okta.md
@@ -97,6 +117,7 @@ nav:
     - Declarative Configuration: advanced/declarative-configuration.md
     - IAM Cookbook: advanced/iam-cookbook.md
   - Architecture:
+    - Figgy Ecosystem: architecture/ecosystem.md
     - Authentication: architecture/authentication.md
     - Events: architecture/events.md
     - Security: architecture/security.md

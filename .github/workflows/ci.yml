@@ -36,7 +36,7 @@ jobs:
 
       - name: Build Site
         run: |
-          pip install mkdocs
+          pip install mkdocs-material pymdown-extensions Pygments
           mkdocs build
 
       - name: Deploy

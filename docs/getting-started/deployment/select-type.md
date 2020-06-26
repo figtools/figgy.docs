@@ -16,7 +16,7 @@ no access, except permissions to assume roles in _other_ Figgy-enabled accounts 
 There is no limit to the number of accounts you can integrate with your Bastion account. Users will be provided
 a single long-lived AWS Keypair to authenticate with the bastion account. From there, MFA can be enabled and user
 will will be required input an MFA token when generating temporary sessions other accounts.
-[Sign me up!](/deployment/bastion.html)
+[Sign me up!](/deployment/bastion/)
 <br/>
 <br/>
 
@@ -30,7 +30,7 @@ and you already leverage Google Apps this can be an elegant solution to managain
 
 <br/>![Google Auth](/images/deployment/google-sso.png)<br/>
 
-To read about this solution check out the docs! [Sign me up!](/deployment/google.html)
+To read about this solution check out the docs! [Sign me up!](/deployment/google/)
 
 <br/>
 <br/>
@@ -44,7 +44,7 @@ highly recommend you select this integration.
 <br/>![Okta Auth](/images/deployment/okta-sso.png)<br/>
 
 To read about this solution check out the below docs!
-[Sign me up!](/deployment/okta.html)
+[Sign me up!](/deployment/okta/)
 
 
 ### Standard AWS IAM
@@ -70,5 +70,5 @@ Standard AWS authentication essentially bypasses the following Figgy security an
 Instead this integration relies *entirely* on the user's locally configured AWS profiles. This integration was originally
 designed to simplify and support CICD pipeline deployments. 
 
-[I understand that this isn't ideal, but Sign me up!](/deployment/standard.html)
+[I understand that this isn't ideal, but Sign me up!](/deployment/standard/)
 

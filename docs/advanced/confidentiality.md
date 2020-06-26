@@ -15,26 +15,26 @@ you have in your organization first before defining them. In most cases, you'll 
 
 With user types (also known as `roles`), you can carve up access however you like and across as many **fig trees** as you want. In
 an example basic configuration, access looks like this:
-
-- Developers:
-    - `/app/*`
-    - `/shared/*`
-  
-- DevOps
-    - `/app/*`
-    - `/shared/*`
-    - `/devops/*`
     
-- DBAs
-    - `/app/*`
-    - `/shared/*`
-    - `/dba/*`
-    
-- Super Admins
-   - `/app/*`
-   - `/shared/*`
-   - `/devops/*`
-   - `/dba/*`
+    - Developers:
+        - `/app/*`
+        - `/shared/*`
+      
+    - DevOps
+        - `/app/*`
+        - `/shared/*`
+        - `/devops/*`
+        
+    - DBAs
+        - `/app/*`
+        - `/shared/*`
+        - `/dba/*`
+        
+    - Super Admins
+        - `/app/*`
+        - `/shared/*`
+        - `/devops/*`
+        - `/dba/*`
     
 ### Encryption
 
@@ -57,7 +57,9 @@ RabbitMQ password but doesn't have access to it. Mariah, our glorious DevOps eng
 and password Jim needs. First Mariah stores the values in the `/devops` namespace and encrypts the values with the 
 `devops` KMS key.
 
-#### Mariah stores these values
+
+>  Mariah stores these values
+  
     /devops/secrets/services/message-fetcher/rabbitmq/user
     /devops/secrets/services/message-fetcher/rabbitmq/password
 
@@ -82,11 +84,13 @@ secret in higher environments, but the `message-fetcher` will.
 <dd>/app/message-fetcher/replicated/rabbitmq/password</dd>
 </dl>
 
-### Important:
-When Figgy performs the share, the parameter is decrypted and re-encrypted with the `replication key`. 
 
-**Access to the replication key should only be given to services consuming these secrets.**
-
-In this example, Jim, the developer, does not have access to the replication key in production. We have now successfully shared a secret 
-directly with the interested party and cut-out the middle-man. For IAM policy examples to support this example, 
-see the [IAM Cookbook](/advanced/iam-cookbook.html)
+!!! tip "Important:"
+   
+    When Figgy performs the share, the parameter is decrypted and re-encrypted with the `replication key`. 
+    
+    **Access to the replication key should only be given to services consuming these secrets.**
+    
+    In this example, Jim, the developer, does not have access to the replication key in production. We have now successfully shared a secret 
+    directly with the interested party and cut-out the middle-man. For IAM policy examples to support this example, 
+    see the [IAM Cookbook](/advanced/iam-cookbook/)

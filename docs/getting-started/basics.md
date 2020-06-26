@@ -30,20 +30,23 @@ Figgy CLI to ensure your configs are where they need to be. Finally your CICD pi
 at deployment time. This declarative definition can be dynamically generated through static code analysis or reflection. 
 In other words, let your code tell your CICD process what configurations it needs. 
 
-> Figgy can break the build if you're missing a required configuration. Don't deploy a service destined to fail initialization.
+
+!!! hint "Figgy can break the build if you're missing a required configuration. Don't deploy a service destined to fail initialization."
+
 
 By declaratively defining (or generating) required configurations for a particular code base and commit,
 you can feel confident you didn't forget that last pesky configuration you service needs to run.
 
 Figgy accomplishes this through a `figgy.json` file that defines the required configurations for a codebase. Before developers
-check-in their code, or before a PR is merged, users (or automation) can run the [sync](/commands/config/sync.html) command
+check-in their code, or before a PR is merged, users (or automation) can run the [sync](/commands/config/sync/) command
 to validate the defined configurations all exist in the targeted environment. Figgy will give you confidence
 that you aren't rolling out a new release and missing a required configuration.
 <br/>
 
+
 ## Twigs - An application's sole configuration provider
 While Figgy doesn't enforce this policy, we **strongly recommend** you store all configurations for each service under
-a **twig** (See: [Figgy Concepts](/getting-started/concepts.html)). For instance, for service 
+a **twig** (See: [Figgy Concepts](/getting-started/concepts/)). For instance, for service 
 `message-fetcher` all configurations would exist under the following namespace: `/app/message-fetcher`. 
 The `/app` namespace is optional, you can call it `/svc`, or whatever you want.
 
@@ -109,7 +112,7 @@ Declarative configuration provides a definitive answer on whether or not a *fig*
 By following Figgy best practices and defining your service configurations under **twigs**,  you will gain the benefit 
 of being notified when you have a *fig* out there that is no longer used by your service.
 
-The [sync](/commands/config/sync.html) and [cleanup](/commands/config/cleanup.html) commands will detect and
+The [sync](/commands/config/sync/) and [cleanup](/commands/config/cleanup/) commands will detect and
 prompt you to clean-up unused configurations to prevent unused config sprawl. 
 
 
@@ -118,12 +121,12 @@ That's it, you now know the basic features of Figgy.
 #### Learn more:
 DevOps / Software Architects:
 1. [Advanced Figgy](/advanced/)
-1. [Installation](/getting-started/install.html)
+1. [Installation](/getting-started/install/)
 1. [Architecture](/architecture/)
 
 <br/>
 Figgy Users:
-1. [Figgy Playground](/getting-started/sandbox.html)
-1. [Installation](/getting-started/install.html)
-1. [Commands](/commands/config/index.html)
-1. [User Guides](/user-guides/index.html)
+1. [Figgy Playground](/getting-started/sandbox/)
+1. [Installation](/getting-started/install/)
+1. [Commands](/commands/config/index/)
+1. [User Guides](/user-guides/index/)

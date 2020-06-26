@@ -1,4 +1,3 @@
-
 ## What does Figgy deploy?
 
 Figgy is a lot more than just a CLI, it's part of a larger config management ecosystem that must be deployed across

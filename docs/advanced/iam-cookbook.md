@@ -4,8 +4,8 @@
 On this page you will find some recommendations on how you can appropriately expand and customize your existing
 Figgy deployment.
 
-1. [Expanding User Access](#expanding-user-access)
-1. [Give your service's **twig** access.](#grant-appropriate-access-to-your-services)
+1. [Expanding user access](#expanding-user-access)
+1. [Give your services **twig** access](#grant-appropriate-access-to-your-services)
 
 
 ## Expanding user access
@@ -32,11 +32,11 @@ rather than editing existing Figgy deployments.
 For instance, suppose you wanted to grant all Figgy users S3 ReadOnly access to all S3 resources across all accounts, 
 you could accomplish it like this:
 
-First, create a new terraform file in `figgy/terraform/figgy/` name `custom_iam_s3.tf`
+First, create a new terraform file in `figgy/terraform/` name `custom_iam_s3.tf`
 
 First, lets find the existing `AmazonS3ReadOnlyAccess` policy:
 
-```hcl
+```terraform
 data "aws_iam_policy" "s3_read" {
   arn = "arn:aws:iam::${var.aws_account_id}:policy/AmazonS3ReadOnlyAccess"
 }
@@ -44,7 +44,7 @@ data "aws_iam_policy" "s3_read" {
 
 Next lets attach this policy to all existing roles.
 
-```hcl
+```terraform
 resource "aws_iam_role_policy_attachment" "s3_read_all_roles" {
   count = length(local.role_types)
   role = local.auth_type == "bastion"? aws_iam_role.bastion_user_role[count.index].name: aws_iam_role.sso_user_role[count.index].name
@@ -118,7 +118,8 @@ In this example. `twig` should be `/app/message-fetcher`
 ```
 
 Here is the equivalent of doing this through terraform
-```hcl
+
+```terraform
 resource "aws_iam_policy" "service_ssm_read" {
   name = "${var.my_service_name}-read-figs"
   policy = data.aws_iam_policy_document.aws_iam_policy_document.json

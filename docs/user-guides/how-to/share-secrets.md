@@ -1,9 +1,5 @@
 ## Manage & Share Secrets
 
-1. [Storing Secrets](#step-1-store-the-secret)
-1. [Sharing Secrets](#step-2-share-the-secret)
-1. [Managing Secrets at Scale](#managing-secrets-at-scale)
-
 If you're a secret owner and want to securely store a secret then you've come to the right place. 
 
 Depending on your user role the commands you might execute may differ. For instance, in this example I will be demonstrating
@@ -38,7 +34,7 @@ data-changer. The fewer people who know this secret the better!
 
 We can verify the secret was successfully shared with the `get` command. You will notice that this secret cannot be 
 decrypted by the user. This secret may _only_ be decrypted by the application using this secret, or a super-admin who
-has been granted access to the [Replication Key](/advanced/confidentiality.html).
+has been granted access to the [Replication Key](/advanced/confidentiality/).
 
 
 <br/>![DBA Share PW](/images/gifs/dba-get-password.gif)<br/>

@@ -3,7 +3,7 @@
 With Figgy you can easily setup build-time validation of application configurations to ensure services cannot be deployed
 if they are missing a require configuration in their destined environment. 
 
-The [validate](/commands/config/validate/html) command with the [--profile flag](/commands/flags/profile.html)
+The [validate](/commands/config/validate/) command with the [--profile flag](/commands/flags/profile/)
 is the secret to configuring CICD build validation.
 
 To set-up CICD validation you'll want to write out a hydrated `~/.aws/credentials` and matching `~/.aws/config` file

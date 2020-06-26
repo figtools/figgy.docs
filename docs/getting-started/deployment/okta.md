@@ -2,7 +2,7 @@
 ## Okta as your Identity Provider
 
 [OKTA](https://okta.com) is an industry leading Identity Provider that supports Federated authentication with hundreds
-of services, including [AWS](https://help.okta.com/en/prod/Content/Topics/DeploymentGuides/AWS/connect-okta-multiple-aws-groups.htm)
+of services, including [AWS](https://help.okta.com/en/prod/Content/Topics/DeploymentGuides/AWS/connect-okta-multiple-aws-groups.htm).
 
 Figgy works with the standard [OKTA AWS Application](https://help.okta.com/en/prod/Content/Topics/DeploymentGuides/AWS/connect-okta-multiple-aws-groups.htm) and
 requires minimal extra configuration. We strongly recommend you select **Connect OKTA to multiple Amazon Web Services Instances** as the single-account alternative has not been tested.
@@ -13,17 +13,6 @@ been integrated with AWS. If you have already integrated OKTA with AWS, you can 
 
 **This is an advanced installation and will take a minimum of ~2-3 hours**
 
-### Steps to Figgy, OKTA, and AWS Harmony:
-
-1. [Clone Figgy](#step-1-fork-figgy)
-1. [Add the AWS App to Okta](#step-2-add-the-aws-app-to-okta)
-1. [Configure Figgy](#step-3-configure-figgy)
-1. [Deploy Figgy](#step-4-deploy-figgy)
-1. [Enable API Integration](#step-5-enable-okta-api-integration)
-1. [Configure Groups](#step-6-configure-groups)
-1. [Test](#step-7-test)
-1. [Configure Figgy CLI](#step-8-configure-figgy-cli)
-1. Rejoice..
 
 ## Step 1: Fork Figgy
 
@@ -69,10 +58,10 @@ Files are located in `REPO_ROOT/terraform/figgy/` directory.
 1. 01_configure_figgy.tf
 1. vars/{env}.tfvars files
 
-### Lets' start with `00_main.tf`
+### Configure Terraform
 
 If you have any familiarity with [Terraform](https://www.terraform.io/) this should be a cinch. All you need to do is configure this file 
-as you normally would any other [Terraform AWS provider](https://www.terraform.io/providers/aws/index.html). 
+as you normally would any other [Terraform AWS provider](https://www.terraform.io/providers/aws/index/). 
 One important distinction is that this code base is a Terraform multi-environment codebase. We will be using this same Terraform configuration to deploy Figgy across
 every account you want to integrate with Figgy. Keep that in mind -- hard-coding a single profile or access key is
 probably not a good idea.
@@ -94,12 +83,12 @@ should make it fairly clear what each option means.
 Once you selected your Figgy role types, copy those types and set them aside:
 
 Default role types are these. You may choose as many or few as make sense to you.
-```hcl
+```terraform
     role_types = ["devops", "data", "dba", "sre", "dev"]
 ```
 
 Don't forget to set:
-```hcl
+```terraform
     auth_type = "okta"
 ```
 
@@ -107,17 +96,15 @@ Next, look in your `vars/` directory. There are some `*.tfvars` files already in
 You will need 1 var file configured for each account you wish to deploy to. If you are using Terraform Cloud or 
 remote variable storage, you will not need these files and will know what to do here.
 
-Be thoughtful, if you are reusing a bucket and set `create_deploy_bucket = false` in `01_configure_figgy.tf`, you will
-want to put the appropriate bucket name in each of these files for each account. Yes, every account will require it's own 
-deployment bucket. Feel free to use your own bucket if you already have one for deploying lambdas. 
+!!! tip "Don't forget to set  `create_deploy_bucket = false` in `01_configure_figgy.tf`, if you're using your own bucket. You will want to put the appropriate bucket name in each of the vars/* files for each account."
 
-`run_env` - This is the environment name users will be referencing your account by when running commands like 
+**run_env**
+This is the environment name users will be referencing your account by when running commands like 
 `figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
 
-`webhook_url` is optional, but if you want you can add a Slack Webhook url where Figgy can post notifications for configuration changes.
+**webhook_url** is optional, but if you want you can add a Slack webhook url where Figgy can post notifications for configuration changes.
 
-You may want to rename some of these files so they appropriately match your selected environment names.
-
+==You may want to rename some of these files so they appropriately match your selected environment names.==
 
 <br/>
 
@@ -128,31 +115,32 @@ with the `dev` environment.
 
 You'll want to run `terraform apply` for each environment. Each environment is associated with a `vars/env-name.tfvars` file. 
 
-Here's what a workflow would look like:
 
-Dev:
-```
-terraform init
-terraform workspace new dev
-terraform workspace select dev
-terraform apply -var-file=vars/dev.tfvars
-```
+**Here's what a workflow would look like:**
 
-Dev is complete, now let's deploy QA:
+=== "DEV"
+    ```
+    terraform init
+    terraform workspace new dev
+    terraform workspace select dev
+    terraform apply -var-file=vars/dev.tfvars
+    ```
 
-```
-terraform workspace new qa
-terraform workspace select qa
-terraform apply -var-file=vars/qa.tfvars
-```
+=== "QA"
+    ```
+    terraform workspace new qa
+    terraform workspace select qa
+    terraform plan -var-file=vars/qa.tfvars
+    terraform apply -var-file=vars/qa.tfvars
+    ```
 
-QA complete. Now Stage:
-
-```
-terraform workspace new stage
-terraform workspace select stage
-terraform apply -var-file=vars/stage.tfvars
-```
+=== "STAGE"
+    ```
+    terraform workspace new stage
+    terraform workspace select stage
+    terraform plan -var-file=vars/stage.tfvars
+    terraform apply -var-file=vars/stage.tfvars
+    ```
 
 You get the drift!
 
@@ -190,7 +178,7 @@ may need to perform these steps in Active Directory instead.
 
 If you get stuck, reference these [OKTA Docs](https://help.okta.com/en/prod/Content/Topics/DeploymentGuides/AWS/connect-okta-multiple-aws-groups.htm)
 
-### For the following steps, we are assuming you are using OKTA managed groups/users. 
+**For the following steps, we are assuming you are using OKTA managed groups/users.** 
 
 Fair warning, this might be a bit tedious if you have a lot of AWS accounts, but once it's done it will be easy to maintain. If you get 
 annoyed or demotivated, you aren't alone.. I've had to write the same figgy deployment guide 3 times over now -- one for each auth type. 
@@ -249,7 +237,7 @@ aws_3333333333_figgy-dev-dev
 
 <br/>
 
-### Step 7: Test
+## Step 7: Test
 
 First, lets make sure you are able to assume into AWS through a web browser. Log-in to OKTA as the user you just
 gave access through groups a few minutes ago.
@@ -265,9 +253,9 @@ exception back then you have successfully configured your Federated access!
 
 <br/>
 
-### Step 8: Configure Figgy CLI
+## Step 8: Configure Figgy CLI
 Prep: 
-- Make sure you have the Figgy CLI [installed locally](/getting-started/install.html).
+- Make sure you have the Figgy CLI [installed locally](/getting-started/install/).
 - A [while ago](#step-2-add-the-aws-app-to-okta) I asked you to save your OKTA App Embed URL. Get that handy.
 
 Configure:
@@ -316,7 +304,7 @@ After configuring, test the CLI is working by running:
 ```
 
 
-### Roll it out to more people
+## Roll it out to more people
 Now that you have your App Embed Link, you can set it in a generic Figgy config file and 
 distribute it to all of your users. This will save them the trouble of having to manage this url themselves.
 

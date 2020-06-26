@@ -8,28 +8,18 @@ identity provider for your AWS accounts. When complete, users will be able to au
 credentials.
 
 With this configuration you will have 0 users provisioned in your AWS accounts. Instead all access will be provided through
-[AWS Account Federation](https://aws.amazon.com/identity/federation/) and a trust configure between your AWS accounts and 
+[AWS Account Federation](https://aws.amazon.com/identity/federation/) and a trust configured between your AWS accounts and 
 your Google account.
 
 **This is an advanced installation and will take a couple hours in total. Grab a snack.**
 
 Resources Provisioned:
-- [Standard Figgy Stack](/getting-started/figgy-footprint.html)
+- [Standard Figgy Stack](/getting-started/figgy-footprint/)
 
 
 Authentication Flow:
 
 <br/>![Google Auth](/images/deployment/google-sso.png)<br/>
-
-
-**Table of Contents:**
-
-1. [Fork Figgy](/deployment/google.html#1-fork-figgy)
-2. [Prep Google Admin Console](/deployment/google.html#2-prep-google-admin-console)
-3. [Configure Figgy](/deployment/google.html#3-configure-figgy)
-4. [Deploy Figgy](/deployment/google.html#4-deploy-figgy)
-5. [Grant User Permissions](/deployment/google.html#5-grant-user-permissions)
-6. [Setup Figgy CLI](/deployment/google.html#6-setup-figgy-cli)
 
 
 **If you have already configured Federated Access to AWS through Google you can SKIP step #2**
@@ -44,30 +34,23 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 
 ## 2. Prep Google Admin Console
 
+### Add custom attributes to users
 1. Log-in to [Google Admin Console](https://admin.google.com)
 1. Hamburger Menu (Top Left) -> Directory -> Users
 1. Click More(v) -> Manage Custom Attributes
 ![Custom Attributes](/images/deployment/google/custom-attribute-button.png)
-1. Add Custom Attribute:
-``` 
-    Category: AWS_SAML
-    Custom Fields:
-       1)
-        - Name: IAM ROLE
-        - Info Type: Text
-        - Visibility: Visible to user and admin
-        - No. of values: Multi-value
 
-       2)
-        - Name: Session Duration
-        - Info Type: Whole Number
-        - Visibility: Visible to user and admin
-        - No. of values: Single Value
-```
+1. Add the following attributes:
+
+|Name   	| Info Type    	| Visibility 	|  No. of values |
+|---	|---	|---	|---
+|IAM ROLE	| Text  	| Visible to user and admin | Multi-value |
+|Session Duration  	| Whole Number  	| Visible to user and admin |   Single Value |
+
 ![Custom Attributes](/images/deployment/google/custom-attributes.png)
-
-
 1. Click Save.
+
+### Configure AWS SAML Application
 1. Open Hamburger Menu (Top Left) -> Apps -> SAML apps
 <img src="/images/deployment/google/saml-button.png" style="max-width: 400px;"/>
 1. Click (+) in bottom right corner of screen.
@@ -80,21 +63,14 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 1. Attribute Mapping: Click `ADD NEW MAPPING` 
 1. Make sure these three attributes exist. The first 2 should be partially filled in already:
 
-   ```
-        - Attribute: `https://aws.amazon.com/SAML/Attributes/Role*`
-        - Category: `Basic Information`
-        - Value: `Primary Email`
+|Attribute   	| Category    	| Value 	|  
+|---	|---	|---	
+|https://aws.amazon.com/SAML/Attributes/Role*	| Basic Information  	| Primary Email |  	
+|https://aws.amazon.com/SAML/Attributes/RoleSessionName*   	| AWS SAML  	| IAM Role |   	
+|https://aws.amazon.com/SAML/Attributes/SessionDuration   	| AWS SAML   	| Session Duration |	
 
-        - Attribute: `https://aws.amazon.com/SAML/Attributes/RoleSessionName*`
-        - Category: `AWS SAML`
-        - Value: `IAM Role`
-   
-        You will have to add this one:
-   
-        - Attribute: `https://aws.amazon.com/SAML/Attributes/SessionDuration`
-        - Category: `AWS SAML`
-        - Value: `Session Duration`
-    ```
+
+
 1. Click Finish.
 1. On the right side in your app's new options menu click (...) and select `ON for everyone`.
 
@@ -103,8 +79,9 @@ Open your new application, click Attribute Mapping, you should see something lik
 ![Attribute Mapping](/images/deployment/google/attribute-mapping.png)
 
 
-With your new SAML Application open, look in your URL bar:
-`https://admin.google.com/your-company.com/AdminHome?hl=en#AppDetails:service=${SOME_NUMBER_HERE}`
+==With your new SAML Application open, look in your URL bar:== 
+
+`https://admin.google.com/your-company.com/AdminHome?hl=en#AppDetails:service=SOME_NUMBER_HERE`
 
 **SOME_NUMBER_HERE** number is your **Service Provider Id**. Copy it, save it. We will need it later.
 
@@ -113,11 +90,12 @@ With your new SAML Application open, look in your URL bar:
 **To prepare Figgy for deployment you're going to need to these files:**
 
 Files are located in `REPO_ROOT/terraform/figgy/` directory. 
+
 1. 00_main.tf
 1. 01_configure_figgy.tf
 1. vars/{env}.tfvars files
 
-### Lets' start with `00_main.tf`
+### Configure Terraform
 
 If you have any familiarity with [Terraform](https://www.terraform.io/) this should be a cinch. All you need to do is configure this file 
 as you normally would any other Terraform `main.tf` file. One important distinction is that this code base is a Terraform 
@@ -141,12 +119,12 @@ should make it fairly clear what each option means
 Once you have selected your Figgy role types, copy those types and set them aside:
 
 The default role types are these. You may choose as many or few as make sense to you.
-```hcl
+```terraform
     role_types = ["devops", "data", "dba", "sre", "dev"]
 ```
 
 Don't forget to set:
-```hcl
+```terraform
     auth_type = "google"
 ```
 
@@ -154,15 +132,15 @@ Next, look in your `vars/` directory. There are some `*.tfvars` files already in
 You will need 1 var file configured for each account you wish to deploy to. If you are using Terraform Cloud or 
 remote variable storage, you will not need these files and will know what to do here.
 
-Be thoughtful, if you are reusing a bucket and set `create_deploy_bucket = false` in `01_configure_figgy.tf`, you will
-want to put the appropriate bucket name in each of these files for each account.
+!!! tip "Don't forget to set  `create_deploy_bucket = false` in `01_configure_figgy.tf`, if you're using your own bucket. You will want to put the appropriate bucket name in each of the vars/* files for each account."
 
-`run_env` - This is the environment name users will be referencing your account by when running commands like 
+**run_env**
+This is the environment name users will be referencing your account by when running commands like 
 `figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
 
-`webhook_url` is optional, but if you want you can add a Slack webhook url where Figgy can post notifications for configuration changes.
+**webhook_url** is optional, but if you want you can add a Slack webhook url where Figgy can post notifications for configuration changes.
 
-You may want to rename some of these files so they appropriately match your selected environment names.
+==You may want to rename some of these files so they appropriately match your selected environment names.==
 
 ## 4. Deploy Figgy
 
@@ -171,33 +149,31 @@ with the `dev` account.
 
 You'll want to run `terraform apply` for each environment. Each environment is associated with a `vars/env-name.tfvars` file. 
 
-Here's what a workflow would look like:
+**Here's what a workflow would look like:**
 
-Dev:
-```
-terraform init
-terraform workspace new dev
-terraform workspace select dev
-terraform apply -var-file=vars/dev.tfvars
-```
+=== "DEV"
+    ```
+    terraform init
+    terraform workspace new dev
+    terraform workspace select dev
+    terraform apply -var-file=vars/dev.tfvars
+    ```
 
-Dev is complete, now let's deploy QA:
+=== "QA"
+    ```
+    terraform workspace new qa
+    terraform workspace select qa
+    terraform plan -var-file=vars/qa.tfvars
+    terraform apply -var-file=vars/qa.tfvars
+    ```
 
-```
-terraform workspace new qa
-terraform workspace select qa
-terraform plan -var-file=vars/qa.tfvars
-terraform apply -var-file=vars/qa.tfvars
-```
-
-QA complete. Now Stage:
-
-```
-terraform workspace new stage
-terraform workspace select stage
-terraform plan -var-file=vars/stage.tfvars
-terraform apply -var-file=vars/stage.tfvars
-```
+=== "STAGE"
+    ```
+    terraform workspace new stage
+    terraform workspace select stage
+    terraform plan -var-file=vars/stage.tfvars
+    terraform apply -var-file=vars/stage.tfvars
+    ```
 
 You get the drift!
 
@@ -217,17 +193,19 @@ will depend on how you named your figgy role-types in `01_configure_figgy.tf`.
 
 The template you will need to follow is this:
 
-`arn:aws:iam::${AWS_ACCOUNT_ID}:role/figgy-${RUN_ENV}-${ROLE_NAME},arn:aws:iam::${AWS_ACCOUNT_ID}:saml-provider/google`
+    arn:aws:iam::${AWS_ACCOUNT_ID}:role/figgy-${RUN_ENV}-${ROLE_NAME},arn:aws:iam::${AWS_ACCOUNT_ID}:saml-provider/google
 
 Replace:
-- AWS_ACCOUNT_ID - Account ID for the Target Account
-- ENV_NAME - `var.run_env` you selected when you filled in a `figgy/terraform/figgy/vars/*.tfvars` files.
-- ROLE_NAME - The name of the role you want to allow the user to assume.
+
+- AWS_ACCOUNT_ID -> Account ID for the Target Account
+- ENV_NAME -> `var.run_env` you selected when you filled in a `figgy/terraform/figgy/vars/*.tfvars` files.
+- ROLE_NAME -> The name of the role you want to allow the user to assume.
 
 Suppose one of your roles is named `devops`, one of your environments is named `dev`, and `dev` is associated with an accountId of `0123456789101`
 
 Input this:
-`arn:aws:iam::0123456789101:role/figgy-dev-devops,arn:aws:iam::0123456789101:saml-provider/google`
+
+    arn:aws:iam::0123456789101:role/figgy-dev-devops,arn:aws:iam::0123456789101:saml-provider/google
 
 You can repeat this attribute as many times as you want to give your user access to many different roles across many different accounts.
 
@@ -253,4 +231,4 @@ Follow the prompts - read carefully. You will be prompted to input your Identity
 Now that you have your Identity Provider Id and Service Provider ID, you can set these in a generic Figgy config file and 
 distribute it to all of your users. This will save them the trouble of having to manage these two ids.
 
-To do this: See [Distributing Figgy](/getting-started/install.html#distributing-figgy)
+To do this: See [Distributing Figgy](/getting-started/install/#distributing-figgy)

@@ -4,7 +4,7 @@ The AWS Bastion account configuration is the simplest configuration for deployin
 a Bastion configuration will provision the following resources across your AWS Accounts.
 
 Resources Provisioned:
-- [Standard Figgy Stack](/getting-started/figgy-footprint.html)
+- [Standard Figgy Stack](/getting-started/figgy-footprint/)
 
 Plus some extra resources in your selected Bastion account:
 - IAM Users (this is what your Figgy users will authenticate with)
@@ -17,19 +17,20 @@ Users will authenticate with your bastion account through some low-power IAM Cre
 With these credentials + their MFA token (if you enable MFA), users will be able to "hop" into other environments and
 interact with Figgy normally.
 
-To simplify user management, after you have Figgy configured you may optionally remove all other IAM users and 
+To simplify user management, after you have Figgy configured, you may optionally remove all other IAM users and 
 leverage the Figgy provisioned Users & Roles as a basis for all user authentication across all AWS accounts.
 
-### All users accounts will live your bastion account!
-First, coalesce a list of accounts you'd like to integrate with Figgy. **Note this down**. Second, if one of these accounts is
-already leveraged as your primary authentication account, select this account to be your bastion. If not, consider 
-creating a new AWS account specifically for the purpose of serving as your AWS SSO bastion account. 
+## Prep:
+- First, coalesce a list of accounts you'd like to integrate with Figgy. 
 
-Next, head over to the <a href="https://github.com/figtools/figgy/tree/master" target="_blank">Figgy Github Repository</a>. 
+- Second, if one of these accounts is already leveraged as your primary authentication account, select this account to 
+be your bastion. If not, consider creating a new AWS account specifically for the purpose of serving as your AWS SSO bastion account. 
+
+- Next, head over to the <a href="https://github.com/figtools/figgy/tree/master" target="_blank">Figgy Github Repository</a>. 
 You're going to want to fork this repository and keep your own version. Once you have the repository locally, open
 it up in your favorite IDE and lets get to selecting options!
 
-Go ahead and change directory into your new forked repository to  `figgy/terraform/figgy/`. This is where all of your Figgy terraform
+- Change directory into your new forked repository to  `figgy/terraform/`. This is where all of your Figgy terraform
 code lives.
 
 **To prepare Figgy for deployment you're going to need to tweak four files:**
@@ -104,31 +105,33 @@ You'll want to run `terraform apply` for each environment. Each environment is a
 
 Here's what a workflow would look like:
 
-Bastion:
-```
-terraform workspace select bastion
-terraform plan -var-file=vars/bastion.tfvars
-terraform apply -var-file=vars/bastion.tfvars
-```
+**Here's what a workflow would look like:**
 
-Bastion is complete, now let's deploy DEV:
+=== "BASTION"
+    ```
+    terraform init
+    terraform workspace new bastion
+    terraform workspace select bastion
+    terraform apply -var-file=vars/bastion.tfvars
+    ```
 
-```
-terraform workspace select dev
-terraform plan -var-file=vars/dev.tfvars
-terraform apply -var-file=vars/dev.tfvars
-```
+=== "DEV"
+    ```
+    terraform workspace new dev
+    terraform workspace select dev
+    terraform plan -var-file=vars/dev.tfvars
+    terraform apply -var-file=vars/dev.tfvars
+    ```
 
-DEV complete. Now QA:
-
-```
-terraform workspace select dev
-terraform plan -var-file=vars/dev.tfvars
-terraform apply -var-file=vars/dev.tfvars
-```
+=== "QA"
+    ```
+    terraform workspace new qa
+    terraform workspace select qa
+    terraform plan -var-file=vars/qa.tfvars
+    terraform apply -var-file=vars/qa.tfvars
+    ```
 
 You get the drift!
-
 ## Last step, lets login with Figgy!
 
 Once Figgy is deployed to all the accounts you want to associate it with, we need just need to login. Find the account
@@ -144,7 +147,10 @@ Configure your new access keys as a local AWS profile:
     
 Enter your Access Key / Secret Key / Region / etc.
 
-Now run `figgy --configure`, follow the prompts, and when you are prompted to enter your AWS profile, put in `bastion`
-(or whatever you used in the previous command under --profile)
+Now run:
+
+    $   figgy --configure
+    
+Follow the prompts. When you are prompted to enter your AWS profile, put in `bastion` (or whatever you used in the previous command under --profile)
 
 That's it, Figgy is installed and you're good-to-go! Try running `figgy config get` to verify everything works as expected.

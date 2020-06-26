@@ -10,33 +10,33 @@ configurations provisioned in the targeted AWS account.
 
 #### CRUD Operations: 
 
-- [Get](/commands/config/get.html)
-- [Put](/commands/config/put.html)
-- [Delete](/commands/config/delete.html)
-- [Edit](/commands/config/edit.html)
+- [Get](/commands/config/get/)
+- [Put](/commands/config/put/)
+- [Delete](/commands/config/delete/)
+- [Edit](/commands/config/edit/)
 
 #### Views: 
 
-- [Browse](/commands/config/browse.html)
-- [List](/commands/config/list.html)
+- [Browse](/commands/config/browse/)
+- [List](/commands/config/list/)
 
 #### Bulk Operations: 
 
-- [Promote](/commands/config/promote.html)
-- [Dump](/commands/config/dump.html)
+- [Promote](/commands/config/promote/)
+- [Dump](/commands/config/dump/)
 
 #### State Synchronization & Management: 
 
-- [Sync](/commands/config/sync.html)
-- [Cleanup](/commands/config/cleanup.html)
-- [Validate](/commands/config/validate.html)
+- [Sync](/commands/config/sync/)
+- [Cleanup](/commands/config/cleanup/)
+- [Validate](/commands/config/validate/)
 
 #### Remote Operations: 
 
-- [Share](/commands/config/share.html)
+- [Share](/commands/config/share/)
 
 
 #### Data integrity / Visibility: 
 
-- [Audit](/commands/config/audit.html)
-- [Restore](/commands/config/restore.html)
+- [Audit](/commands/config/audit/)
+- [Restore](/commands/config/restore/)
