@@ -55,8 +55,10 @@ jobs:
           bundle install --local
 
       - name: Build Site
+        uses: actions/setup-python@v2
         run: |
-          bash scripts/build.sh
+          pip install mkdocs
+          mkdocs build
 
       - name: Setup python
         uses: actions/setup-python@v2

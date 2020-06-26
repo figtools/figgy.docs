@@ -1,0 +1,104 @@
+site_name: Figgy Docs
+site_description: Figgy Documentation
+repo_url: https://github.com/figtools/figgy.docs
+theme:
+  name: material
+  custom_dir: mkdocs-material/material
+  language: en
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: logo
+  feature:
+    tabs: true
+  include_search_page: false
+  search_index_only: true
+extra_css:
+  - stylesheets/dark-theme.css
+  - stylesheets/dark-theme-system.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/squidfunk
+    - icon: fontawesome/brands/gitter
+      link: https://gitter.im/squidfunk/mkdocs-material
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/squidfunk/
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/squidfunk
+markdown_extensions:
+  - toc:
+      permalink: '#'
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Overview: 'index.md'
+  - Getting Started:
+    - Installing Figgy: getting-started/install.md
+    - Sandbox: getting-started/sandbox.md
+    - Concepts: getting-started/concepts.md
+    - Basics: getting-started/basics.md
+    - Deploying Figgy:
+      - Bastion: getting-started/deployment/bastion.md
+      - Google: getting-started/deployment/google.md
+      - Okta: getting-started/deployment/okta.md
+      - Standard: getting-started/deployment/standard.md
+      - Figgy Footprint: getting-started/figgy-footprint.md
+  - Commands:
+    - Config:
+      - Get: commands/config/get.md
+      - Put: commands/config/put.md
+      - Delete: commands/config/delete.md
+      - Edit: commands/config/edit.md
+      - Browse: commands/config/browse.md
+      - List: commands/config/list.md
+      - Promote: commands/config/promote.md
+      - Sync: commands/config/sync.md
+      - Cleanup: commands/config/cleanup.md
+      - Share: commands/config/share.md
+      - Dump: commands/config/dump.md
+      - Audit: commands/config/audit.md
+      - Restore: commands/config/restore.md
+      - Validate: commands/config/validate.md
+    - IAM:
+      - Export: commands/iam/export.md
+    - Other:
+      - Configure: commands/other/configure.md
+      - Version: commands/other/version.md
+      - Login: commands/other/login.md
+    - --flags:
+      - --env: commands/flags/env.md
+      - --role: commands/flags/role.md
+      - --profile: commands/flags/profile.md
+  - User Guides:
+    - How To:
+      - Manage Application Configs: user-guides/how-to/manage-application-configs.md
+      - Configure CICD Validation: user-guides/how-to/cicd-validation.md
+      - Manage & Share Secrets: user-guides/how-to/share-secrets.md
+      - Rotate Secrets: user-guides/how-to/secret-rotation.md
+    - Developer Guide: user-guides/dev.md
+    - DevOps Guide: user-guides/devops.md
+    - Secret Owner Guide: user-guides/secret.md
+  - Advanced Usage:
+    - Config Confidentiality: advanced/confidentiality.md
+    - Declarative Configuration: advanced/declarative-configuration.md
+    - IAM Cookbook: advanced/iam-cookbook.md
+  - Architecture:
+    - Authentication: architecture/authentication.md
+    - Events: architecture/events.md
+    - Security: architecture/security.md
+    - Caching: architecture/caching.md
+  - FAQ: faq/index.md
