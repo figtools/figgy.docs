@@ -1,7 +1,7 @@
 
 # Events
 
-As discussed in [Figgy Basics](/getting-started/basics.html), many of Figgy's features are driven by Events. The
+As discussed in [Figgy Basics](/docs/getting-started/basics.html), many of Figgy's features are driven by Events. The
 types of events that Figgy respects are: 
 
 ### The following event types are tracked:

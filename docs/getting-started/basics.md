@@ -40,7 +40,7 @@ By declaratively defining (or generating) required configurations for a particul
 you can feel confident you didn't forget that last pesky configuration you service needs to run.
 
 Figgy accomplishes this through a `figgy.json` file that defines the required configurations for a codebase. Before developers
-check-in their code, or before a PR is merged, users (or automation) can run the [sync](/commands/config/sync/) command
+check-in their code, or before a PR is merged, users (or automation) can run the [sync](/docs/commands/config/sync/) command
 to validate the defined configurations all exist in the targeted environment. Figgy will give you confidence
 that you aren't rolling out a new release and missing a required configuration.
 <br/>
@@ -48,7 +48,7 @@ that you aren't rolling out a new release and missing a required configuration.
 
 ## Twigs - An application's sole configuration provider
 While Figgy doesn't enforce this policy, we **strongly recommend** you store all configurations for each service under
-a **twig** (See: [Figgy Concepts](/getting-started/concepts/)). For instance, for service 
+a **twig** (See: [Figgy Concepts](/docs/getting-started/concepts/)). For instance, for service 
 `message-fetcher` all configurations would exist under the following namespace: `/app/message-fetcher`. 
 The `/app` namespace is optional, you can call it `/svc`, or whatever you want.
 
@@ -125,7 +125,7 @@ Declarative configuration provides a definitive answer on whether or not a *fig*
 By following Figgy best practices and defining your service configurations under **twigs**,  you will gain the benefit 
 of being notified when you have a *fig* out there that is no longer used by your service.
 
-The [sync](/commands/config/sync/) and [cleanup](/commands/config/cleanup/) commands will detect and
+The [sync](/docs/commands/config/sync/) and [cleanup](/docs/commands/config/cleanup/) commands will detect and
 prompt you to clean-up unused configurations to prevent unused config sprawl. 
 
 
@@ -134,15 +134,15 @@ That's it, you now know the basic features of Figgy.
 
 **DevOps / Software Architects:**
 
-1. [Installation](/getting-started/install/)
-1. [Deploying Figgy](/getting-started/deployment/select-type/)
-1. [Advanced Figgy](/advanced/confidentiality/)
-1. [Architecture](/architecture/ecosystem/)
+1. [Installation](/docs/getting-started/install/)
+1. [Deploying Figgy](/docs/getting-started/deployment/select-type/)
+1. [Advanced Figgy](/docs/advanced/confidentiality/)
+1. [Architecture](/docs/architecture/ecosystem/)
 
 <br/>
 **Figgy Users:**
 
-1. [Figgy Playground](/getting-started/sandbox/)
-1. [Installation](/getting-started/install/)
-1. [Commands](/commands/config/index/)
-1. [User Guides](/user-guides/index/)
+1. [Figgy Playground](/docs/getting-started/sandbox/)
+1. [Installation](/docs/getting-started/install/)
+1. [Commands](/docs/commands/config/index/)
+1. [User Guides](/docs/user-guides/index/)

@@ -4,7 +4,7 @@ The AWS Bastion account configuration is the simplest configuration for deployin
 a Bastion configuration will provision the following resources across your AWS Accounts.
 
 Resources Provisioned:
-- [Standard Figgy Stack](/getting-started/figgy-footprint/)
+- [Standard Figgy Stack](/docs/getting-started/figgy-footprint/)
 
 Plus some extra resources in your selected Bastion account:
 - IAM Users (this is what your Figgy users will authenticate with)

@@ -3,7 +3,7 @@
 
 ## Figgy Standard
 
-If you've already read through [Selecting a Deployment Type](/getting-started/deployment/select-type/) and you understand what you're giving up 
+If you've already read through [Selecting a Deployment Type](/docs/getting-started/deployment/select-type/) and you understand what you're giving up 
 when using Figgy standard, continue reading here. No judgement here, let's get you set-up. 
 
 The Figgy AWS Standard deployment by far the simplest deployment configuration. Figgy offloads all user-management to you.
@@ -138,7 +138,7 @@ this step as may time and across as many accounts as you like.
 
 ## Test Figgy
 
-[Install Figgy](/getting-started/install/)
+[Install Figgy](/docs/getting-started/install/)
 
 For each account, test your access by running:
 

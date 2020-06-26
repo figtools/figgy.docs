@@ -17,7 +17,7 @@ throughout the day.
 
     $   figgy login sandbox
     
-Logs the user into the he [Figgy Sandbox](/getting-started/sandbox/). This command will overwrite any existing
+Logs the user into the he [Figgy Sandbox](/docs/getting-started/sandbox/). This command will overwrite any existing
 local figgy configuration - meaning, after running this command you'll have to rerun `figgy --configure` to 
 reconnect to your own environment.
 

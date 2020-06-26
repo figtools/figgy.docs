@@ -16,7 +16,7 @@ around each user story, so there's a little bit for everyone to appreciate.
 - Make users happy :smile:
 
 Depending on who you are, your Figgy Docs experience may differ. If your organization already uses's Figgy and you're looking
-to install the CLI and get started, then I recommend you skip over to [Install](/getting-started/install/)
-then browse one of the [User Guides](/user-guides/dev/)
+to install the CLI and get started, then I recommend you skip over to [Install](/docs/getting-started/install/)
+then browse one of the [User Guides](/docs/user-guides/dev/)
 
-Want to know what Figgy does? Read below, then head over to [Getting Started](/getting-started/install/)
+Want to know what Figgy does? Read below, then head over to [Getting Started](/docs/getting-started/install/)

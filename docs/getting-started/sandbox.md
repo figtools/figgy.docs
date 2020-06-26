@@ -4,7 +4,7 @@
 There's a free <a href="https://www.figgy.dev/tabs/sandbox/" target="_blank">Figgy Sandbox</a> you can use to 
 experiment with Figgy. Go ahead, open up that Sandbox link, lets' have some fun!
 
-Don't forget: [Install Figgy First](/getting-started/install/)
+Don't forget: [Install Figgy First](/docs/getting-started/install/)
 
 ## Login to the Sandbox
     $   figgy login sandbox
@@ -51,4 +51,4 @@ Browse the Fig orchard to see what's out there.
 
 <br/><img src="/docs/images/gifs/browse.gif" alt="Login Sandbox" class="gif"><br/>
 
-And so much more. See our [Commands](/commands/) section to see all figgy can offer!
+And so much more. See our [Commands](/docs/commands/) section to see all figgy can offer!

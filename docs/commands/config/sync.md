@@ -3,7 +3,7 @@
 
 Synchronizes your defined figgy.json configurations with those in Parameter Store. This ensures the proper 
 configurations exist in the targeted run environment for your application and notifies you of any detected errors. 
-If sync passes, you can expect your build to pass the Parameter Store [validation](/commands/config/validate/) 
+If sync passes, you can expect your build to pass the Parameter Store [validation](/docs/commands/config/validate/) 
 step that should be incorporated into your CICD pipeline.
 
 - Ensures that all `app_figs` are present in Parameter Store and prompts you to add any missing parameters. 

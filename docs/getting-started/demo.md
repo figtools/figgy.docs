@@ -22,6 +22,6 @@ configuration dependencies straight from your source code!
 
 Check out these pages to learn more about Figgy!
 
-1. [Figgy Basics](/getting-started/basics/)
-1. [Figgy Concepts](/getting-started/concepts/)
-1. [User Guides](/user-guides/index/)
+1. [Figgy Basics](/docs/getting-started/basics/)
+1. [Figgy Concepts](/docs/getting-started/concepts/)
+1. [User Guides](/docs/user-guides/index/)

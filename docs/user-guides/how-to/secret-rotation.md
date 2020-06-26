@@ -1,10 +1,10 @@
 ## Rotating Secrets
 
-One advantage of cutting out the middle-man when sharing secrets (See: [Config Replication](/getting-started/basics/#the-solution-config-replication))
+One advantage of cutting out the middle-man when sharing secrets (See: [Config Replication](/docs/getting-started/basics/#the-solution-config-replication))
 is empowering secret-owners to rotate secrets on their own time and without having to involve application owners.
 
 For instance, suppose our DBA, Karen, wants to safely rotate some high power mongo credentials owned by the `message-processor` 
-service account. If following [best practicies](/getting-started/basics/#twigs---an-applications-sole-configuration-provider), 
+service account. If following [best practicies](/docs/getting-started/basics/#twigs---an-applications-sole-configuration-provider), 
 the `message-processor` application will only have access to the `/app/message-processor` namespace. Typically DBAs like Karen 
 would not and should not need direct access to this application namespace as these credentials
 would be shared with the `message-processor` from their secure location in Karen's DBA namespace.
@@ -14,7 +14,7 @@ So for clarity, Karen maintains the credentials here:
         /dba/passpack/services/message-processor/mongo/user
         /dba/passpack/services/message-processor/mongo/password
         
-And through [Config Replication](/getting-started/basics/#the-solution-config-replication), these credentials
+And through [Config Replication](/docs/getting-started/basics/#the-solution-config-replication), these credentials
 have been shared here:
 
         /app/message-processor/replicated/mongo/user

@@ -14,7 +14,7 @@ your Google account.
 **This is an advanced installation and will take a couple hours in total. Grab a snack.**
 
 Resources Provisioned:
-- [Standard Figgy Stack](/getting-started/figgy-footprint/)
+- [Standard Figgy Stack](/docs/getting-started/figgy-footprint/)
 
 
 Authentication Flow:
@@ -231,4 +231,4 @@ Follow the prompts - read carefully. You will be prompted to input your Identity
 Now that you have your Identity Provider Id and Service Provider ID, you can set these in a generic Figgy config file and 
 distribute it to all of your users. This will save them the trouble of having to manage these two ids.
 
-To do this: See [Distributing Figgy](/getting-started/install/#distributing-figgy)
+To do this: See [Distributing Figgy](/docs/getting-started/install/#distributing-figgy)

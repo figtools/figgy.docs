@@ -34,7 +34,7 @@ data-changer. The fewer people who know this secret the better!
 
 We can verify the secret was successfully shared with the `get` command. You will notice that this secret cannot be 
 decrypted by the user. This secret may _only_ be decrypted by the application using this secret, or a super-admin who
-has been granted access to the [Replication Key](/advanced/confidentiality/).
+has been granted access to the [Replication Key](/docs/advanced/confidentiality/).
 
 
 <br/>![DBA Share PW](/docs/images/gifs/dba-get-password.gif)<br/>
