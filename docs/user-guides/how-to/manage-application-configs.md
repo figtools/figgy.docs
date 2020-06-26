@@ -21,7 +21,7 @@ that specific commit to the exact configurations your application needs to run.
 - More to come, please consider contributing!
 
 Language isn't supported yet? No worries! This is a nice-to-have and will save you time but is NOT required to use Figgy. 
-You can also write your own withou too much trouble. See our ![Python](https://github.com/figtools/figgy.python.lib) library
+You can also write your own withou too much trouble. See our [Python](https://github.com/figtools/figgy.python.lib) library
 for reference.
 
 By keeping a versioned `figgy.json` in your repository, you'll get these great features:
