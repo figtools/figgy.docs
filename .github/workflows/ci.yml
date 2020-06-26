@@ -29,31 +29,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Bundle Caching
-        id: bundle-cache
-        uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-
-      - name: Bundle config
-        run: |
-          gem install jekyll
-          gem install bundler -v 2.1.4
-          bundle config path vendor/bundle
-
-      - name: Bundle Install
-        if: steps.bundle-cache.outputs.cache-hit != 'true'
-        run: |
-          bundle install
-
-      - name: Bundle Install locally
-        if: steps.bundle-cache.outputs.cache-hit == 'true'
-        run: |
-          bundle install --local
-
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
