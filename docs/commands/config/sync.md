@@ -11,7 +11,11 @@ step that should be incorporated into your CICD pipeline.
 any changes from your defined sources to your defined destinations.
 - Validates defined shared figs are present in Parameter Store.
 
-For details on how to configure your figgy.json, see: [figgy.json Reference]
+If you do not provide the `--config` option to specify the location of your `figgy.json`, figgy will search in 
+[these locations](https://github.com/figtools/figgy-cli/blob/a39095d86c873a7f27fded1755028e2fd21dfa3d/src/figcli/config/constants.py#L154)
+for a `figgy.json` file automatically. 
+
+For details on how to configure your figgy.json, see: [Declarative Configuration](/docs/advanced/declarative-configuration/)
 
 Sync success.
 <br/>![SyncSuccess](/docs/images/gifs/sync-success.gif)<br/>

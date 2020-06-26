@@ -22,17 +22,21 @@ code in our public repository to see what to expect. You can find it here:
 * Figgy-specific ParameterStore parameters stored under the `/figgy` namespace.
 
 **Other resources based on your configuration options:**
+
 - AWS IAM Roles
 - AWS IAM Policies
 - AWS KMS Keys
 
 **For Google & OKTA SSO Configurations:**
+
 - 1 trusted Identity Provider - you will need to provide the IDP metadata
 
 **For OKTA Integrations:**
+
 - 1 (Optional) AWS IAM User
 
-Optional, you can provide or the Figgy infra-as-code can do it:
+Optionally, you can provide or the Figgy infra-as-code can do it:
+
 - 1 AWS S3 Bucket for Figgy Lambdas to be deployed to
 - AWS Cloudtrail must be enabled - Cloudtrail events are the backbone of Figgy's event pipeline
 

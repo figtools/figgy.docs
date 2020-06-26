@@ -18,13 +18,13 @@ Let's get started.
 
 ## Configure Figgy
 
-First, clone [Figgy](https://github.com/figtools/figgy) locally.
+- Make a private fork of <a href="https://github.com/figtools/figgy/tree/master" target="_blank">Figgy</a> and clone it locally. 
 
 ```console
-    $   git clone https://github.com/figtools/figgy.git
+    $   git clone https://github.com/your-org/figgy.git
 ```
 
-Next change directory into `figgy/terraform/figgy`
+Next change directory into `figgy/terraform/`
 
 **To prepare Figgy for deployment you're going to need to tweak these files:**
 
@@ -120,7 +120,7 @@ You get the drift!
     $   brew install awscli
 
 In each account you should see new groups that have been created, each named `figgy-{ROLE_TYPE}` where ROLE_TYPE is the 
-name of the role you selected when you filled out [01_configure_figgy](#configure-figgy-install)
+name of the role you selected when you filled out [01_configure_figgy](#configure-figgy)
 
 Add your user to one or more of these groups. Keep in mind, if your user is in multiple groups it will be granted access to the 
 sum of all access across both groups. There is no concept of "impersonating" different roles with the Standard installation.

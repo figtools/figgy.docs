@@ -79,7 +79,7 @@ Configuring the Figgy CLI is as simple as running.
     
     
 You will be guided through configuration. Before running `--configure` you'll need to know what type of authentication 
-you'll be using: Bastion, Google SSO, or OKTA SSO. See [Figgy Deployment](/deployment/index/)
+you'll be using: Bastion, Google SSO, or OKTA SSO. See [Figgy Deployment](/docs/getting-started/deployment/select-type/)
 
 <br/>
 
