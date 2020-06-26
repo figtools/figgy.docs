@@ -6,8 +6,8 @@ theme:
   custom_dir: mkdocs-material/material
   language: en
   palette:
-    primary: indigo
-    accent: indigo
+    primary: green
+    accent: brown
   font:
     text: Roboto
     code: Roboto Mono
