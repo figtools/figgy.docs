@@ -14,11 +14,11 @@ any changes from your defined sources to your defined destinations.
 For details on how to configure your figgy.json, see: [figgy.json Reference]
 
 Sync success.
-<br/>![SyncSuccess](/images/gifs/sync-success.gif)<br/>
+<br/>![SyncSuccess](/docs/images/gifs/sync-success.gif)<br/>
 
 Sync detecting missing parameters.
-<br/>![SyncUpdate](/images/gifs/sync-update.gif)<br/>
+<br/>![SyncUpdate](/docs/images/gifs/sync-update.gif)<br/>
 
 
 Sync notifying of unused parameters.
-<br/>![SyncOrphan](/images/gifs/sync-orphan.gif)<br/>
+<br/>![SyncOrphan](/docs/images/gifs/sync-orphan.gif)<br/>

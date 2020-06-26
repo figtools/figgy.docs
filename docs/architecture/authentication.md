@@ -34,7 +34,7 @@ STS credentials as needed.
 For Google and OKTA SSO configurations, the user's password will be saved in their local OS keychain under 
 the `figgy` namespace. 
 
-![Auth Keychain](/images/architecture/auth-keychain.png)
+![Auth Keychain](/docs/images/architecture/auth-keychain.png)
 
 The Figgy CLI will attempt to retrieve these credentials on the user's behalf when existing cached SSO sessions have expired.
 The frequency of this is dependant on SSO provider configurations. Organizations configured to use the [Bastion](/deployment/bastion/)

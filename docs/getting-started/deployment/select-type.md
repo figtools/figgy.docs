@@ -11,7 +11,7 @@ A Figgy Bastion configuration turns one of your AWS accounts into your Figgy 'SS
 and can be installed in under an hour. Users who authenticate with Figgy will authenticate with this account and will have 
 no access, except permissions to assume roles in _other_ Figgy-enabled accounts through temporary AWS STS sessions.
 
-<br/>![Bastion Auth](/images/deployment/bastion-auth.png)<br/>
+<br/>![Bastion Auth](/docs/images/deployment/bastion-auth.png)<br/>
 
 There is no limit to the number of accounts you can integrate with your Bastion account. Users will be provided
 a single long-lived AWS Keypair to authenticate with the bastion account. From there, MFA can be enabled and user
@@ -28,7 +28,7 @@ Figgy can integrate directly with Google Admin Console to provide Federated acce
 SAML based authentication with Google as your identity provider (IDP). If you don't want to manage any AWS user accounts
 and you already leverage Google Apps this can be an elegant solution to managaing AWS access for your organization. 
 
-<br/>![Google Auth](/images/deployment/google-sso.png)<br/>
+<br/>![Google Auth](/docs/images/deployment/google-sso.png)<br/>
 
 To read about this solution check out the docs! [Sign me up!](/deployment/google/)
 
@@ -41,7 +41,7 @@ OKTA is a true SSO solution and the ideal Identity Provider to integrate with Fi
 for AWS through an internal OKTA application that is well documented and easy to configure. If you're using OKTA we 
 highly recommend you select this integration.
 
-<br/>![Okta Auth](/images/deployment/okta-sso.png)<br/>
+<br/>![Okta Auth](/docs/images/deployment/okta-sso.png)<br/>
 
 To read about this solution check out the below docs!
 [Sign me up!](/deployment/okta/)
@@ -55,7 +55,7 @@ That being said; we recognize the cloud is complicated and often teams are faced
 constraints that may affect the opportunity to integrate through one of the above SSO solutions. If this applies to you, 
 or if you want to do some light experimentation with Figgy in a _single_ account the below integration option will work for you.
 
-<br/>![Standard Auth](/images/deployment/standard-auth.png)<br/>
+<br/>![Standard Auth](/docs/images/deployment/standard-auth.png)<br/>
 
 
 This type of authentication might be ideal for small organizations that have a single AWS account and maintain all of 

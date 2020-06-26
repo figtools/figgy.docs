@@ -62,7 +62,7 @@ will re-trigger replication to all downstream `destinations`.
 
 1. Parameter Store Auditor - Listens to PS Change events and logs changes to our `figgy-config-auditor` DynamoDB table.
 
-<br/>![PutOrSync](/images/architecture/events-put-sync.png)<br/>
+<br/>![PutOrSync](/docs/images/architecture/events-put-sync.png)<br/>
 
 <br/>
 
@@ -76,4 +76,4 @@ Replication can be triggered one of three ways:
 
 #### The Replication Syncer Lambda will do nothing in the vast majority of cases. It is mainly there as a stop-gap in case a bug is introduced or a user accidentally breaks the the former 2 lambdas.
 
-<br/>![Replication Flow](/images/architecture/events-replication.png)<br/>
+<br/>![Replication Flow](/docs/images/architecture/events-replication.png)<br/>

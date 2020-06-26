@@ -153,4 +153,4 @@ of authentication and replaces the `--env` parameter.
 
 Below is an example of what you should see:
 
-<br/>![Edit](/images/gifs/get-with-profile.gif)<br/>
+<br/>![Edit](/docs/images/gifs/get-with-profile.gif)<br/>

@@ -5,7 +5,7 @@
 Figgy implements multiple levels of cache to maximize performance. 
 
 
-<br/>![Caching](/images/architecture/caching.png)<br/>
+<br/>![Caching](/docs/images/architecture/caching.png)<br/>
 
 ### Remote cache:
 

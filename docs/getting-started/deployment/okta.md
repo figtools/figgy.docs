@@ -145,7 +145,7 @@ You'll want to run `terraform apply` for each environment. Each environment is a
 You get the drift!
 
 For each deployed account, you will see a new "Identity Provider" show up with the name of 'okta':
-![Okta IDP](/images/deployment/okta/aws-idp-okta.png)
+![Okta IDP](/docs/images/deployment/okta/aws-idp-okta.png)
 
 This establishes a trust with OKTA based on that metadata file you downloaded.
 
@@ -230,7 +230,7 @@ aws_3333333333_figgy-dev-dev
 
 1. Go back and open `AWS Account Federation` application you created under OKTA -> Applications.
 1. Under the `Assignments` tab select Assign -> Assign To Groups
-![Assign Button](/images/deployment/okta/app-assign.png)
+![Assign Button](/docs/images/deployment/okta/app-assign.png)
 
 1. Scroll down and assign ALL the groups you just created.
 <img src="/images/deployment/okta/assign-groups.png" style="max-width: 700px" alt="Assign Groups">

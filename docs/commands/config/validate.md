@@ -10,9 +10,9 @@ This command is extra-useful when accompanied by the [--profile](/commands/flags
 
 
 #### Successful Validation
-<br/>![Validate](/images/gifs/validate-success.gif)<br/>
+<br/>![Validate](/docs/images/gifs/validate-success.gif)<br/>
 
 
 
 #### Validation Failure
-<br/>![Validate](/images/gifs/validate-fail.gif)<br/>
+<br/>![Validate](/docs/images/gifs/validate-fail.gif)<br/>

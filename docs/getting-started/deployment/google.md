@@ -19,7 +19,7 @@ Resources Provisioned:
 
 Authentication Flow:
 
-<br/>![Google Auth](/images/deployment/google-sso.png)<br/>
+<br/>![Google Auth](/docs/images/deployment/google-sso.png)<br/>
 
 
 **If you have already configured Federated Access to AWS through Google you can SKIP step #2**
@@ -38,7 +38,7 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 1. Log-in to [Google Admin Console](https://admin.google.com)
 1. Hamburger Menu (Top Left) -> Directory -> Users
 1. Click More(v) -> Manage Custom Attributes
-![Custom Attributes](/images/deployment/google/custom-attribute-button.png)
+![Custom Attributes](/docs/images/deployment/google/custom-attribute-button.png)
 
 1. Add the following attributes:
 
@@ -47,7 +47,7 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 |IAM ROLE	| Text  	| Visible to user and admin | Multi-value |
 |Session Duration  	| Whole Number  	| Visible to user and admin |   Single Value |
 
-![Custom Attributes](/images/deployment/google/custom-attributes.png)
+![Custom Attributes](/docs/images/deployment/google/custom-attributes.png)
 1. Click Save.
 
 ### Configure AWS SAML Application
@@ -76,7 +76,7 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 
 Open your new application, click Attribute Mapping, you should see something like this:
         
-![Attribute Mapping](/images/deployment/google/attribute-mapping.png)
+![Attribute Mapping](/docs/images/deployment/google/attribute-mapping.png)
 
 
 ==With your new SAML Application open, look in your URL bar:== 
@@ -178,7 +178,7 @@ You'll want to run `terraform apply` for each environment. Each environment is a
 You get the drift!
 
 For each deployed account, you will see a new "Identity Provider" show up with the name of 'google':
-![Google IDP](/images/deployment/google/aws-idp-google.png)
+![Google IDP](/docs/images/deployment/google/aws-idp-google.png)
 
 This establishes a trust with Google based on that metadata file you downloaded.
 

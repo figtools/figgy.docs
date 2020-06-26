@@ -6,7 +6,7 @@ all integrated AWS accounts.  Below is a diagram of the entire Figgy Ecosystem. 
 and AWS as Identity Providers in this diagram; however, depending on your configuration, 
 two of those will not exist for your deployment.
 
-<br/>![Figgy Ecosystem](/images/deployment/figgy-ecosystem.png)<br/>
+<br/>![Figgy Ecosystem](/docs/images/deployment/figgy-ecosystem.png)<br/>
 
 Your _ecosystem_ depends on how you configure Figgy. Every Figgy deployment will require the following
 resources to be provisioned in each integrated AWS account. As always, you can and **should** look over the Terraform

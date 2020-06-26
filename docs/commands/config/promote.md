@@ -9,6 +9,6 @@ each value so can eaisly omit promotion of any values you wish to avoid.
 
 You can only promote values you have access to both retrieve and decrypt.
 
-<br/>![Promote](/images/gifs/promote.gif)<br/>
+<br/>![Promote](/docs/images/gifs/promote.gif)<br/>
 
 

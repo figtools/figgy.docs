@@ -10,7 +10,7 @@ Plus some extra resources in your selected Bastion account:
 - IAM Users (this is what your Figgy users will authenticate with)
 - IAM Roles
 
-<br/>![Bastion Auth](/images/deployment/bastion-auth.png)<br/>
+<br/>![Bastion Auth](/docs/images/deployment/bastion-auth.png)<br/>
 
 
 Users will authenticate with your bastion account through some low-power IAM Credentials stored in their `~/.aws/credentials` file.

@@ -47,12 +47,12 @@ With these two files in place, run validate against the appropriate environment.
 You will get output something like this:
 
 ### Successful Validation
-<br/>![Validate](/images/gifs/validate-success.gif)<br/>
+<br/>![Validate](/docs/images/gifs/validate-success.gif)<br/>
 
 
 
 ### Validation Failure
-<br/>![Validate](/images/gifs/validate-fail.gif)<br/>
+<br/>![Validate](/docs/images/gifs/validate-fail.gif)<br/>
 
 
 [Example Validation with Github Action](https://github.com/figtools/figgy.python-reference/blob/master/.github/workflows/validate-cicd.yml)

@@ -14,7 +14,7 @@ First, Steve will will need to securely store and encrypt his secret with Figgy.
     $   figgy config put --env prod
 ```
 
-<br/>![DBA Store PW](/images/gifs/dba-put-password.gif)<br/>
+<br/>![DBA Store PW](/docs/images/gifs/dba-put-password.gif)<br/>
 
 Sweet! Steve has now successfully stored a secret in ParameterStore!
 
@@ -29,7 +29,7 @@ data-changer. The fewer people who know this secret the better!
     $   figgy config share --env prod
 ```
 
-<br/>![DBA Share PW](/images/gifs/dba-share-password.gif)<br/>
+<br/>![DBA Share PW](/docs/images/gifs/dba-share-password.gif)<br/>
 
 
 We can verify the secret was successfully shared with the `get` command. You will notice that this secret cannot be 
@@ -37,7 +37,7 @@ decrypted by the user. This secret may _only_ be decrypted by the application us
 has been granted access to the [Replication Key](/advanced/confidentiality/).
 
 
-<br/>![DBA Share PW](/images/gifs/dba-get-password.gif)<br/>
+<br/>![DBA Share PW](/docs/images/gifs/dba-get-password.gif)<br/>
 
 ## Managing secrets at scale
 
@@ -75,4 +75,4 @@ in the **stage** environment.
     
 And so on for every higher environment. This expands on the declarative design of managing configurations.
 
-<br/>![DBA Sync](/images/gifs/dba-sync-repl-only.gif)<br/>
+<br/>![DBA Sync](/docs/images/gifs/dba-sync-repl-only.gif)<br/>
