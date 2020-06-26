@@ -31,7 +31,9 @@ at deployment time. This declarative definition can be dynamically generated thr
 In other words, let your code tell your CICD process what configurations it needs. 
 
 
-!!! hint "Figgy can break the build if you're missing a required configuration. Don't deploy a service destined to fail initialization."
+!!! hint 
+
+    Figgy can break the build if you're missing a required configuration. Don't deploy a service destined to fail initialization.
 
 
 By declaratively defining (or generating) required configurations for a particular code base and commit,
@@ -50,7 +52,8 @@ a **twig** (See: [Figgy Concepts](/getting-started/concepts/)). For instance, fo
 `message-fetcher` all configurations would exist under the following namespace: `/app/message-fetcher`. 
 The `/app` namespace is optional, you can call it `/svc`, or whatever you want.
 
-#### Here are some example configurations under the `twig`: `/app/message-fetcher`
+Here are some example configurations under the `twig`: `/app/message-fetcher`
+
     /app/message-fetcher ⬇(FIGS)⬇
                         /log-level  
         ⬆(TWIG)⬆       /batch-size
@@ -87,15 +90,25 @@ In Figgy we want configurations to have a single source of truth but avoid unnec
 The problem with having all configurations stored under twigs is that it assumes there aren't 
 "global" or "shared" configurations.
 
+??? note "Confused?"
+    
+    If each service only has access to its twig, for example: `/app/foo/*`  for the `foo` service 
+    and `/app/bar/*` for the `bar` service. What do we do about shared configurations? What if both foo and bar 
+    need a value named `db-hostname`. Where would that live?
+    
+    We certainly don’t want to duplicate `db-hostname` it in both twigs - that would be hard to maintain. 
+    Instead we store the **source of truth** of these shared configurations in a global, shared space, and sync them 
+    into the the twig namespaces.
+
 ### The solution: Config Replication
 
 The `/shared` **fig tree** is a special configuration tree where you can store configurations that are shared
 among numerous services. This is great for DNS names, database names, and anything else that is used in more than 
 one place.
 
-#### As with all Figgy concepts, the /shared tree is a recommendation. It is not enforced by Figgy.
+!!! hint "As with all Figgy concepts, the `/shared` tree convention is a recommendation. It is not enforced by Figgy."
 
-*Config replication* is how Figgy accomplishes sharing configurations from a `source` to 1 or more `destinations`.
+*Config replication* is how Figgy accomplishes sharing configurations from a *source* to one or more *destinations*.
 Figgy will keep the destination in sync with the source. Whenever the source is updated, events will trigger to 
 automatically update all destinations within about 1 second.
 
@@ -118,14 +131,17 @@ prompt you to clean-up unused configurations to prevent unused config sprawl.
 
 That's it, you now know the basic features of Figgy.
 
-#### Learn more:
-DevOps / Software Architects:
-1. [Advanced Figgy](/advanced/)
+
+**DevOps / Software Architects:**
+
 1. [Installation](/getting-started/install/)
-1. [Architecture](/architecture/)
+1. [Deploying Figgy](/getting-started/deployment/select-type/)
+1. [Advanced Figgy](/advanced/confidentiality/)
+1. [Architecture](/architecture/ecosystem/)
 
 <br/>
-Figgy Users:
+**Figgy Users:**
+
 1. [Figgy Playground](/getting-started/sandbox/)
 1. [Installation](/getting-started/install/)
 1. [Commands](/commands/config/index/)

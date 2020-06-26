@@ -1,5 +1,5 @@
 
-## **Figgy Concepts**:
+## Figgy Concepts:
 
 Application config management is best managed through hierarchies of key-value pairs stored in a configuration tree. 
 [AWS ParameterStore](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store/)
@@ -12,7 +12,9 @@ hierarchies.
 
 
 ## Fig Orchard 
-#### All con**fig**urations under all figgy-managed namespaces. 
+
+All configurations under all figgy-managed namespaces. 
+
         - /app/*
         - /shared/*
         - /dba/*
@@ -21,19 +23,25 @@ hierarchies.
             
 
 ## Fig Tree
-#### A hierarchy of configs under a high-level figgy-managed namespace.
+
+A hierarchy of configs under a high-level figgy-managed namespace.
+
         - /app/*    
     
 
 ## Twig
-#### A hierarchy of configs under a **Fig Tree** that is owned by a single service
+
+A hierarchy of configs under a **Fig Tree** that is owned by a single service
+
         - /app/hello-world/*
     
 !!! hint "Recommendation: Write your service IAM policies to ONLY access the *twig* namespace"
     
 
 ## Fig
-#### A single con**fig**uration stored `/under/a/named/path` and on a **Twig**
+
+A single con**fig**uration stored `/under/a/named/path` and on a **Twig**
+
         - /app/hello-world/log-level
   
 These namespaces are all examples. You can name your Figs / Twigs / Trees, and Orchards however you like!

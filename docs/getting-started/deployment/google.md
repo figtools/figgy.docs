@@ -52,7 +52,7 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 
 ### Configure AWS SAML Application
 1. Open Hamburger Menu (Top Left) -> Apps -> SAML apps
-<img src="/images/deployment/google/saml-button.png" style="max-width: 400px;"/>
+<img src="/docs/images/deployment/google/saml-button.png" style="max-width: 400px;"/>
 1. Click (+) in bottom right corner of screen.
 1. Search: `Amazon Web Services` & select the only option.
 1. Under SSO URL -> Copy the IDP ID from the URL:

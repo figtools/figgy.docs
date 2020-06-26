@@ -66,8 +66,9 @@ You will want to update your PATH in ~/.bashrc or ~/.zshrc as well. Done!
 ```
 
 You'll want to add the installation directory to your path [permanently](https://codingbee.net/powershell/powershell-make-a-permanent-change-to-the-path-environment-variable): 
-> Be sure to use standard x86 Powershell or the Windows Command Prompt. The Powershell Integrated Scripting Environment 
-> experiences issue with receiving Figgy user input. 
+
+!!! note ""
+    Be sure to use standard x86 Powershell or the Windows Command Prompt. The Powershell Integrated Scripting Environment experiences issue with receiving Figgy user input. 
 
 <br/>
 

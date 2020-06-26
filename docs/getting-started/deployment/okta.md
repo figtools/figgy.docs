@@ -33,7 +33,7 @@ been integrated with AWS. If you have already integrated OKTA with AWS, you can 
     - Download your IDP metadata.xml file. Right click the `Identity Provider metadata` link and download the contents.
     - **Store this in the `REPO_ROOT/terraform/figgy/saml/` directory and named as `metadata.xml`**
     
-    <img src="/images/deployment/okta/metadata.png" style="max-width: 800px" alt="Metadata">
+    <img src="/docs/images/deployment/okta/metadata.png" style="max-width: 800px" alt="Metadata">
     
     - Under Session Duration, input a max duration up to `43200` (recommended)
     - Check `Use Group Mapping` box. This will reveal some new options.
@@ -45,7 +45,7 @@ been integrated with AWS. If you have already integrated OKTA with AWS, you can 
 
 Open your `AWS Account Federation` application. Under the General Tab, find the `App Embed Link`. Copy it and set it aside, you will need it later.
 
-<img src="/images/deployment/okta/embed-url.png" style="max-width: 800px" alt="Embed Url">
+<img src="/docs/images/deployment/okta/embed-url.png" style="max-width: 800px" alt="Embed Url">
 
 <br/>
 
@@ -167,7 +167,7 @@ AWS Account Federation app.
     - Click Test integration.
     - Under the `Provisioning` tab, under `To App`, enable "Create Users" & "Update User Attributes"
     
-    <img src="/images/deployment/okta/okta-api-integration.png" style="max-width: 700px" alt="API Integration">
+    <img src="/docs/images/deployment/okta/okta-api-integration.png" style="max-width: 700px" alt="API Integration">
     
 
 ## Step 6: Configure Groups
@@ -233,7 +233,7 @@ aws_3333333333_figgy-dev-dev
 ![Assign Button](/docs/images/deployment/okta/app-assign.png)
 
 1. Scroll down and assign ALL the groups you just created.
-<img src="/images/deployment/okta/assign-groups.png" style="max-width: 700px" alt="Assign Groups">
+<img src="/docs/images/deployment/okta/assign-groups.png" style="max-width: 700px" alt="Assign Groups">
 
 <br/>
 
@@ -243,10 +243,10 @@ First, lets make sure you are able to assume into AWS through a web browser. Log
 gave access through groups a few minutes ago.
 
 Under OKTA apps you should see `AWS Account Federation`:
-<img src="/images/deployment/okta/account-federation.png" style="max-width: 500px" alt="Account Federation">
+<img src="/docs/images/deployment/okta/account-federation.png" style="max-width: 500px" alt="Account Federation">
 
 When you select that app, you should see a list of accounts you can sign-in to. 
-<img src="/images/deployment/okta/okta-roles.png" style="max-width: 500px" alt="Account List">
+<img src="/docs/images/deployment/okta/okta-roles.png" style="max-width: 500px" alt="Account List">
 
 Attempt to sign into the AWS console through one of these roles. If you are successful and do not receive a SAML
 exception back then you have successfully configured your Federated access!

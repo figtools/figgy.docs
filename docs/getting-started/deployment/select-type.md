@@ -1,4 +1,13 @@
-# Deploying Figgy
+# Figgy Cloud
+
+Figgy Cloud is a serverless suite of services that "keep the trains running on time" in your AWS accounts. These services 
+maintain the integrity of your configuration tree, support the FiggyCLI, and provide facilities for
+configuration backup and restoration. Deploying Figgy starts with deploying Figgy Cloud, and to do so, you will need to
+decide what type of Figgy Cloud deployment makes the most sense for your organization. Below you'll find explanations of 
+the different deployment options. 
+
+
+## Deploying Figgy
 
 Before you deploy Figgy into your environment you must decide which authentication method works best for your
 organization. Once you have selected, continue to the associated setup guide based on your selection.

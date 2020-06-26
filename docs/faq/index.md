@@ -10,7 +10,7 @@ Yes! AWS AppConfig is a new AWS tool that sits on top of AWS ParameterStore and 
 rollbacks, and different deployment strategies. AppConfig is totally compatible with Figgy since it uses ParameterStore as its
 configuration backend.
 
-Figgy & AppConfig perform different duties. Figgy is designed to help you maintain your application config tree and 
+Figgy and AWS AppConfig perform different duties. Figgy is designed to help you maintain your application config tree and 
 avoid common mistakes in config management pre-deployment. AppConfig kicks-in after or during your deployment.
 
 ---
@@ -41,6 +41,7 @@ The following data is collected:
 - Current installed Figgy version
 - Command types run: [get, put, delete, sync, etc], and the # of times each command has been run.
 - A random GUUID associated with your user. No personal data is collected.
+- Platform used [Windows / Linux / MacOs]
 
 The data is cached in a file at this location: `~/.figgy/cache/other/usage-metrics-cache.json`. Feel free to take a look.
 The data is reported to `https://api.figgy.dev/v1/log-metrics` once per day.

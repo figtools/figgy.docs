@@ -1,5 +1,9 @@
 site_name: Figgy Docs
-site_description: Figgy Documentation
+site_description: >-
+  Figgy is configuration management framework designed to bring developers, DevOps engineers, and secret owners together
+  around an ecosystem designed for simple and secure configuration and secret management. Figgy has features designed
+  around each user story, so there's a little bit for everyone to appreciate.
+
 repo_url: https://github.com/figtools/figgy.docs
 theme:
   name: material
@@ -13,8 +17,9 @@ theme:
     code: Roboto Mono
   icon:
     logo: logo
-  feature:
-    tabs: true
+  features:
+    - tabs
+  include_sidebar: yes
   include_search_page: false
   search_index_only: true
 #extra_css:
@@ -23,15 +28,11 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/squidfunk/mkdocs-material
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+      link: https://github.com/figtools
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
+      link: https://twitter.com/JordanMance1
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/squidfunk/
+      link: https://www.linkedin.com/in/jordan-mance-78b87133/
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/squidfunk
 markdown_extensions:
@@ -61,17 +62,20 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tabbed
   - pymdownx.tilde
+  - meta
 
 
 nav:
   - Overview: 'index.md'
+  - Features: 'features.md'
   - Getting Started:
     - Installing FiggyCLI: getting-started/install.md
+    - Demo: getting-started/demo.md
     - Sandbox: getting-started/sandbox.md
     - Concepts: getting-started/concepts.md
     - Basics: getting-started/basics.md
-  - Deploying Figgy Cloud:
-      - Select Deployment Type: getting-started/deployment/select-type.md
+  - Figgy Cloud:
+      - Figgy Cloud: getting-started/deployment/select-type.md
       - Bastion: getting-started/deployment/bastion.md
       - Google: getting-started/deployment/google.md
       - Okta: getting-started/deployment/okta.md
@@ -109,13 +113,13 @@ nav:
       - Configure CICD Validation: user-guides/how-to/cicd-validation.md
       - Manage & Share Secrets: user-guides/how-to/share-secrets.md
       - Rotate Secrets: user-guides/how-to/secret-rotation.md
+    - Advanced Figgy:
+      - Config Confidentiality: advanced/confidentiality.md
+      - Declarative Configuration: advanced/declarative-configuration.md
+      - IAM Cookbook: advanced/iam-cookbook.md
     - Developer Guide: user-guides/dev.md
     - DevOps Guide: user-guides/devops.md
     - Secret Owner Guide: user-guides/secret.md
-  - Advanced Usage:
-    - Config Confidentiality: advanced/confidentiality.md
-    - Declarative Configuration: advanced/declarative-configuration.md
-    - IAM Cookbook: advanced/iam-cookbook.md
   - Architecture:
     - Figgy Ecosystem: architecture/ecosystem.md
     - Authentication: architecture/authentication.md

@@ -161,7 +161,7 @@ The resulting value at `/app/message-processor/replicated/sql/conn_string` will 
 Figgy will maintain this merged configuration for you and will ensure your merged configuration is synchronized with
 all of the configurations that it depends on.
 
-<img src="/images/advanced/merge-template.png" style="max-width:800px; display: block;" alt="Merge Template">
+<img src="/docs/images/advanced/merge-template.png" style="max-width:800px; display: block;" alt="Merge Template">
 
 <br/><br/>
 ## replicate_from

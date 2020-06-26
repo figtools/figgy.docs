@@ -66,14 +66,14 @@ and password Jim needs. First Mariah stores the values in the `/devops` namespac
 <br/>
 
 ## **Store the value**
-<br/><img src="/images/gifs/basics-put.gif" alt="Basic Put" class="gif"><br/>
+<br/><img src="/docs/images/gifs/basics-put.gif" alt="Basic Put" class="gif"><br/>
 <br/>
 
 Next Mariah will share the value directly to Jim's `message-fetcher` service. Jim will not have access to this
 secret in higher environments, but the `message-fetcher` will. 
 
 ## **Share the value**
-<br/><img src="/images/gifs/basics-share.gif" alt="Basic Share" class="gif"><br/>
+<br/><img src="/docs/images/gifs/basics-share.gif" alt="Basic Share" class="gif"><br/>
 
 **The secret will now be shared**
 
