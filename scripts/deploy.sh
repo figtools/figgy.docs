@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-aws s3 sync _site/ s3://figgy-website/docs/ --delete
+aws s3 sync site/ s3://figgy-website/docs/ --delete

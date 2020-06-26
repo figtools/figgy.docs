@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-bundle exec jekyll serve
+mkdocs serve -v

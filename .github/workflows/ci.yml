@@ -63,7 +63,7 @@ jobs:
         run: |
           pip install mkdocs
           mkdocs build
-          
+
       - name: Deploy
         env:
           AWS_REGION: us-east-1
