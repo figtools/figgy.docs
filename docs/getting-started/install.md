@@ -21,7 +21,7 @@ Installing Figgy is _easy_.
 - [Download Windows](https://www.figgy.dev/releases/cli/latest/windows/figgy.zip)
 
 
-#### Manual Install (Still easy)
+#### Manual Install from Zip
 
 **MacOs / Linux**
 ```console
@@ -46,16 +46,15 @@ You will want to update your PATH in ~/.bashrc or ~/.zshrc as well. Done!
 **Windows**
 ```powershell 
     # powershell
-    
-    # Create install directory
-    mkdir figgy
-    cd figgy
-    
+   
     # Download Figgy
     Invoke-WebRequest -Uri https://www.figgy.dev/releases/cli/latest/windows/figgy.zip -OutFile figgy.zip 
 
     # Unzip
-    Expand-Archive .\figgy.zip 
+    Expand-Archive .\figgy.zip
+
+    # Add DIR to path
+    cd figgy/ 
     $DIR=pwd
 
     # Add Dir to path
