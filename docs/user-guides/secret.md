@@ -23,3 +23,8 @@ Below you will find a collection of docs and examples that may be helpful for se
 1. [sync](/docs/commands/config/sync/) (with --replication-only flag)
 1. [share](/docs/commands/config/share/)
 1. [browse](/docs/commands/config/browse/)
+
+
+#### Important to know:
+
+1. [upgrade](/docs/commands/other/upgrade/)

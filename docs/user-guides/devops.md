@@ -31,3 +31,4 @@ Below you will find a collection of docs that may be helpful for DevOps engineer
 
 1. [audit](/docs/commands/config/audit/)
 1. [restore](/docs/commands/config/restore/)
+1. [upgrade](/docs/commands/other/upgrade/)

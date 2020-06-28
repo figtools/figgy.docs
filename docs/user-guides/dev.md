@@ -21,3 +21,8 @@ Below you will find a collection of docs and examples that may be helpful for de
 1. [browse](/docs/commands/config/browse/)
 1. [list](/docs/commands/config/list/)
 1. [export](/docs/commands/iam/export/)
+
+
+#### Important to know:
+
+1. [upgrade](/docs/commands/other/upgrade/)
