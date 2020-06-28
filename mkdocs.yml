@@ -105,6 +105,7 @@ nav:
       - Configure: commands/other/configure.md
       - Version: commands/other/version.md
       - Login: commands/other/login.md
+      - Upgrade: commands/other/upgrade.md
     - --flags:
       - --env: commands/flags/env.md
       - --role: commands/flags/role.md

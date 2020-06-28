@@ -9,11 +9,13 @@ Installing Figgy is _easy_.
 **MacOs**
 
     $    brew install figtools/figgy/figgy
-        
+            
+
 **Windows, Linux, or Mac** (requires Python 3.7)
 
     $    pip3 install figgy-cli
 
+        
 **Any OS - Install from .zip file**
 
 - [Download Mac](https://www.figgy.dev/releases/cli/latest/darwin/figgy.zip)
@@ -54,7 +56,7 @@ You will want to update your PATH in ~/.bashrc or ~/.zshrc as well. Done!
     Expand-Archive .\figgy.zip
 
     # Add DIR to path
-    cd figgy/ 
+    cd figgy/figgy
     $DIR=pwd
 
     # Add Dir to path
