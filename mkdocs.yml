@@ -68,7 +68,7 @@ markdown_extensions:
 
 nav:
   - Figgy Blog: '../'
-  - Overview: 'index.md'
+  - What's Figgy: 'index.md'
   - Features: 'features.md'
   - Getting Started:
     - Installing FiggyCLI: getting-started/install.md
