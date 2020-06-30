@@ -41,7 +41,7 @@ With these two files in place, run validate against the appropriate environment.
 > If validation fails, figgy will exit with a non-0 exit code.
 
 ```console
-    $   figgy config validate --env dev --config path/to/figgy.json
+    $   figgy config validate --env dev --config path/to/figgy.json --profile dev   <-- your profile name here
 ```
 
 You will get output something like this:

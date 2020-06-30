@@ -41,9 +41,10 @@ Many features of Figgy are designed around users defining the **desired state** 
 AWS events to drive these changes ensures remote state remains in sync with desired state as quickly as possible. 
 
 **Event Sourcing**
+
 Event Sourcing is a design pattern where a log of events is the source-of-truth of your application state. To fix application 
 state a series of events are replayed rather than attempting to restore from a "snapshot" of data at some point in the past.
-This pattern enables Figgy to replay events to rebuild histortical state in disaster recovery scenarios. Essentially, because
+This pattern enables Figgy to replay events to rebuild historical state in disaster recovery scenarios. Essentially, because
 all events are captured, we can track all changes over time, and restore any, or all, ParameterStore values to a point-in-time
 in the past.
 
@@ -74,6 +75,6 @@ Replication can be triggered one of three ways:
 1. A new record defining `source` -> `destination` replication is inserted into the `service-config-replication` DynamoDB Table.
 1. The Replication Syncer lambda detects an out-of-sync replication source and destination and synchronizes these values.
 
-#### The Replication Syncer Lambda will do nothing in the vast majority of cases. It is mainly there as a stop-gap in case a bug is introduced or a user accidentally breaks the the former 2 lambdas.
+**The Replication Syncer Lambda will do nothing in the vast majority of cases. It is mainly there as a stop-gap in case a bug is introduced or a user accidentally breaks the the former 2 lambdas.**
 
 <br/>![Replication Flow](/docs/images/architecture/events-replication.png)<br/>

@@ -12,6 +12,7 @@ Figgy implements multiple levels of cache to maximize performance.
 DynamoDB is leveraged as a remote cache for Figgy and is deployed as part of the standard [Figgy Footprint](/docs/getting-started/figgy-footprint/). 
 
 DynamoDB was chosen for the following reasons:
+
 - Serverless
 - Highly performant
 - Supports native AWS IAM authentication & authorization
