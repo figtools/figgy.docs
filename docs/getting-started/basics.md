@@ -2,8 +2,8 @@
 ## Figgy Basics
 Figgy does a lot, but lets start with the simple parts. At its core, Figgy is a configuration management framework built
 on top of AWS ParameterStore. ParameterStore is a great AWS service for managing application configurations, but it 
-isn't without its usability faults. Figgy is designed to build on the great foundation ParameterStore offers and add more 
-functionality.
+isn't without its usability faults. Figgy is designed to build on the great foundation ParameterStore offers to add more 
+functionality, enforce best practicies, and simplify the user experience.
 
 You don't have to use _all_ Figgy has to offer. So let's start with the basics. With Figgy installed, you can use
 the CLI to interact with AWS ParameterStore across many different accounts. 
@@ -60,7 +60,7 @@ Here are some example configurations under the `twig`: `/app/message-fetcher`
                         /worker-thread-count
                         /replicated/rabbitmq/url
                         /replicated/rabbitmq/user
-                        /replicated/rabbitmq/password    <-- And this
+                        /replicated/rabbitmq/password    
 
 `/app/message-fetcher` is the *twig*. 
 

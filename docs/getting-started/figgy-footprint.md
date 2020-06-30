@@ -12,7 +12,7 @@ diagram; however, depending on your configuration, two of those will not exist f
 Your _ecosystem_ depends on how you configure Figgy. Every Figgy deployment will require the following
 resources to be provisioned in each integrated AWS account. As always, you can and **should** look over the Terraform
 code in our public repository to see what to expect. You can find it here: 
-<a href="https://github.com/figtools/figgy/tree/master/terraform/figgy" target="_blank">Figgy Infrastructure Code</a>
+<a href="https://github.com/figtools/figgy/tree/master/terraform/" target="_blank">Figgy Infrastructure Code</a>
 
 ### Resources required for Figgy operation:
 * 6 AWS Lambdas
@@ -35,7 +35,7 @@ code in our public repository to see what to expect. You can find it here:
 
 - 1 (Optional) AWS IAM User
 
-Optionally, you can provide or the Figgy infra-as-code can do it:
+For the following, yu can provide these resources or the Figgy can do it:
 
 - 1 AWS S3 Bucket for Figgy Lambdas to be deployed to
 - AWS Cloudtrail must be enabled - Cloudtrail events are the backbone of Figgy's event pipeline
@@ -53,6 +53,7 @@ In order to provide the best Figgy experience, users can optionally enable anony
 entirely optional and can be defaulted to off**. 
 
 The data collected is the following:
+
 - Current installed Figgy Version
 - Command types run: [get, put, delete, sync, etc], and the # of times each command has been run.
 - A random GUUID associated with your user. No personal data is collected.

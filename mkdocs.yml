@@ -101,6 +101,7 @@ nav:
       - Validate: commands/config/validate.md
     - IAM:
       - Export: commands/iam/export.md
+      - Restore: commands/iam/restore.md
     - Other:
       - Configure: commands/other/configure.md
       - Version: commands/other/version.md

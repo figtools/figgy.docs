@@ -23,8 +23,8 @@ no access, except permissions to assume roles in _other_ Figgy-enabled accounts 
 <br/>![Bastion Auth](/docs/images/deployment/bastion-auth.png)<br/>
 
 There is no limit to the number of accounts you can integrate with your Bastion account. Users will be provided
-a single long-lived AWS Keypair to authenticate with the bastion account. From there, MFA can be enabled and user
-will will be required input an MFA token when generating temporary sessions other accounts.
+a single long-lived AWS Keypair to authenticate with the bastion account. From there, MFA can be enabled and users
+will be required input an MFA token when generating temporary sessions in other accounts.
 [Sign me up!](/docs/getting-started/deployment/bastion/)
 <br/>
 <br/>
@@ -58,11 +58,12 @@ To read about this solution check out the below docs!
 
 ### Standard AWS IAM
 
-> Figgy is designed for deep and convenient SSO integrations with OKTA, Google, or through AWS Bastion accounts. We **strongly** recommend selecting one of these use cases for virtually ALL use cases. 
+Figgy is designed for deep and convenient SSO integrations with OKTA, Google, or through AWS Bastion accounts. 
+We **strongly** recommend selecting one of these use cases for virtually ALL use cases. 
 
 That being said; we recognize the cloud is complicated and often teams are faced with complex technical debt or unique business 
 constraints that may affect the opportunity to integrate through one of the above SSO solutions. If this applies to you, 
-or if you want to do some light experimentation with Figgy in a _single_ account the below integration option will work for you.
+or if you want to do some light experimentation with Figgy in a _single_ account, the below integration option will work for you.
 
 <br/>![Standard Auth](/docs/images/deployment/standard-auth.png)<br/>
 
@@ -71,6 +72,7 @@ This type of authentication might be ideal for small organizations that have a s
 their environments in this account. 
 
 Standard AWS authentication essentially bypasses the following Figgy security and convenience features:
+
 - SSO authentication
 - Temporary session credentials for all sessions
 - MFA support
