@@ -2,7 +2,7 @@
 Installing Figgy is _easy_.
 
 
-### One-liner installs for each OS
+### One-liner installs per platform
 
 **MacOs**
 ```bash
@@ -13,7 +13,6 @@ Installing Figgy is _easy_.
 ```bash
     bash <(curl -sL "https://raw.githubusercontent.com/figtools/figgy-cli/master/scripts/install-linux.sh")
 ```
-
 
 **Windows**
 ```powershell 
@@ -28,7 +27,7 @@ Installing Figgy is _easy_.
             
 
 
-**Windows, Linux, or Mac** (requires Python 3.7 - not recommended for most use cases, but good for CICD)
+**Windows, Linux, or Mac** (requires Python 3.7 - not recommended, but good for CICD)
 
     $    pip3 install figgy-cli
 
@@ -41,9 +40,6 @@ Installing Figgy is _easy_.
 - [Download Linux](https://www.figgy.dev/releases/cli/latest/linux/figgy.zip)
 - [Download Windows](https://www.figgy.dev/releases/cli/latest/windows/figgy.zip)
 
-
-!!! note "Windows ONLY"
-    Be sure to use standard x86 PowerShell or the Windows Command Prompt. The PowerShell Integrated Scripting Environment experiences issue with receiving Figgy user input. 
 
 <br/>
 
