@@ -5,71 +5,43 @@ Installing Figgy is _easy_.
 
 
 #### Automatic Install
-
 **MacOs**
 
     $    brew install figtools/figgy/figgy
             
+#### One-liner installs for each OS
 
-**Windows, Linux, or Mac** (requires Python 3.7)
+**MacOs auto-install**
+```console
+    bash <(curl -sL "https://raw.githubusercontent.com/figtools/figgy-cli/master/scripts/install-mac.sh")
+```
+
+**Linux auto-install**
+```console
+    bash <(curl -sL "https://raw.githubusercontent.com/figtools/figgy-cli/master/scripts/install-linux.sh")
+```
+
+You will want to update your PATH in ~/.bashrc or ~/.zshrc as well. Done!
+
+**Windows auto-install**
+```powershell 
+    iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/figtools/figgy-cli/master/scripts/install-windows.ps1'))
+```
+
+**Windows, Linux, or Mac** (requires Python 3.7 - not recommended for most use cases, but good for CICD)
 
     $    pip3 install figgy-cli
 
         
-**Any OS - Install from .zip file**
+**Any OS - Manual install from .zip file**
 
 - [Download Mac](https://www.figgy.dev/releases/cli/latest/darwin/figgy.zip)
 - [Download Linux](https://www.figgy.dev/releases/cli/latest/linux/figgy.zip)
 - [Download Windows](https://www.figgy.dev/releases/cli/latest/windows/figgy.zip)
 
 
-#### Manual Install from Zip
-
-**MacOs / Linux**
-```console
-    # Linux Example (change download URL for MacOs)
-    mkdir -p ~/tools/figgy
-    
-    # Download Figgy
-    cd tools/figgy/ && curl https://www.figgy.dev/releases/cli/latest/linux/figgy.zip > figgy.zip
-
-    # Unzip Figgy
-    unzip figgy.zip
-
-    # Add figgy to path
-    export PATH=$PATH:$(pwd)
-
-    # Test Figgy
-    figgy --version
-```
-
-You will want to update your PATH in ~/.bashrc or ~/.zshrc as well. Done!
-
-**Windows**
-```powershell 
-    # powershell
-   
-    # Download Figgy
-    Invoke-WebRequest -Uri https://www.figgy.dev/releases/cli/latest/windows/figgy.zip -OutFile figgy.zip 
-
-    # Unzip
-    Expand-Archive .\figgy.zip
-
-    # Add DIR to path
-    cd figgy/figgy
-    $DIR=pwd
-
-    # Add Dir to path
-    $ENV:PATH="$ENV:PATH;$DIR"
-
-    # Test Figgy
-    figgy --version
-```
-
-You'll want to add the installation directory to your path [permanently](https://codingbee.net/powershell/powershell-make-a-permanent-change-to-the-path-environment-variable): 
-
-!!! note ""
-    Be sure to use standard x86 Powershell or the Windows Command Prompt. The Powershell Integrated Scripting Environment experiences issue with receiving Figgy user input. 
+!!! note "Windows ONLY"
+    Be sure to use standard x86 PowerShell or the Windows Command Prompt. The PowerShell Integrated Scripting Environment experiences issue with receiving Figgy user input. 
 
 <br/>
 
