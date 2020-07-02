@@ -41,7 +41,7 @@ user has enabled anonymous usage metric reporting.
 ### Local encrypted cache: `~/.figgy/vault/`
 
 Also known as the "Figgy Vault", the Figgy CLI caches SSO and AWS STS temporary session credentials in a local encrypted
-cache. This encrypted cache is tapped as-needed subsequent Figgy executions. SSO session duration is based on the 
-remote party's (OKTA / Google) session duration configurations, and will be refreshed as needed.
+cache. This encrypted cache is tapped as-needed in subsequent Figgy executions. SSO session duration is based on the 
+remote party's (OKTA / Google) session duration configurations and will be refreshed when existing cached sessions expire.
 
 

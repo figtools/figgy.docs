@@ -40,7 +40,8 @@ can even integrate the generation or validation of the `figgy.json` file into yo
 The `figgy.json` file (which can be named `whatever-you-want.json`) declaratively defines the configurations your application
 needs to run. The FiggyCLI will parse this file to support lots of great functionality like:
 
-!!! hint: 
+!!! hint  
+    
     For a reference on all supported `figgy.json` options, see: [Declarative Configuration](/docs/advanced/delcarative-configuration/)
 
 
