@@ -36,6 +36,7 @@ extra:
       link: https://www.linkedin.com/in/jordan-mance-78b87133/
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/squidfunk
+
 markdown_extensions:
   - toc:
       permalink: '#'
@@ -131,3 +132,8 @@ nav:
     - Security: architecture/security.md
     - Caching: architecture/caching.md
   - FAQ: faq/index.md
+
+# Google Analytics
+google_analytics:
+  - 'UA-168748263-1'
+  - auto
