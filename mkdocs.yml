@@ -10,22 +10,20 @@ theme:
   name: material
   custom_dir: mkdocs-material/material
   language: en
-  palette:
-    primary: green
-    accent: brown
   font:
     text: Roboto
     code: Roboto Mono
   icon:
-    logo: logo
+    logo: light
   features:
     - tabs
   include_sidebar: yes
   include_search_page: false
   search_index_only: true
-#extra_css:
-#  - stylesheets/dark-theme.css
-#  - stylesheets/dark-theme-system.css
+extra_css:
+  - stylesheets/figgy-theme.css
+  - stylesheets/figgy-system.css
+  - stylesheets/figgy-code.css
 extra:
   social:
     - icon: fontawesome/brands/github

@@ -1,0 +1,70 @@
+html,
+body {
+    background-color: #303d39;
+    color: #F5F6F5;
+}
+
+
+html .md-nav--primary .md-nav__title~.md-nav__list {
+    background-color: #303d39;
+}
+
+/* Header */
+html .md-header, .md-tabs {
+    background-color: #048384;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #F5F6F5 !important;
+}
+
+/* > in markdown */
+blockquote p {
+    color: #059ccd;
+}
+
+.md-typeset blockquote {
+    border-left: .2rem solid #059ccd
+}
+
+/* Links */
+.md-typeset a {
+    color: #0de5a8;
+}
+
+
+/* Code blocks */
+
+.md-typeset code {
+    background-color: #1E2E2A;
+    color: #f5f6f5;
+}
+
+/* Hints */
+.md-typeset .admonition {
+    background-color: #303d39;
+    color: #F5F6F5;
+}
+
+.md-typeset .note {
+    background-color: rgba(0,191,165,.1);
+    color: #F5F6F5;
+}
+
+.md-typeset details.note {
+    border-color: #059ccd;
+}
+
+/* Links */
+.md-nav__item .md-nav__link--active {
+    color: #09c4a2;
+}
+.md-nav__link:focus, .md-nav__link:hover {
+    color: #0de5a8
+}
