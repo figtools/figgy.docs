@@ -33,7 +33,7 @@ All changes you make in the Figgy Sandbox will be broadcast to all people perusi
 ### Login 
  
 <br/>
-<video controls autoplay loop class="video"><source src="/images/videos/login.mp4" type="video/mp4"></video>
+<video controls autoplay loop muted class="video"><source src="/images/videos/login.mp4" type="video/mp4"></video>
 <br/>
 
 !!! note "You can always run `figgy --help` or `figgy config --help` to see what Figgy can do"
@@ -45,7 +45,7 @@ Get a config, any config, from our DEV environment. Depending on the config you 
 to that configuration. 
 
 <br/>
-<video controls autoplay loop class="video"><source src="/images/videos/get.mp4" type="video/mp4"></video>
+<video controls autoplay loop muted class="video"><source src="/images/videos/get.mp4" type="video/mp4"></video>
 <br/>
 
 
@@ -55,7 +55,7 @@ to that configuration.
 Store a new configurations in our DEV environment. 
     
 <br/>
-<video controls autoplay loop class="video"><source src="/images/videos/put.mp4" type="video/mp4"></video>
+<video controls autoplay loop muted class="video"><source src="/images/videos/put.mp4" type="video/mp4"></video>
 <br/>
 
 ### Basics 3: Browse the Fig Orchard
@@ -64,6 +64,6 @@ Store a new configurations in our DEV environment.
 Browse the Fig Orchard to see what's out there. 
 
 <br/>
-<video controls autoplay loop class="video"><source src="/images/videos/browse.mp4" type="video/mp4"></video>
+<video controls autoplay loop muted class="video"><source src="/images/videos/browse.mp4" type="video/mp4"></video>
 <br/>
 And so much more. See our [Commands](/docs/commands/) section to see all figgy can offer!

@@ -8,7 +8,7 @@ providing added functionality and an improved user experience.
 
 <br/>
 
-<video controls autoplay loop class="video"><source src="/images/videos/walkthrough.mp4" type="video/mp4"></video>
+<video controls autoplay loop muted class="video"><source src="/images/videos/walkthrough.mp4" type="video/mp4"></video>
 
 
 Figgy simplifies and accelerates your development workflow by protecting you from common mistakes that lead to security 
