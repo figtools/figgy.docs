@@ -66,6 +66,7 @@
     --danger-800: #92193d;
     --danger-900: #790f37;
 
+    /* Global Overrides */
     --md-default-fg-color--lightest: var(--info-600);
     --md-accent-fg-color: var(--info-600);
     --md-test-color: var(--gray-100);
@@ -78,20 +79,3 @@
 
 
 
-
-/* Success */
-
-
-
-
-/* Info */
-
-
-
-
-/* Warning */
-
-
-
-
-/* Danger */

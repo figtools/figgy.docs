@@ -135,7 +135,7 @@ That's it, you now know the basic features of Figgy.
 **DevOps / Software Architects:**
 
 1. [Installation](/docs/getting-started/install/)
-1. [Deploying Figgy](/docs/getting-started/deployment/select-type/)
+1. [Deploying Figgy](/docs/figgy-cloud/index/)
 1. [Advanced Figgy](/docs/advanced/confidentiality/)
 1. [Architecture](/docs/architecture/ecosystem/)
 

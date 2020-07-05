@@ -84,16 +84,40 @@ blockquote p {
     color: var(--gray-400)
 }
 
+.md-nav--primary .md-nav__title[for=__drawer]{
+    background-color: var(--gray-700);
+    color: var(--gray-100);
+    font-weight: bold;
+    font-family: "Montserrat Bold", sans-serif;
+}
+
+.md-nav__source {
+    background-color: var(--info-600);
+    color: var(--gray-700);
+}
+
+.md-nav--primary .md-nav__title {
+    background-color: var(--gray-700);
+    color: var(--gray-100);
+    font-weight: bold;
+    font-family: "Montserrat Bold", sans-serif;
+}
+
+.md-nav--primary .md-nav__item--active>.md-nav__link {
+    color: var(--primary-200);
+    font-weight: bold;
+}
+
 /* Links */
 .md-nav__item .md-nav__link--active {
-    color: var(--primary-500);
+    color: var(--primary-200);
 }
 .md-nav__link:focus, .md-nav__link:hover {
     color: var(--info-600)
 }
 
 .md-typeset a {
-    color: var(--primary-500);
+    color: var(--primary-200);
 }
 
 .md-nav__link--active {
@@ -146,3 +170,4 @@ blockquote p {
     background-color: var(--gray-900);
     color: var(--gray-100)
 }
+

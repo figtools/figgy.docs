@@ -12,9 +12,9 @@ for your use case, all three options enforce the following security best practic
 
 The three main types of authentication are:
 
-1. [Bastion](/docs/getting-started/deployment/bastion/)
-1. [Google SSO](/docs/getting-started/deployment/google/)
-1. [OKTA SSO](/docs/getting-started/deployment/okta/)
+1. [Bastion](/docs/figgy-cloud/bastion/)
+1. [Google SSO](/docs/figgy-cloud/google/)
+1. [OKTA SSO](/docs/figgy-cloud/okta/)
 
 All of these enforce sign on through a single provider and do not require multiple sets of credentials to be maintained. 
 
@@ -37,7 +37,7 @@ the `figgy` namespace.
 ![Auth Keychain](/docs/images/architecture/auth-keychain.png)
 
 The Figgy CLI will attempt to retrieve these credentials on the user's behalf when existing cached SSO sessions have expired.
-The frequency of this is dependant on SSO provider configurations. Organizations configured to use the [Bastion](/docs/getting-started/deployment/bastion/)
+The frequency of this is dependant on SSO provider configurations. Organizations configured to use the [Bastion](/docs/figgy-cloud/bastion/)
 authentication provider do not require passwords and instead use AWS API Keys. These low-power keys are stored in the user's 
 `~/.aws/credentials` file like all other AWS credentials. 
 

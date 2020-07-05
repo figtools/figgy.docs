@@ -24,7 +24,9 @@ extra_css:
   - stylesheets/figgy-theme.css
   - stylesheets/figgy-system.css
   - stylesheets/figgy-code.css
+  - stylesheets/figgy-other.css
   - stylesheets/figgy-typography.css
+  - stylesheets/growl-dark-theme.css
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -68,7 +70,8 @@ markdown_extensions:
 
 nav:
   - Figgy Blog: '../'
-  - What's Figgy: 'index.md'
+  - What's Figgy: 'whats-figgy.md'
+  - Why Figgy: 'why-figgy.md'
   - Features: 'features.md'
   - Getting Started:
     - Installing FiggyCLI: getting-started/install.md
@@ -77,12 +80,12 @@ nav:
     - Concepts: getting-started/concepts.md
     - Basics: getting-started/basics.md
   - Figgy Cloud:
-      - Figgy Cloud: getting-started/deployment/select-type.md
-      - Bastion: getting-started/deployment/bastion.md
-      - Google: getting-started/deployment/google.md
-      - Okta: getting-started/deployment/okta.md
-      - Standard: getting-started/deployment/standard.md
-      - Figgy Footprint: getting-started/figgy-footprint.md
+      - Figgy Cloud: figgy-cloud/index.md
+      - Bastion: figgy-cloud/bastion.md
+      - Google: figgy-cloud/google.md
+      - Okta: figgy-cloud/okta.md
+      - Standard: figgy-cloud/standard.md
+      - Figgy Footprint: figgy-cloud/figgy-footprint.md
   - Commands:
     - Config:
       - Get: commands/config/get.md
