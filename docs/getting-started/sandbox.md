@@ -1,6 +1,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="/js/lib/growl-notifications.js" crossorigin="anonymous"></script>
-<script src="/js/events.js" crossorigin="anonymous"></script>
+<script src="/docs/js/lib/growl-notifications.js" crossorigin="anonymous"></script>
+<script src="/docs/js/events.js" crossorigin="anonymous"></script>
   
 ## Figgy Sandbox
 
