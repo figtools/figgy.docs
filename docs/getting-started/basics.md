@@ -8,7 +8,7 @@ functionality, enforce best practicies, and simplify the user experience.
 You don't have to use _all_ Figgy has to offer. So let's start with the basics. With Figgy installed, you can use
 the CLI to interact with AWS ParameterStore across many different accounts. 
 
-There's a free <a href="https://www.figgy.dev/tabs/sandbox/" target="_blank">Figgy Sandbox</a> 
+There's a free <a href="https://www.figgy.dev/docs/getting-started/sandbox/" target="_blank">Figgy Sandbox</a> 
 you can use to experiment with Figgy. Go ahead, click that Sandbox link, let's have some fun!  
 <br/>
  
