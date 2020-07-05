@@ -75,6 +75,6 @@ actual syntax highlighting
 .highlight .gu { color: #868787 !important ; } /* Generic.Subheading & Diff Unified/Comment? */
 .highlight .gd { color: #f92672 !important ; } /* Generic.Deleted & Diff Deleted */
 .highlight .gi { color: #07c8ef !important ; } /* Generic.Inserted & Diff Inserted */
-
+.highlight .go { color: var(--gray-200)}
 .highlight .md-clipboard:before { color: rgba(255, 255, 255, 0.07) } /* Clipboard button (no hover) */
 .highlight:hover .md-clipboard:before { color: rgba(255, 255, 255, 0.54) } /* Clipboard button (hovered) */

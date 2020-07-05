@@ -1,70 +1,117 @@
 html,
 body {
-    background-color: #303d39;
-    color: #F5F6F5;
+    background-color: var(--gray-700);
+    color: var(--gray-100);
 }
 
 
 html .md-nav--primary .md-nav__title~.md-nav__list {
-    background-color: #303d39;
+    background-color: var(--gray-700);
 }
 
 /* Header */
 html .md-header, .md-tabs {
-    background-color: #048384;
+    background-color: var(--primary-200);
+    color: var(--gray-900);
+}
+
+.md-header-nav__title {
+    padding: 0;
+    font-family: "Montserrat Bold", sans-serif;
+}
+
+.md-tabs__link--active {
+    font-weight: bold;
 }
 
 /* Headings */
-h1,
-h2,
+h1 {
+    color: var(--gray-100) !important;
+    font-family: "Montserrat Bold", sans-serif;
+    font-weight: 500 !important;
+}
+h2{
+    color: var(--gray-100) !important;
+    font-family: "Montserrat Bold", sans-serif;
+    font-weight: 300 !important;
+}
 h3,
 h4,
 h5,
 h6 {
-    color: #F5F6F5 !important;
+    color: var(--gray-100) !important;
+    font-family: "Montserrat Bold", sans-serif;
 }
 
 /* > in markdown */
 blockquote p {
-    color: #059ccd;
+    color: var(--info-600);
 }
 
 .md-typeset blockquote {
-    border-left: .2rem solid #059ccd
+    border-left: .2rem solid var(--info-600)
 }
-
-/* Links */
-.md-typeset a {
-    color: #0de5a8;
-}
-
 
 /* Code blocks */
 
 .md-typeset code {
-    background-color: #1E2E2A;
-    color: #f5f6f5;
+    background-color: var(--gray-800);
+    color: var(--gray-200);
 }
 
 /* Hints */
 .md-typeset .admonition {
-    background-color: #303d39;
-    color: #F5F6F5;
+    background-color: var(--gray-700);
+    color: var(--gray-100);
 }
 
 .md-typeset .note {
     background-color: rgba(0,191,165,.1);
-    color: #F5F6F5;
+    color: var(--gray-100);
 }
 
 .md-typeset details.note {
-    border-color: #059ccd;
+    border-color: var(--info-600);
+}
+
+.md-tabs__link {
+    opacity: .8;
+
+}
+
+/* Nav */
+.md-nav__link[data-md-state=blur] {
+    color: var(--gray-400)
 }
 
 /* Links */
 .md-nav__item .md-nav__link--active {
-    color: #09c4a2;
+    color: var(--primary-500);
 }
 .md-nav__link:focus, .md-nav__link:hover {
-    color: #0de5a8
+    color: var(--info-500)
+}
+
+.md-typeset a {
+    color: var(--primary-500);
+}
+
+.md-nav__link--active {
+    font-weight: bold;
+}
+
+/*.md-typeset a {*/
+/*    color: var(--info-100)*/
+/*}*/
+
+
+/* HR */
+.md-typeset hr {
+    border-bottom: .05rem dotted var(--gray-400);
+}
+
+/* Tabs */
+.md-typeset .tabbed-set {
+    color: var(--info-600) !important;
+    border-color: var(--info-600) !important;
 }

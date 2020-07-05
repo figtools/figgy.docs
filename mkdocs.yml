@@ -11,10 +11,10 @@ theme:
   custom_dir: mkdocs-material/material
   language: en
   font:
-    text: Roboto
+    text: Proxima Nova Semi-Bold
     code: Roboto Mono
   icon:
-    logo: light
+    logo: dark
   features:
     - tabs
   include_sidebar: yes
@@ -24,6 +24,7 @@ extra_css:
   - stylesheets/figgy-theme.css
   - stylesheets/figgy-system.css
   - stylesheets/figgy-code.css
+  - stylesheets/figgy-typography.css
 extra:
   social:
     - icon: fontawesome/brands/github

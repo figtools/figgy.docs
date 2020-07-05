@@ -45,7 +45,8 @@
 
   // Color palette
   [data-md-color-accent="#{$name}"] {
-    --md-accent-fg-color:              hsla(#{hex2hsl($color)}, 1);
+    //--md-accent-fg-color:              hsla(#{hex2hsl($color)}, 1);
+    --md-accent-fg-color:              var(--info-500);
     --md-accent-fg-color--transparent: hsla(#{hex2hsl($color)}, 0.1);
 
     // Inverted text for lighter shades
