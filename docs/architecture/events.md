@@ -1,8 +1,7 @@
 
 # Events
 
-As discussed in [Figgy Basics](/docs/getting-started/basics.html), many of Figgy's features are driven by Events. The
-types of events that Figgy respects are: 
+As discussed in [Figgy Basics](/docs/getting-started/basics.html), many of Figgy's features are driven by Events.
 
 ### The following event types are tracked:
 
@@ -15,16 +14,17 @@ types of events that Figgy respects are:
     - Any change to `FiggyConfigReplication` DyanmoDB Table.
     
 These event streams trigger a number of features in Figgy including:
-- Maintaining records in the `figgy-config-cache` table which Figgy users query regularly to inform their own local cache
-of parameter names. These names inform functionality like the auto-complete functionality and Browse tree in the Figgy CLI.
+
+- Maintaining records in the `figgy-config-cache` table. The Figgy CLI regularly queries this table inform its local cache.
+These names support the auto-complete functionality and browse tree in the Figgy CLI.
 
 - Triggering `source` -> `destination` replication. If a source record is updated, Figgy will automatically trigger replication
 to all destinations. Likewise, if a new `source` -> `destination` record is added, a DDB stream event will trigger immediate
 replication. 
 
 - Maintaining the Figgy audit log. The `figgy-config-auditor` table maintains a history of all parameter changes over time.
-Every change to a parameter in ParameterStore results in a new record inserted into this table. This table is how Figgy is
-able to support point-in-time restores. 
+Every change to a parameter in ParameterStore results in a new record inserted into this table. Figgy is
+able to support point-in-time restores by leveraging the history of events stored in this table.
 
 ### Why all this effort to leverage events?
 
@@ -42,11 +42,11 @@ AWS events to drive these changes ensures remote state remains in sync with desi
 
 **Event Sourcing**
 
-Event Sourcing is a design pattern where a log of events is the source-of-truth of your application state. To fix application 
-state a series of events are replayed rather than attempting to restore from a "snapshot" of data at some point in the past.
-This pattern enables Figgy to replay events to rebuild historical state in disaster recovery scenarios. Essentially, because
-all events are captured, we can track all changes over time, and restore any, or all, ParameterStore values to a point-in-time
-in the past.
+Event Sourcing is a design pattern where a log of events is the source-of-truth of your application state. To fix bad 
+application state, a series of events are replayed rather than attempting to restore from a "snapshot" of data at some point in the past.
+This pattern enables Figgy to replay events to rebuild both current state _and_ historical state in disaster recovery scenarios. 
+Essentially, because all events are captured, we can track all changes over time, and restore any, or all, ParameterStore values 
+to any point-in-time in the past.
 
 
 ## Event Flow

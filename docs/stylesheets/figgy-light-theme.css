@@ -1,17 +1,17 @@
 html,
 body {
-    background-color: var(--gray-700);
-    color: var(--gray-100);
+    background-color: var(--gray-100);
+    color: var(--gray-900);
 }
 
 
 html .md-nav--primary .md-nav__title~.md-nav__list {
-    background-color: var(--gray-700);
+    background-color: var(--gray-100);
 }
 
 /* Header */
 html .md-header, .md-tabs {
-    background-color: var(--primary-200);
+    background-color: var(--primary-400);
     color: var(--gray-900);
 }
 
@@ -26,12 +26,12 @@ html .md-header, .md-tabs {
 
 /* Headings */
 h1 {
-    color: var(--gray-100) !important;
+    color: var(--gray-900) !important;
     font-family: "Montserrat Bold", sans-serif;
     font-weight: 500 !important;
 }
 h2{
-    color: var(--gray-100) !important;
+    color: var(--gray-900) !important;
     font-family: "Montserrat Bold", sans-serif;
     font-weight: 300 !important;
 }
@@ -39,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--gray-100) !important;
+    color: var(--gray-900) !important;
     font-family: "Montserrat Bold", sans-serif;
 }
 
@@ -55,19 +55,19 @@ blockquote p {
 /* Code blocks */
 
 .md-typeset code {
-    background-color: var(--gray-800);
-    color: var(--gray-200);
+    background-color: var(--gray-200);
+    color: var(--gray-500);
 }
 
 /* Hints */
 .md-typeset .admonition {
-    background-color: var(--gray-700);
-    color: var(--gray-100);
+    background-color: var(--gray-100);
+    color: var(--gray-900);
 }
 
 .md-typeset .note {
     background-color: rgba(0,191,165,.1);
-    color: var(--gray-100);
+    color: var(--gray-900);
 }
 
 .md-typeset details.note {
@@ -89,7 +89,7 @@ blockquote p {
     color: var(--primary-500);
 }
 .md-nav__link:focus, .md-nav__link:hover {
-    color: var(--info-600)
+    color: var(--info-500)
 }
 
 .md-typeset a {
@@ -118,31 +118,31 @@ blockquote p {
 
 /* Search */
 .md-search-result__title {
-    background-color: var(--gray-700);
+    background-color: var(--gray-100);
     color: var(--primary-500) !important;
 }
 
 .md-search-result__teaser {
-    background-color: var(--gray-700);
-    color: var(--gray-100)
+    background-color: var(--gray-100);
+    color: var(--gray-900)
 }
 
 .md-search-result__article {
-    background-color: var(--gray-700);
-    color: var(--gray-100)
+    background-color: var(--gray-100);
+    color: var(--gray-900)
 }
 
 .md-search-result__meta {
-    background-color: var(--gray-700);
-    color: var(--gray-100)
+    background-color: var(--gray-100);
+    color: var(--gray-900)
 }
 
 .md-search__input {
-    background-color: var(--gray-700);
-    color: var(--gray-100)
+    background-color: var(--gray-100);
+    color: var(--gray-900)
 }
 
 .md-search__input:hover {
     background-color: var(--gray-900);
-    color: var(--gray-100)
+    color: var(--gray-900)
 }

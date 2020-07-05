@@ -40,7 +40,7 @@ A hierarchy of configs under a **Fig Tree** that is owned by a single service
 
 ## Fig
 
-A single con**fig**uration stored `/under/a/named/path` and on a **Twig**
+A single configuration stored `/under/a/named/path` and on a **Twig**
 
         - /app/hello-world/log-level
   

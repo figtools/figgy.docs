@@ -65,6 +65,15 @@
     --danger-700: #b62845;
     --danger-800: #92193d;
     --danger-900: #790f37;
+
+    --md-default-fg-color--lightest: var(--info-600);
+    --md-accent-fg-color: var(--info-600);
+    --md-test-color: var(--gray-100);
+    --md-accent-fg-color--transparent: var(--primary-200);
+    --md-default-fg-color--light: var(--info-600);
+    --md-default-bg-color: var(--gray-700);
+    --md-default-fg-color--lighter: var(--info-600);
+    --md-default-fg-color: var(--gray-100)
 }
 
 
