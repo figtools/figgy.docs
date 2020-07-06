@@ -20,7 +20,7 @@ With these credentials + their MFA token (if you enable MFA), users will be able
 interact with Figgy normally.
 
 To simplify user management, after you have Figgy configured, you may optionally remove all other IAM users and 
-leverage the Figgy provisioned Users & Roles as a basis for all user authentication across all AWS accounts.
+leverage the Figgy provisioned users & roles as a basis for all user authentication across all AWS accounts.
 
 ## Prep:
 - First, _coalesce_ a list of accounts you'd like to integrate with Figgy. 

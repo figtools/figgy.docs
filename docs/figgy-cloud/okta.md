@@ -267,7 +267,7 @@ Configure:
 When running configure you will be prompted to input the OKTA Embed link, be sure to enter the link you copied earlier.
 If you lost it, you can find it under your application's `General` tab under `App Embed Link`.
 
-If you enter your MFA (or don't) and then see the list of your environments and your user's associated roles then you are GRAVY BABY! Celebrate!
+If you enter your MFA (or don't) and then see the list of your environments and your user's associated roles then you are GRAVY! Celebrate!
 ```console
 ...
 
@@ -308,4 +308,4 @@ After configuring, test the CLI is working by running:
 Now that you have your App Embed Link, you can set it in a generic Figgy config file and 
 distribute it to all of your users. This will save them the trouble of having to manage this url themselves.
 
-To do this: See [Distributing Figgy](/docs/getting-started/install.html#distributing-figgy)
+To do this: See [Distributing Figgy](/docs/getting-started/install/#distributing-figgy)

@@ -44,7 +44,7 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 
 |Name   	| Info Type    	| Visibility 	|  No. of values |
 |---	|---	|---	|---
-|IAM ROLE	| Text  	| Visible to user and admin | Multi-value |
+|IAM Role	| Text  	| Visible to user and admin | Multi-value |
 |Session Duration  	| Whole Number  	| Visible to user and admin |   Single Value |
 
 ![Custom Attributes](/docs/images/deployment/google/custom-attributes.png)
