@@ -1,8 +1,8 @@
 site_name: Figgy Docs
 site_description: >-
-  Figgy is configuration management framework designed to bring developers, DevOps engineers, and secret owners together
-  around an ecosystem designed for simple and secure configuration and secret management. Figgy has features designed
-  around each user story, so there's a little bit for everyone to appreciate.
+  Figgy is an cloud native, serverless, open-source framework that simplifies and accelerates your development workflow
+  by protecting you from common mistakes that lead to security breaches, failed deployments, lost data, or application downtime.
+
 site_url: https://www.figgy.dev/docs/
 
 repo_url: https://github.com/figtools/figgy
@@ -67,9 +67,8 @@ markdown_extensions:
 
 
 nav:
-  - Figgy Blog: '../'
-  - What's Figgy: 'index.md'
-#  - Why Figgy: 'why-figgy.md'
+  - Home: index.md
+  - What's Figgy: 'whats-figgy.md'
   - Features: 'features.md'
   - Getting Started:
     - Installing FiggyCLI: getting-started/install.md
