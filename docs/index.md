@@ -20,6 +20,8 @@ providing added functionality and an improved user experience.
 - Keep secrets with their owners by cutting out the middle-man and establishing a strong framework of least-privilege. 
 - Avoid 3rd party lock-in or external dependencies -- Figgy deploys serverlessly into your AWS environments
 
+## Why Figgy?
+
 
 #### Simple & secure config and secret management
 As your cloud footprint grows, so do the configurations you need to manage your applications. 

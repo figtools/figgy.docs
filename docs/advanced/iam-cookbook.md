@@ -26,13 +26,13 @@ The default IAM policies configured by a standard Figgy deployment are least pri
 use-case that Figgy supports. However you may want to add more IAM roles or expand the existing default 
 Figgy IAM policies in your Forked Figgy repository. 
 
-To enable constant updates from the root Figgy repository we recommend you make these any changes in **new** terraform files 
+To support updates from the root Figgy repository we recommend you make these any changes in **new** terraform files 
 rather than editing existing Figgy deployments. 
 
 For instance, suppose you wanted to grant all Figgy users S3 ReadOnly access to all S3 resources across all accounts, 
 you could accomplish it like this:
 
-First, create a new terraform file in `figgy/terraform/` name `custom_iam_s3.tf`
+First, create a new terraform file in `figgy/terraform/` named `custom_iam_s3.tf`
 
 First, lets find the existing `AmazonS3ReadOnlyAccess` policy:
 

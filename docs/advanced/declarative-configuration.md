@@ -30,7 +30,8 @@ Here are the purposes of each property:
 
 This property should be set to your service's **twig**. I.E. `/app/your-service-name` or `/svc/your-service-name`
 
-!!! hint: "If you set the twig property, you may omit your twig's prefix (I.E. `/app/service-name` from your `app_figs` values."
+!!! hint: ""
+    If you set the twig property, you may omit your twig's prefix (I.E. `/app/service-name` from your `app_figs` values.
 
 
 <br/><br/>
@@ -54,7 +55,7 @@ Sample `app_figs` config block:
    ] 
 ```
  
-!!! hint "If you have `twig` property set, you may instead structure the above block like this:"
+!!! hint "For simpler configuration, you may instead structure the above block like this:"
 
 ```json
    "app_figs": [
@@ -79,7 +80,7 @@ Sample replicate_figs block:
 ```json
     "replicate_figs": { 
         "/shared/data/sql/hostname" :  "/app/message-processor/replicated/sql/hostname", 
-        "/shared/data/sql/db_name" :  "/app/demo-time/replicated/shared/sql/db_name" 
+        "/shared/data/sql/db_name" :  "/app/message-processor/replicated/sql/db_name" 
     }
 ```
 
@@ -125,12 +126,9 @@ This will prevent inadvertent deployments destined to fail.
 
 **The `merged_figs` property is optional.** 
 
-Merged figs enable you to merge multiple other figs into a single `merged_fig`. Merged figs support two different formats.
+Merged figs enable you to merge multiple other figs into a single `merged_fig`. 
 
-String Merged Parameter Configs:
-Your application can pull the PS value at /app/demo-time/replicated/sql/conn_string to retrieve the total connection string with embedded user / pw / db
-
-List figs are a Map of type KEY (STR) VALUE (List[STR]). In the value, you may define a list of strings. 
+Merge figs require are a Map of type KEY (STR) VALUE (List[STR]). In the value, you may define a list of strings. 
 These strings will be combined in the order defined to generate a merged fig. 
 
 ```json 
@@ -170,7 +168,7 @@ all of the configurations that it depends on.
 **The `replicate_from` property is optional.**
 
 This block enables users to replicate a series of parameters from another namespace 
-**UNDER THE SAME [FIG TREE](/docs/getting-started/concepts#fig-tree)**. 
+**under the same [Fig Tree](/docs/getting-started/concepts/#fig-tree)**. 
 
 This is useful for when you might want to deploy a single service multiple times into the same environment with 
 slightly differing configurations (perhaps multiple feature branches?) 
