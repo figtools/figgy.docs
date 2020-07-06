@@ -3,13 +3,13 @@ Microservices are great, but your growing service footprint means configuration 
 *Out of the box, Figgy comes with all of these features:*
 
 ### **Figgy CLI**
-- An elegant CLI on top of AWS ParameterStore that addresses many ParameterStore limitations.
+- A custom built CLI on top of AWS ParameterStore that addresses many ParameterStore limitations.
 - Add / Update / Delete / Edit configurations and more
 - Promote configs from lower to higher environments
 - Share secrets directly to the code that needs them. No more handing DB credentials to some middle man so they can go put them "somewhere".
 - Browse a log that tracks all config changes over time, even for deleted configs.
-- Roll back any configuration, or hierarchy of configurations to *any point in time* (to the second) in the past!
-- Combat config sprawl. Figgy will tell you if you have a config in ParameterStore that you aren't using anymore!
+- Roll back any configuration, or hierarchy of configurations to *any point in time* (to the second) in the past.
+- Combat config sprawl. Figgy will tell you if you have a config in ParameterStore that you aren't using anymore.
 
 ### **Simplify your Development Workflow**
 - Easily integrate your CICD process with Figgy
@@ -18,7 +18,7 @@ Microservices are great, but your growing service footprint means configuration 
 - Make configuration *clear*. 
     - Following Figgy best-practices means you'll quickly know what configurations your app is using at any point-in-time.
 - Let your _code_ inform your configuration. 
-    - Figgy shared libraries can auto-generate your 'configuration' tree from your application code!
+    - Figgy shared libraries can auto-generate your 'configuration' tree from your application code.
     
 ### **Security**
 - SSO Integrations with Google Admin Console, OKTA, and AWS

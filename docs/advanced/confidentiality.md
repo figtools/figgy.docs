@@ -1,6 +1,7 @@
 ## Configuration Confidentiality
 
 Figgy manages the confidentiality of configurations in two main ways.
+
 - [x] Access control
 - [x] Encryption
 
