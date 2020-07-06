@@ -1,19 +1,3 @@
-Figgy simplifies and accelerates your development workflow by protecting you from common mistakes that lead to security 
-breaches, failed deployments, lost data, or application downtime.
-
-
-**Figgy will help you:**
-
-- Establish secure best practices from the start
-- Prevent failed deployments and application downtime due to configuration mismanagmeent
-- Save you and your engineering team time by automating simple configuration management tasks
-- Give you peace of mind through high availability and resiliency, versioned configurations, audit logs, and easy rollbacks or restores.
-- Keep secrets with their owners by cutting-out the middle-man and establishing a strong framework of least-privilege. 
-- No 3rd party lock-in or external dependencies -- Figgy deploys serverlessly into your AWS environments
-
-
----
-
 #### Simple & secure config and secret management
 As your cloud footprint grows, so do the configurations you need to manage your applications. 
 Figgy is a framework for simple, secure, and resilient config management in AWS. The best part? No new servers to 

@@ -8,7 +8,7 @@ Got 15 minutes or less? I can't save you on car insurance, but you can complete 
 
 - Impersonate a "Secret Owner" and store some super-secret credentials. 
 
-- Run a local Docker (or non-docker) application and see Figgy's libraries will infer your 
+- Run a local Docker (or non-docker) application and watch Figgy's libraries infer your 
 configuration dependencies straight from your source code.
 
 - Synchronize your local config state with remote configurations stored in AWS.

@@ -5,7 +5,7 @@ site_description: >-
   around each user story, so there's a little bit for everyone to appreciate.
 site_url: https://www.figgy.dev/docs/
 
-repo_url: https://github.com/figtools/figgy.docs
+repo_url: https://github.com/figtools/figgy
 theme:
   name: material
   custom_dir: mkdocs-material/material
@@ -35,8 +35,6 @@ extra:
       link: https://twitter.com/JordanMance1
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jordan-mance-78b87133/
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/squidfunk
 
 markdown_extensions:
   - toc:
@@ -71,7 +69,7 @@ markdown_extensions:
 nav:
   - Figgy Blog: '../'
   - What's Figgy: 'index.md'
-  - Why Figgy: 'why-figgy.md'
+#  - Why Figgy: 'why-figgy.md'
   - Features: 'features.md'
   - Getting Started:
     - Installing FiggyCLI: getting-started/install.md
