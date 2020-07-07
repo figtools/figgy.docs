@@ -42,9 +42,9 @@ AWS events to drive these changes ensures remote state remains in sync with desi
 
 **Event Sourcing**
 
-Event Sourcing is a design pattern where a log of events is the source-of-truth of your application state. To fix bad 
-application state, a series of events are replayed rather than attempting to restore from a "snapshot" of data at some point in the past.
-This pattern enables Figgy to replay events to rebuild both current state _and_ historical state in disaster recovery scenarios. 
+Event Sourcing is a design pattern where a log of events is the source-of-truth for application state. If application state needs
+to be restored or repaired, a series of events can be replayed to reset the state instead of attempting restoring data
+from a historical snapshot. Adopting this pattern enables Figgy to replay events to rebuild both current state _and_ historical state in disaster recovery scenarios. 
 Essentially, because all events are captured, we can track all changes over time, and restore any, or all, ParameterStore values 
 to any point-in-time in the past.
 

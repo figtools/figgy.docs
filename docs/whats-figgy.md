@@ -4,7 +4,9 @@ Figgy is built on AWS ParameterStore and leverages native AWS constructs such as
 integration with your environment. Figgy does not overlap with any existing AWS services, instead it builds on them, 
 providing added functionality and an improved user experience.
 
-
+Figgy is a management framework for configurations stored in AWS ParameterStore. It helps your teams safely manage
+the SSM keyspace, preventing misconfigured deployments and supporting least-privilege access. Figgy natively works with
+multiple AWS accounts and maintains a global audit log, which gives operators the ability to do global
 
 <br/>
 

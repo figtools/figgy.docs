@@ -42,10 +42,10 @@ DynamoDB Table.
 
 ## Privacy & Confidentiality
 
-- Figgy supports multi-factor authentication out of the box for ALL deployment options.
+- Figgy supports multi-factor authentication out of the box for all sso deployment modes.
 
-- One principal feature of Figgy is enabling secret owners to share their secrets with the applications that need
-them and to cut out the middle-man thereby reducing secret exposure.
+- Figgy enables secret owners to directly share their secrets with the applications that need
+them and cut out the middle-man to reduce secret exposure.
 
 - Figgy is designed from the ground up with a focus on the principal of least privilege. Figgy's default configurations 
 follow these best practices. 
