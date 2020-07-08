@@ -25,4 +25,4 @@ Sync detecting missing parameters.
 
 
 Sync notifying of unused parameters.
-<br/>![SyncOrphan](/docs/images/gifs/sync-orphan.gif)<br/>
+<br/>![SyncOrphan](/docs/images/gifs/sync-stray.gif)<br/>

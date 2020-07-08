@@ -93,7 +93,7 @@ nav:
       - List: commands/config/list.md
       - Promote: commands/config/promote.md
       - Sync: commands/config/sync.md
-      - Cleanup: commands/config/cleanup.md
+      - Prune: commands/config/prune.md
       - Share: commands/config/share.md
       - Dump: commands/config/dump.md
       - Audit: commands/config/audit.md

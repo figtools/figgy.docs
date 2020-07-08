@@ -56,7 +56,7 @@ state with the targeted environment. For instance, suppose you run:
 
 Figgy will look-up your currently defined state and compare it to the configuration state in your `dev` environment. Next, Figgy
 will prompt you to add any Parameter Store configurations that are missing. Sync will also tell you if there are 
-orphaned configurations in Parameter Store that your code doesn't appear to need anymore. Finally, sync will set up 
+stray configurations in Parameter Store that your code doesn't appear to need anymore. Finally, sync will set up 
 [config replication](/docs/getting-started/basics/#the-solution-config-replication) for any global parameters 
 your service needs and ensures sure they'll always be available to your service in its namespace.
 
@@ -65,7 +65,7 @@ without configuration issues in the targeted environment.
 
 ### [Cleanup](/docs/commands/config/cleanup/)
 
-Sync will notify you of orphaned configurations in Parameter Store but [cleanup](/docs/commands/config/cleanup/) 
+Sync will notify you of stray configurations in Parameter Store but [cleanup](/docs/commands/config/cleanup/) 
 will will walk you through them one-by-one and ask you if you'd like to delete them.
 
 ```console
