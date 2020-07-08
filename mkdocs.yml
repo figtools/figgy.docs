@@ -124,6 +124,11 @@ nav:
     - Developer Guide: user-guides/dev.md
     - DevOps Guide: user-guides/devops.md
     - Secret Owner Guide: user-guides/secret.md
+  - Operator Manual:
+      - Maintenance:
+          - Updating Figgy Cloud: manual/maintenance/updating-figgy-cloud.md
+      - Integrations:
+          - Slack: manual/integrations/slack.md
   - Architecture:
     - Figgy Ecosystem: architecture/ecosystem.md
     - Authentication: architecture/authentication.md
