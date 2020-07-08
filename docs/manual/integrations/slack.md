@@ -37,7 +37,7 @@ out of Lambda concurrency in your AWS account and are being _significantly_ thro
 
 ---
 
-#### Configuration Deleted
+#### Configuration Deleted:
 
 Any configuration that has been deleted from ParameterStore will result in a push notification to Slack with the following
 information.
@@ -46,4 +46,4 @@ information.
 - ID of user who performed the delete.
 - Environment where the delete was performed.
 
-!!! hint "To disable these events, set the parameter: `/figgy/integrations/slack/notify-deletes` to a value of `false`"
+!!! hint "To disable these events, set the fig: `/figgy/integrations/slack/notify-deletes` to a value of `false`"

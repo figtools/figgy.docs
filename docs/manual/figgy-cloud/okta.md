@@ -255,6 +255,7 @@ exception back then you have successfully configured your Federated access!
 
 ## Step 8: Configure Figgy CLI
 Prep: 
+
 - Make sure you have the Figgy CLI [installed locally](/docs/getting-started/install/).
 - A [while ago](#step-2-add-the-aws-app-to-okta) I asked you to save your OKTA App Embed URL. Get that handy.
 

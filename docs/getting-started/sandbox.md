@@ -5,15 +5,15 @@
 ## Figgy Sandbox
 
 The Figgy sandbox is the perfect place to have a *fling* with Figgy without the *long-term* commitment so many tools
-require :smirk:. The Figgy sandbox is configured as a [Bastion](/docs/figgy-cloud/) deployment across 5 different AWS accounts. 
+require :smirk:. The Figgy sandbox is configured as a [Bastion](/docs/manual/figgy-cloud/) deployment across 5 different AWS accounts. 
 
-These Sandbox AWSaccounts have been pre-populated with some `Fig Trees` (See - [Figgy Concepts](/docs/getting-started/concepts/)).
-Feel free take Figgy for a nice long walk through our Sandbox `Fig Orchard` :palm_tree:. Get to know `Figgy`, the `Fig Tree`, and all
-the little `Figs` you can find across our sandbox AWS accounts. Feel confident that you can't hurt Figgy or the `Fig Orchard`. 
-We grow a new beautiful Sandbox Fig Orchard every night :satisfied:.
+The Figgy Sandbox has been pre-populated with Fig Trees (See - [Figgy Concepts](/docs/getting-started/concepts/)).
+Feel free take Figgy for a nice long walk through our Fig Orchard :palm_tree:. Get to know Figgy, our Fig Trees, and all
+the little Figs you can find across our sandbox AWS accounts. Don't worry, you can't hurt Figgy or the Fig Orchard,  
+we grow a new beautiful Sandbox Fig Orchard every night :satisfied:.
 
 
-Don't forget: [Install Figgy First](/docs/getting-started/install/)
+!!! hint "Don't forget: [Install Figgy First](/docs/getting-started/install/)"
 
 ## Login to the Sandbox
     $   figgy login sandbox
@@ -51,7 +51,7 @@ to that configuration.
 ### Basics 2: Store a fig
     $   figgy config put --env dev
     
-Store a new configurations in our DEV environment. 
+Store a new configuration in our DEV environment. 
     
 <br/>
 <video autoplay loop muted class="video"><source src="/images/videos/put.mp4" type="video/mp4"></video>

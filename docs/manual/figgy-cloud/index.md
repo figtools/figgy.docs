@@ -1,12 +1,3 @@
-# Figgy Cloud
-
-Figgy Cloud is a suite of services that "keep the trains running on time" in your AWS accounts. These services 
-maintain the integrity of your configuration tree, support the FiggyCLI, and provide facilities for
-configuration backup and restoration. Deploying Figgy starts with deploying Figgy Cloud, and to do so, you will need to
-decide what type of Figgy Cloud deployment makes the most sense for your organization. Below you'll find explanations of 
-the different deployment options. 
-
-
 ## Deploying Figgy
 
 Before you deploy Figgy into your environment you must decide which authentication method works best for your
@@ -25,7 +16,7 @@ no access, except permissions to assume roles in _other_ Figgy-enabled accounts 
 There is no limit to the number of accounts you can integrate with your Bastion account. Users will be provided
 a single long-lived AWS Keypair to authenticate with the bastion account. From there, MFA can be enabled and users
 will be required input an MFA token when generating temporary sessions in other accounts.
-[Sign me up!](/docs/figgy-cloud/bastion/)
+[Sign me up!](/docs/manual/figgy-cloud/bastion/)
 <br/>
 <br/>
 
@@ -39,7 +30,7 @@ and you already leverage Google Apps this can be an elegant solution to managain
 
 <br/>![Google Auth](/docs/images/deployment/google-sso.png)<br/>
 
-To read about this solution check out the docs! [Sign me up!](/docs/figgy-cloud/google/)
+To read about this solution check out the docs! [Sign me up!](/docs/manual/figgy-cloud/google/)
 
 <br/>
 <br/>
@@ -53,7 +44,7 @@ highly recommend you select this integration.
 <br/>![Okta Auth](/docs/images/deployment/okta-sso.png)<br/>
 
 To read about this solution check out the below docs!
-[Sign me up!](/docs/figgy-cloud/okta/)
+[Sign me up!](/docs/manual/figgy-cloud/okta/)
 
 
 ### Standard AWS IAM
@@ -81,5 +72,5 @@ Standard AWS authentication essentially bypasses the following Figgy security an
 Instead this integration relies *entirely* on the user's locally configured AWS profiles. This integration was originally
 designed to simplify and support CICD pipeline deployments. 
 
-[I understand that this isn't ideal, but Sign me up!](/docs/figgy-cloud/standard/)
+[I understand that this isn't ideal, but Sign me up!](/docs/manual/figgy-cloud/standard/)
 

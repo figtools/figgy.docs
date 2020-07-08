@@ -76,13 +76,6 @@ nav:
     - Sandbox: getting-started/sandbox.md
     - Concepts: getting-started/concepts.md
     - Basics: getting-started/basics.md
-  - Figgy Cloud:
-      - Figgy Cloud: figgy-cloud/index.md
-      - Bastion: figgy-cloud/bastion.md
-      - Google: figgy-cloud/google.md
-      - Okta: figgy-cloud/okta.md
-      - Standard: figgy-cloud/standard.md
-      - Figgy Footprint: figgy-cloud/figgy-footprint.md
   - Commands:
     - Config:
       - Get: commands/config/get.md
@@ -125,8 +118,16 @@ nav:
     - DevOps Guide: user-guides/devops.md
     - Secret Owner Guide: user-guides/secret.md
   - Operator Manual:
+      - Setup Guide: manual/setup.md
+      - Figgy Footprint: manual/footprint.md
+      - Figgy Cloud:
+        - Introduction: manual/figgy-cloud/index.md
+        - Bastion: manual/figgy-cloud/bastion.md
+        - Google: manual/figgy-cloud/google.md
+        - Okta: manual/figgy-cloud/okta.md
+        - Standard: manual/figgy-cloud/standard.md
       - Maintenance:
-          - Updating Figgy Cloud: manual/maintenance/updating-figgy-cloud.md
+          - Updating Figgy: manual/maintenance/updating-figgy-cloud.md
       - Integrations:
           - Slack: manual/integrations/slack.md
   - Architecture:

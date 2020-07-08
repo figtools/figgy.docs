@@ -3,7 +3,7 @@
 
 ## Figgy Standard
 
-If you've already read through [Selecting a Deployment Type](/docs/figgy-cloud/index/) and you understand what you're giving up 
+If you've already read through [Selecting a Deployment Type](/docs/manual/figgy-cloud/index/) and you understand what you're giving up 
 when using Figgy standard, continue reading here. No judgement here, let's get you set-up. 
 
 The Figgy AWS Standard deployment by far the simplest deployment configuration. Figgy offloads all user-management to you.

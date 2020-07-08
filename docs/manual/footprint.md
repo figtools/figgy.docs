@@ -35,7 +35,7 @@ code in our public repository to see what to expect. You can find it here:
 
 - 1 (Optional) AWS IAM User
 
-For the following, yu can provide these resources or the Figgy can do it:
+For the following, you can provide these resources or the Figgy can do it:
 
 - 1 AWS S3 Bucket for Figgy Lambdas to be deployed to
 - AWS Cloudtrail must be enabled - Cloudtrail events are the backbone of Figgy's event pipeline
@@ -59,6 +59,6 @@ The data collected is the following:
 - A random GUUID associated with your user. No personal data is collected.
 
 The data is cached in a file at this location: `~/.figgy/cache/other/usage-metrics-cache.json`. Feel free to take a look.
-The data is reported to `https://api.figgy.dev/v1/log-metrics` once per day.
+The data is reported to `https://api.figgy.dev/v1/log-metrics` occasionally.
 You can find the code for usage tracking here: [Anonymouse Usage Tracking](https://github.com/figtools/figgy/blob/master/cli/figgy/svcs/observability/anonymous_usage_tracker.py)
 

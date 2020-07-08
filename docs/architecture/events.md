@@ -26,7 +26,7 @@ replication.
 Every change to a parameter in ParameterStore results in a new record inserted into this table. Figgy is
 able to support point-in-time restores by leveraging the history of events stored in this table.
 
-### Why all this effort to leverage events?
+### Why events?
 
 **To improve the collaboratve user experience**
 

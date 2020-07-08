@@ -102,8 +102,8 @@ The problem with having all configurations stored under twigs is that it assumes
 
 ### The solution: Config Replication
 
-The `/shared` **fig tree** is a special configuration tree where you can store configurations that are shared
-among numerous services. This is great for DNS names, database names, and anything else that is used in more than 
+The `/shared` **fig tree** is a special configuration tree where configurations that are shared
+among numerous services may be stored. This is great for DNS names, database names, and anything else that is used in more than 
 one place.
 
 !!! hint "As with all Figgy concepts, the `/shared` tree convention is a recommendation. It is not enforced by Figgy."
@@ -125,7 +125,7 @@ Declarative configuration provides a definitive answer on whether or not a *fig*
 By following Figgy best practices and defining your service configurations under **twigs**,  you will gain the benefit 
 of being notified when you have a *fig* out there that is no longer used by your service.
 
-The [sync](/docs/commands/config/sync/) and [cleanup](/docs/commands/config/cleanup/) commands will detect and
+The [sync](/docs/commands/config/sync/) and [prune](/docs/commands/config/prune/) commands will detect and
 prompt you to clean-up unused configurations to prevent unused config sprawl. 
 
 
@@ -135,7 +135,7 @@ That's it, you now know the basic features of Figgy.
 **DevOps / Software Architects:**
 
 1. [Installation](/docs/getting-started/install/)
-1. [Deploying Figgy](/docs/figgy-cloud/index/)
+1. [Deploying Figgy](/docs/manual/figgy-cloud/index/)
 1. [Advanced Figgy](/docs/advanced/confidentiality/)
 1. [Architecture](/docs/architecture/ecosystem/)
 
