@@ -33,7 +33,7 @@ been integrated with AWS. If you have already integrated OKTA with AWS, you can 
     - Download your IDP metadata.xml file. Right click the `Identity Provider metadata` link and download the contents.
     - **Store this in the `REPO_ROOT/terraform/figgy/saml/` directory and named as `metadata.xml`**
     
-    <img src="/docs/images/deployment/okta/metadata.png" style="max-width: 800px" alt="Metadata">
+    <img src="/images/deployment/okta/metadata.png" style="max-width: 800px" alt="Metadata">
     
     - Under Session Duration, input a max duration up to `43200` (recommended)
     - Check `Use Group Mapping` box. This will reveal some new options.
@@ -45,7 +45,7 @@ been integrated with AWS. If you have already integrated OKTA with AWS, you can 
 
 Open your `AWS Account Federation` application. Under the General Tab, find the `App Embed Link`. Copy it and set it aside, you will need it later.
 
-<img src="/docs/images/deployment/okta/embed-url.png" style="max-width: 800px" alt="Embed Url">
+<img src="/images/deployment/okta/embed-url.png" style="max-width: 800px" alt="Embed Url">
 
 <br/>
 
@@ -98,7 +98,7 @@ remote variable storage, you will not need these files and will know what to do 
 
 !!! tip "Don't forget to set  `create_deploy_bucket = false` in `01_configure_figgy.tf`, if you're using your own bucket. You will want to put the appropriate bucket name in each of the vars/* files for each account."
 
-**run_env**
+**env_alias**
 This is the environment name users will be referencing your account by when running commands like 
 `figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
 
@@ -145,7 +145,7 @@ You'll want to run `terraform apply` for each environment. Each environment is a
 You get the drift!
 
 For each deployed account, you will see a new "Identity Provider" show up with the name of 'okta':
-![Okta IDP](/docs/images/deployment/okta/aws-idp-okta.png)
+![Okta IDP](/images/deployment/okta/aws-idp-okta.png)
 
 This establishes a trust with OKTA based on that metadata file you downloaded.
 
@@ -167,7 +167,7 @@ AWS Account Federation app.
     - Click Test integration.
     - Under the `Provisioning` tab, under `To App`, enable "Create Users" & "Update User Attributes"
     
-    <img src="/docs/images/deployment/okta/okta-api-integration.png" style="max-width: 700px" alt="API Integration">
+    <img src="/images/deployment/okta/okta-api-integration.png" style="max-width: 700px" alt="API Integration">
     
 
 ## Step 6: Configure Groups
@@ -230,7 +230,7 @@ aws_3333333333_figgy-dev-dev
 
 1. Go back and open `AWS Account Federation` application you created under OKTA -> Applications.
 1. Under the `Assignments` tab select Assign -> Assign To Groups
-![Assign Button](/docs/images/deployment/okta/app-assign.png)
+![Assign Button](/images/deployment/okta/app-assign.png)
 
 1. Scroll down and assign ALL the groups you just created.
 <img src="/docs/images/deployment/okta/assign-groups.png" style="max-width: 700px" alt="Assign Groups">

@@ -19,7 +19,7 @@ Resources Provisioned:
 
 Authentication Flow:
 
-<br/>![Google Auth](/docs/images/deployment/google-sso.png)<br/>
+<br/>![Google Auth](/images/deployment/google-sso-2.png)<br/>
 
 
 **If you have already configured Federated Access to AWS through Google you can SKIP step #2**
@@ -38,7 +38,7 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 1. Log-in to [Google Admin Console](https://admin.google.com)
 1. Hamburger Menu (Top Left) -> Directory -> Users
 1. Click More(v) -> Manage Custom Attributes
-![Custom Attributes](/docs/images/deployment/google/custom-attribute-button.png)
+![Custom Attributes](/images/deployment/google/custom-attribute-button.png)
 
 1. Add the following attributes:
 
@@ -47,7 +47,7 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 |IAM Role	| Text  	| Visible to user and admin | Multi-value |
 |Session Duration  	| Whole Number  	| Visible to user and admin |   Single Value |
 
-![Custom Attributes](/docs/images/deployment/google/custom-attributes.png)
+![Custom Attributes](/images/deployment/google/custom-attributes.png)
 1. Click Save.
 
 ### Configure AWS SAML Application
@@ -76,7 +76,7 @@ code lives. Take note of the `saml/metadata.xml.placeholder` file. It's [here](h
 
 Open your new application, click Attribute Mapping, you should see something like this:
         
-![Attribute Mapping](/docs/images/deployment/google/attribute-mapping.png)
+![Attribute Mapping](/images/deployment/google/attribute-mapping.png)
 
 
 ==With your new SAML Application open, look in your URL bar:== 
@@ -134,7 +134,7 @@ remote variable storage, you will not need these files and will know what to do 
 
 !!! tip "Don't forget to set  `create_deploy_bucket = false` in `01_configure_figgy.tf`, if you're using your own bucket. You will want to put the appropriate bucket name in each of the vars/* files for each account."
 
-**run_env**
+**env_alias**
 This is the environment name users will be referencing your account by when running commands like 
 `figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
 
@@ -178,7 +178,7 @@ You'll want to run `terraform apply` for each environment. Each environment is a
 You get the drift!
 
 For each deployed account, you will see a new "Identity Provider" show up with the name of 'google':
-![Google IDP](/docs/images/deployment/google/aws-idp-google.png)
+![Google IDP](/images/deployment/google/aws-idp-google.png)
 
 This establishes a trust with Google based on that metadata file you downloaded.
 
@@ -198,7 +198,7 @@ The template you will need to follow is this:
 Replace:
 
 - AWS_ACCOUNT_ID -> Account ID for the Target Account
-- ENV_NAME -> `var.run_env` you selected when you filled in a `figgy/terraform/figgy/vars/*.tfvars` files.
+- ENV_NAME -> `var.env_alias` you selected when you filled in a `figgy/terraform/figgy/vars/*.tfvars` files.
 - ROLE_NAME -> The name of the role you want to allow the user to assume.
 
 Suppose one of your roles is named `devops`, one of your environments is named `dev`, and `dev` is associated with an accountId of `0123456789101`

@@ -11,7 +11,7 @@ Below you will find a collection of docs that may be helpful for DevOps engineer
 1. [Configuring CICD Validation](/docs/user-guides/how-to/cicd-validation/)
 1. [Example Dockerized Application](https://github.com/figtools/figgy.python-reference)
 1. [Managing Application Configs](/docs/user-guides/how-to/manage-application-configs/)
-1. [IAM Cookbook](/docs/advanced/iam-cookbook/)
+1. [IAM Cookbook](/docs/manual/configuration/iam-cookbook/)
 
 
 #### Commonly used commands:

@@ -1,17 +1,17 @@
 ## Deploying Figgy
 
-Before you deploy Figgy into your environment you must decide which authentication method works best for your
-organization. Once you have selected, continue to the associated setup guide based on your selection.
-
-The different deployment options available are:
+Before deploying Figgy Cloud into your environment an appropriate authentication strategy must be selected. Figgy Cloud currently
+supports four different authentication strategies. Below you will find a list of all support authentication strategies 
+supported by Figgy. Once you have selected the best-fit, continue to the associated setup guide based on your selection.
 
 ### Bastion Authentication
 
-A Figgy Bastion configuration turns one of your AWS accounts into your Figgy 'SSO' provider. It's the simplest configuration
-and can be installed in under an hour. Users who authenticate with Figgy will authenticate with this account and will have 
-no access, except permissions to assume roles in _other_ Figgy-enabled accounts through temporary AWS STS sessions.
+A Figgy Bastion configuration turns one of your AWS accounts into your Figgy 'SSO' provider. This is the simplest Figgy SSO
+configuration and can be installed in under an hour. When users authenticate with Figgy, they will instead be authenticating with this account.
+Permissions in the Bastion account are limited to self-management. Instead, users will assume roles in _other_ Figgy-enabled 
+accounts through temporary AWS STS sessions to gain access to manage their configurations.
 
-<br/>![Bastion Auth](/docs/images/deployment/bastion-auth.png)<br/>
+<br/>![Bastion Auth](/images/deployment/bastion-auth-2.png)<br/>
 
 There is no limit to the number of accounts you can integrate with your Bastion account. Users will be provided
 a single long-lived AWS Keypair to authenticate with the bastion account. From there, MFA can be enabled and users
@@ -28,7 +28,7 @@ Figgy can integrate directly with Google Admin Console to provide Federated acce
 SAML based authentication with Google as your identity provider (IDP). If you don't want to manage any AWS user accounts
 and you already leverage Google Apps this can be an elegant solution to managaing AWS access for your organization. 
 
-<br/>![Google Auth](/docs/images/deployment/google-sso.png)<br/>
+<br/>![Google Auth](/images/deployment/google-sso-2.png)<br/>
 
 To read about this solution check out the docs! [Sign me up!](/docs/manual/figgy-cloud/google/)
 
@@ -41,7 +41,7 @@ OKTA is a true SSO solution and the ideal Identity Provider to integrate with Fi
 for AWS through an internal OKTA application that is well documented and easy to configure. If you're using OKTA we 
 highly recommend you select this integration.
 
-<br/>![Okta Auth](/docs/images/deployment/okta-sso.png)<br/>
+<br/>![Okta Auth](/images/deployment/okta-sso-2.png)<br/>
 
 To read about this solution check out the below docs!
 [Sign me up!](/docs/manual/figgy-cloud/okta/)
@@ -56,7 +56,7 @@ That being said; we recognize the cloud is complicated and often teams are faced
 constraints that may affect the opportunity to integrate through one of the above SSO solutions. If this applies to you, 
 or if you want to do some light experimentation with Figgy in a _single_ account, the below integration option will work for you.
 
-<br/>![Standard Auth](/docs/images/deployment/standard-auth.png)<br/>
+<br/>![Standard Auth](/images/deployment/figgy-standard.png)<br/>
 
 
 This type of authentication might be ideal for small organizations that have a single AWS account and maintain all of 

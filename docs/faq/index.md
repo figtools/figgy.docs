@@ -22,6 +22,14 @@ Secrets Manager is also built on top of ParameterStore and as such is completely
 
 ---
 
+#### What about Kubernetes?
+
+Figgy is independent but compatible with AWS K8s deployments and offers some distinct advantages over ConfigMaps and K8s Secrets. 
+
+[Learn More](/docs/manual/integrations/k8s/)
+
+---
+
 #### Why does Figgy need access to my laptop keychain?
 <br/>
 Figgy _only_ needs access to the `figgy` namespace of your laptop keychain. Figgy does not have access to any other

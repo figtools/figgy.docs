@@ -7,7 +7,7 @@ _exactly_ what to expect when deploying Figgy into your environment.
 Below is a diagram of the entire Figgy Ecosystem. You will see OKTA, Google, and AWS as Identity Providers in this 
 diagram; however, depending on your configuration, two of those will not exist for your deployment.
 
-<br/>![Figgy Ecosystem](/docs/images/deployment/figgy-ecosystem.png)<br/>
+<br/>![Figgy Ecosystem](/images/deployment/figgy-ecosystem.png)<br/>
 
 Your _ecosystem_ depends on how you configure Figgy. Every Figgy deployment will require the following
 resources to be provisioned in each integrated AWS account. As always, you can and **should** look over the Terraform
@@ -43,7 +43,7 @@ For the following, you can provide these resources or the Figgy can do it:
 Figgy is designed to protect your sensitive applications and secrets. All Figgy resources are provisioned with a
 focus on minimum privilege. 
 
-<br/>![Figgy Footprint](/docs/images/deployment/figgy-footprint.png)<br/>
+<br/>![Figgy Footprint](/images/deployment/figgy-footprint-2.png)<br/>
 
 <br/><br/>
 

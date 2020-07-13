@@ -38,7 +38,7 @@ recommendations and the [Browse](/docs/commands/config/browse/) Tree.
 Anonymous usage metrics are also logged in a local cache. These metrics are always logged locally, but are only reported if the 
 user has enabled anonymous usage metric reporting. 
 
-### Local encrypted cache: `~/.figgy/vault/`
+### Local encrypted cache: `~/.figgy/lockbox/`
 
 Also known as the "Figgy Vault", the Figgy CLI caches SSO and AWS STS temporary session credentials in a local encrypted
 cache. This encrypted cache is tapped as-needed in subsequent Figgy executions. SSO session duration is based on the 

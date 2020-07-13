@@ -113,10 +113,10 @@ nav:
     - Advanced Figgy:
       - Config Confidentiality: advanced/confidentiality.md
       - Declarative Configuration: advanced/declarative-configuration.md
-      - IAM Cookbook: advanced/iam-cookbook.md
     - Developer Guide: user-guides/dev.md
     - DevOps Guide: user-guides/devops.md
     - Secret Owner Guide: user-guides/secret.md
+    - Figgy Repositories: user-guides/repos.md
   - Operator Manual:
       - Setup Guide: manual/setup.md
       - Figgy Footprint: manual/footprint.md
@@ -126,10 +126,15 @@ nav:
         - Google: manual/figgy-cloud/google.md
         - Okta: manual/figgy-cloud/okta.md
         - Standard: manual/figgy-cloud/standard.md
+      - Configuration:
+        - Figgy Cloud: manual/configuration/figgy-cloud.md
+        - Figgy CLI: manual/configuration/figgy-cli.md
+        - IAM Cookbook: manual/configuration/iam-cookbook.md
       - Maintenance:
           - Updating Figgy: manual/maintenance/updating-figgy-cloud.md
       - Integrations:
           - Slack: manual/integrations/slack.md
+          - Kubernetes: manual/integrations/k8s.md
   - Architecture:
     - Figgy Ecosystem: architecture/ecosystem.md
     - Authentication: architecture/authentication.md

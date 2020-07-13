@@ -56,6 +56,6 @@ limited to access to any arbitrary section of the ParameterStore tree.
 - Figgy supports creating and leveraging as many AWS KMS encryption keys as desired by organizations to protect and carve 
 up sensitive data stored through Figgy.
 
-- Figgy automatically encrypts all temporary secrets in its own local vault and stores long-lived sensitive user 
+- Figgy automatically encrypts all temporary secrets in its own local lockbox and stores long-lived sensitive user 
 credentials in the default OS keychain for maximum protection.
 

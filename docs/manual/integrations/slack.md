@@ -31,9 +31,9 @@ Virtually never, but potentially:
 - A source and destination were detected as out-of-sync and were resynchronized by a background process that looks 
 for configurations in bad state.
 
-This final scenario should never occur except in extremely rare cases where either a bug has been introduced
-into Figgy, or an outside enviornment related processes affects Figgy's ability to maintain state. For instance, if your run
-out of Lambda concurrency in your AWS account and are being _significantly_ throttled.
+This final scenario should never occur except in extremely rare circumstances where either a bug has been introduced
+into Figgy, or an external environmental factor has affected Figgy's ability to maintain state, such as 
+running out of Lambda concurrency availability in your AWS account and are being _significantly_ throttled.
 
 ---
 

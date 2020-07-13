@@ -12,7 +12,7 @@ Plus some extra resources in your selected Bastion account:
 - IAM Users (this is what your Figgy users will authenticate with)
 - IAM Roles
 
-<br/>![Bastion Auth](/docs/images/deployment/bastion-auth.png)<br/>
+<br/>![Bastion Auth](/images/deployment/bastion-auth-2.png)<br/>
 
 
 Users will authenticate with your bastion account through some low-power IAM Credentials stored in their `~/.aws/credentials` file.
@@ -97,7 +97,7 @@ will be one `.tfvars` file for each account you are integrating. If there are ex
     Don't forget to set  `create_deploy_bucket = false` in `01_configure_figgy.tf`, if you're using your own bucket. 
     You will want to put the appropriate bucket name in each of the vars/* files for each account.
 
-**run_env** must match to the environment names you set in your `02_configure_bastion` file in the `env -> accountId` map.
+**env_alias** must match to the environment names you set in your `02_configure_bastion` file in the `env -> accountId` map.
 
 **webhook_url** is optional, but if you want you can add a Slack webhook url where Figgy can post notifications for configuration changes.
 

@@ -1,6 +1,6 @@
 Figgy Cloud is versioned and released similarly to the FiggyCLI. Future versions of
 the FiggyCLI may contain features that require updates to your FiggyCloud installation. As such, when installing 
-Figgy Cloud it's important _fork_ the root [Figgy Cloud](https://github.com/figtools/figgy) repository and maintain your own version.
+Figgy Cloud, it's important _fork_ the root [Figgy Cloud](https://github.com/figtools/figgy) repository and maintain your own version.
 During your installation you should commit your configuration changes to your organization's git repository.
 
 Maintaining your own Fork will enable merging updates from the root Figgy Cloud repository. To merge the latest
@@ -13,9 +13,9 @@ stable version of Figgy. If desired, you may also target previous versions of Fi
 
 
 
-!!! warning 
+!!! warning ""
         Don't forget to check the [release notes](https://github.com/figtools/figgy/blob/master/RELEASE_NOTES.md)
-        to see if you need to add new configuration parameters required by new features!
+        to see if you need to add new configuration parameters to take advantage of new features!
 
 Once you have merged your changes, re-run the standard Terraform plan & apply process you ran when 
 originally provisioning Figgy. 

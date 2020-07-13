@@ -63,6 +63,6 @@ Store a new configuration in our DEV environment.
 Browse the Fig Orchard to see what's out there. 
 
 <br/>
-<video controls autoplay loop muted class="video"><source src="/images/videos/browse.mp4" type="video/mp4"></video>
+<video autoplay loop muted class="video"><source src="/images/videos/browse.mp4" type="video/mp4"></video>
 <br/>
 And so much more. See our [Commands](/docs/commands/config/get) section to see all figgy can offer!

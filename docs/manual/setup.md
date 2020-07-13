@@ -4,9 +4,9 @@ A working Figgy installation has two main parts:
 - Figgy CLI
     
 Setup in your organization requires setting up Figgy Cloud *first*. If you're still evaluating Figgy and don't want to
-go through the trouble of installing FiggyCloud, but you can experiment with Figgy through our
+go through the trouble of installing Figgy Cloud, you can experiment with Figgy through our
 free [Sandbox](/docs/getting-started/sandbox). The Sandbox is a hosted Figgy Cloud installation designed for public
-experimentation and consumption. If you're ready to adopt Figgy, continue below:
+experimentation and consumption. Once you're ready to adopt Figgy, continue below:
     
     
 ## Figgy Cloud
@@ -42,9 +42,10 @@ you'll be using: Bastion, Google SSO, or OKTA SSO. See [Figgy Deployment](/docs/
 ## Distributing Figgy
 
 If you are rolling Figgy out across an organization it might be easiest to auto-configure some sane defaults for users.
-Sane defaults can be written to the figgy defaults file: `~/.figgy/config`. When users run `figgy --configure` they will
-have the option to keep or overwrite any defaults in this file. Without this defaults file users will be prompted to
-manually enter all configurations required by your selected Figgy Cloud installation below:
+Sane defaults can be written to the figgy defaults file: `~/.figgy/config`. Users will be presented with options to 
+keep or override any defaults defined in the `~/.figgy/config` file when running `figgy --configure`. Without this *optional* 
+defaults file, users will be prompted to manually enter all configurations required by your selected 
+Figgy Cloud installation below:
 
 All configs listed below are optional. Feel free to remove items irrelevant to your deployment.
 

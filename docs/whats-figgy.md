@@ -47,7 +47,7 @@ don’t ask yourself, “What secrets passed through Bill that we need to rotate
 ---
 #### Easily manage and maintain least privilege
 Figgy makes it easy to give both users and applications, the exact amount of access they need and nothing more. Figgy's 
-primary features are designed to make it easy to scalably maintain and enforce least privilege. By following Figgy best
+primary features make it easy to scalably maintain and enforce least privilege. By following Figgy best
 practices you can easily maintain appropriate access for users and services while keeping your IAM policies short and sweet.
 
 ---

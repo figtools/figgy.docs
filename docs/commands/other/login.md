@@ -5,7 +5,7 @@ Command:
 
     $   figgy login
         
-Generates and caches STS sessions with authorized accounts and stores them in the figgy vault. If a user has MFA enabled,
+Generates and caches STS sessions with authorized accounts and stores them in the figgy lockbox. If a user has MFA enabled,
 the `login` command may be useful for reducing the number of MFA prompts a user would receive while using Figgy 
 throughout the day. 
 

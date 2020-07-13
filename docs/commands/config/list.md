@@ -1,6 +1,6 @@
 
 ## List
 
-List all values under some ParameterStore prefix. From this list, you may select individual values to look up.
+List, filter, lookup, and search parameters in the Fig Orchard. 
 
 <br/>![List](/docs/images/gifs/list.gif)<br/>

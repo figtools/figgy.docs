@@ -94,4 +94,4 @@ secret in higher environments, but the `message-fetcher` will.
     
     In this example, Jim, the developer, does not have access to the replication key in production. We have now successfully shared a secret 
     directly with the interested party and cut-out the middle-man. For IAM policy examples to support this example, 
-    see the [IAM Cookbook](/docs/advanced/iam-cookbook/)
+    see the [IAM Cookbook](/docs/manual/configuration/iam-cookbook/)

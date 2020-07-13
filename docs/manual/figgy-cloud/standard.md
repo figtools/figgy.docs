@@ -68,7 +68,7 @@ will be one `.tfvars` file for each account you are integrating. If there are ex
 
 !!! tip "Don't forget to set  `create_deploy_bucket = false` in `01_configure_figgy.tf`, if you're using your own bucket. You will want to put the appropriate bucket name in each of the vars/* files for each account."
 
-**run_env**
+**env_alias**
 This is the environment name users will be referencing your account by when running commands like 
 `figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
 
