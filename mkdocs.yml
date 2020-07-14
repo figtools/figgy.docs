@@ -72,75 +72,75 @@ nav:
   - Features: 'features.md'
   - Getting Started:
     - Installing FiggyCLI: getting-started/install.md
-    - Demo: getting-started/demo.md
-    - Sandbox: getting-started/sandbox.md
-    - Concepts: getting-started/concepts.md
-    - Basics: getting-started/basics.md
+#    - Demo: getting-started/demo.md
+#    - Sandbox: getting-started/sandbox.md
+#    - Concepts: getting-started/concepts.md
+#    - Basics: getting-started/basics.md
   - Commands:
     - Config:
       - Get: commands/config/get.md
-      - Put: commands/config/put.md
-      - Delete: commands/config/delete.md
-      - Edit: commands/config/edit.md
-      - Browse: commands/config/browse.md
-      - List: commands/config/list.md
-      - Promote: commands/config/promote.md
-      - Sync: commands/config/sync.md
-      - Prune: commands/config/prune.md
-      - Share: commands/config/share.md
-      - Dump: commands/config/dump.md
-      - Audit: commands/config/audit.md
-      - Restore: commands/config/restore.md
-      - Validate: commands/config/validate.md
-    - IAM:
-      - Export: commands/iam/export.md
-      - Restore: commands/iam/restore.md
-    - Other:
-      - Configure: commands/other/configure.md
-      - Version: commands/other/version.md
-      - Login: commands/other/login.md
-      - Upgrade: commands/other/upgrade.md
-    - --flags:
-      - --env: commands/flags/env.md
-      - --role: commands/flags/role.md
-      - --profile: commands/flags/profile.md
+#      - Put: commands/config/put.md
+#      - Delete: commands/config/delete.md
+#      - Edit: commands/config/edit.md
+#      - Browse: commands/config/browse.md
+#      - List: commands/config/list.md
+#      - Promote: commands/config/promote.md
+#      - Sync: commands/config/sync.md
+#      - Prune: commands/config/prune.md
+#      - Share: commands/config/share.md
+#      - Dump: commands/config/dump.md
+#      - Audit: commands/config/audit.md
+#      - Restore: commands/config/restore.md
+#      - Validate: commands/config/validate.md
+#    - IAM:
+#      - Export: commands/iam/export.md
+#      - Restore: commands/iam/restore.md
+#    - Other:
+#      - Configure: commands/other/configure.md
+#      - Version: commands/other/version.md
+#      - Login: commands/other/login.md
+#      - Upgrade: commands/other/upgrade.md
+#    - --flags:
+#      - --env: commands/flags/env.md
+#      - --role: commands/flags/role.md
+#      - --profile: commands/flags/profile.md
   - User Guides:
     - How To:
       - Manage Application Configs: user-guides/how-to/manage-application-configs.md
-      - Configure CICD Validation: user-guides/how-to/cicd-validation.md
-      - Manage & Share Secrets: user-guides/how-to/share-secrets.md
-      - Rotate Secrets: user-guides/how-to/secret-rotation.md
+#      - Configure CICD Validation: user-guides/how-to/cicd-validation.md
+#      - Manage & Share Secrets: user-guides/how-to/share-secrets.md
+#      - Rotate Secrets: user-guides/how-to/secret-rotation.md
     - Advanced Figgy:
       - Config Confidentiality: advanced/confidentiality.md
-      - Declarative Configuration: advanced/declarative-configuration.md
+#      - Declarative Configuration: advanced/declarative-configuration.md
     - Developer Guide: user-guides/dev.md
-    - DevOps Guide: user-guides/devops.md
-    - Secret Owner Guide: user-guides/secret.md
-    - Figgy Repositories: user-guides/repos.md
+#    - DevOps Guide: user-guides/devops.md
+#    - Secret Owner Guide: user-guides/secret.md
+#    - Figgy Repositories: user-guides/repos.md
   - Operator Manual:
       - Setup Guide: manual/setup.md
-      - Figgy Footprint: manual/footprint.md
+#      - Figgy Footprint: manual/footprint.md
       - Figgy Cloud:
         - Introduction: manual/figgy-cloud/index.md
-        - Bastion: manual/figgy-cloud/bastion.md
-        - Google: manual/figgy-cloud/google.md
-        - Okta: manual/figgy-cloud/okta.md
-        - Standard: manual/figgy-cloud/standard.md
-      - Configuration:
-        - Figgy Cloud: manual/configuration/figgy-cloud.md
-        - Figgy CLI: manual/configuration/figgy-cli.md
-        - IAM Cookbook: manual/configuration/iam-cookbook.md
-      - Maintenance:
-          - Updating Figgy: manual/maintenance/updating-figgy-cloud.md
-      - Integrations:
-          - Slack: manual/integrations/slack.md
-          - Kubernetes: manual/integrations/k8s.md
+#        - Bastion: manual/figgy-cloud/bastion.md
+#        - Google: manual/figgy-cloud/google.md
+#        - Okta: manual/figgy-cloud/okta.md
+#        - Standard: manual/figgy-cloud/standard.md
+#      - Configuration:
+#        - Figgy Cloud: manual/configuration/figgy-cloud.md
+#        - Figgy CLI: manual/configuration/figgy-cli.md
+#        - IAM Cookbook: manual/configuration/iam-cookbook.md
+#      - Maintenance:
+#          - Updating Figgy: manual/maintenance/updating-figgy-cloud.md
+#      - Integrations:
+#          - Slack: manual/integrations/slack.md
+#          - Kubernetes: manual/integrations/k8s.md
   - Architecture:
     - Figgy Ecosystem: architecture/ecosystem.md
-    - Authentication: architecture/authentication.md
-    - Events: architecture/events.md
-    - Security: architecture/security.md
-    - Caching: architecture/caching.md
+#    - Authentication: architecture/authentication.md
+#    - Events: architecture/events.md
+#    - Security: architecture/security.md
+#    - Caching: architecture/caching.md
   - FAQ: faq/index.md
 
 # Google Analytics
