@@ -47,25 +47,25 @@ let search: Search
  * @param config - Search index configuration
  */
 function setupLunrLanguages(config: SearchIndexConfig): void {
-  const base = "../lunr"
-
-  /* Add scripts for languages */
-  const scripts = []
-  for (const lang of config.lang) {
-    if (lang === "ja") scripts.push(`${base}/tinyseg.min.js`)
-    if (lang !== "en") scripts.push(`${base}/min/lunr.${lang}.min.js`)
-  }
-
-  /* Add multi-language support */
-  if (config.lang.length > 1)
-    scripts.push(`${base}/min/lunr.multi.min.js`)
-
-  /* Load scripts synchronously */
-  if (scripts.length)
-    importScripts(
-      `${base}/min/lunr.stemmer.support.min.js`,
-      ...scripts
-    )
+  // const base = "../lunr"
+  //
+  // /* Add scripts for languages */
+  // const scripts = []
+  // for (const lang of config.lang) {
+  //   if (lang === "ja") scripts.push(`${base}/tinyseg.min.js`)
+  //   if (lang !== "en") scripts.push(`${base}/min/lunr.${lang}.min.js`)
+  // }
+  //
+  // /* Add multi-language support */
+  // if (config.lang.length > 1)
+  //   scripts.push(`${base}/min/lunr.multi.min.js`)
+  //
+  // /* Load scripts synchronously */
+  // if (scripts.length)
+  //   importScripts(
+  //     `${base}/min/lunr.stemmer.support.min.js`,
+  //     ...scripts
+  //   )
 }
 
 /* ----------------------------------------------------------------------------

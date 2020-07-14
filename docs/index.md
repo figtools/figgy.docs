@@ -1,5 +1,5 @@
 ---
-template: overrides/figgy-home.html
+template: overrides/home.html
 title: Figgy
 ---
 

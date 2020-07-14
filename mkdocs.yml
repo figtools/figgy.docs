@@ -14,12 +14,12 @@ theme:
     text: Proxima Nova Semi-Bold
     code: Roboto Mono
   icon:
-    logo: dark
+    logo: logo
   features:
     - tabs
   include_sidebar: yes
   include_search_page: false
-  search_index_only: true
+  search_index_only: false
 extra_css:
   - stylesheets/figgy-theme.css
   - stylesheets/figgy-system.css
