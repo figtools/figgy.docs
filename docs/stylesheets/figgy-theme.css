@@ -15,7 +15,7 @@ html, body {
 body {
     background-color: var(--gray-700);
     background-image: url("../images/bg-site-gradient.svg");
-    background-repeat:no-repeat;
+    background-repeat:repeat-x;
     background-position: 50% 48px;
 }
 /* custom inner container */

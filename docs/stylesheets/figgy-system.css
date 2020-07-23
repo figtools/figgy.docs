@@ -109,7 +109,7 @@ VARIABLES
     --h5: 0.9rem;
     --h6: 0.7rem;
     --input: 0.7rem;
-    --paragraph: .8rem;
+    --paragraph: .8rem; /* Updated by jordan from typography to make docs more readable */
     --label: 0.6rem;
  
 
@@ -120,7 +120,14 @@ VARIABLES
     --medium: 600;
     --bold: 700;
     --black: 900;
-    
+
+    /* Global Overrides */
+    --md-default-fg-color--lightest: var(--info-600);
+    --md-accent-fg-color: var(--info-600);
+    --md-default-fg-color: var(--white);
+    --md-test-color: var(--gray-100);
+    --md-default-bg-color: var(--gray-700);
+    --md-accent-fg-color--transparent: var(--primary-200);
 }
 
 
@@ -379,7 +386,7 @@ CLASSES FOR USE IN THE WILD
         font-family: var(--font-family-sans); 
         font-size: var(--paragraph);
         font-weight: var(--regular);
-        line-height: var(--paragraph);
+        line-height: calc(var(--paragraph) * 1.5);
     }
     .fnt-label {  
         font-family: var(--font-family-sans); 

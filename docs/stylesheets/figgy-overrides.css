@@ -1,6 +1,7 @@
 /* FIGGY OVERRIDES */
 /* all theme overrides here in one place */
 
+
 /* 
 MASTHEAD 
 */
@@ -117,11 +118,11 @@ li {
 }
 /* code display */
 .md-typeset code {
-    background: transparent;
+    background: var(--gray-800);
 }
 .md-typeset code, .md-typeset pre, .md-typeset kbd {
     color: white;
-    padding-right: 45px;
+    /*padding-right: 45px;*/
 }
 .md-clipboard, .md-clipboard:hover {
     color: var(--brandmint)!important;
@@ -129,4 +130,41 @@ li {
 /* search results */
 .md-search-result__title {
     color: var(--gray-700);
+}
+
+/* Hints */
+.md-typeset .admonition {
+    background-color: var(--gray-700) !important;
+}
+
+.note {
+    border-color: var(--info-500) !important;
+}
+
+summary::before {
+    background-color: var(--info-500) !important;
+}
+
+
+.hint {
+    border-color: var(--primary-500) !important;
+}
+
+.hint .admonition-title::before {
+    background-color: var(--primary-500) !important;
+}
+
+
+.warning {
+    border-color: var(--warning-500) !important;
+}
+
+.warning .admonition-title::before {
+    background-color: var(--warning-500) !important;
+}
+
+
+/* Bullets */
+.md-typeset .task-list-control [type=checkbox]:checked + .task-list-indicator::before {
+    background-color: var(--brandmint) !important;
 }

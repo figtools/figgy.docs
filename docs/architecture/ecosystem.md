@@ -12,5 +12,5 @@ code in our public repository to see what to expect. You can find it here:
 <a href="https://github.com/figtools/figgy/tree/master/terraform" target="_blank">Figgy Infrastructure Code</a>
 
 
-<br/>![Figgy Ecosystem](/docs/images/deployment/figgy-ecosystem.png)<br/>
+<br/>![Figgy Ecosystem](/images/deployment/figgy-ecosystem.png)<br/>
 
