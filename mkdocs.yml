@@ -11,7 +11,7 @@ theme:
   custom_dir: mkdocs-material/material
   language: en
   font:
-    text: Proxima Nova Semi-Bold
+    text: Roboto Mono
     code: Roboto Mono
   icon:
     logo: logo
@@ -25,8 +25,11 @@ extra_css:
   - stylesheets/figgy-system.css
   - stylesheets/figgy-code.css
   - stylesheets/figgy-other.css
-  - stylesheets/figgy-typography.css
+  - stylesheets/figgy-overrides.css
   - stylesheets/growl-dark-theme.css
+  - fonts/AlpinGothic/stylesheet.css
+  - fonts/Montserrat/stylesheet.css
+  - fonts/ProximaNova/stylesheet.css
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -68,8 +71,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - What's Figgy: 'whats-figgy.md'
-  - Features: 'features.md'
+  #- What's Figgy: 'whats-figgy.md'
+  #- Features: 'features.md'
   - Getting Started:
     - Installing FiggyCLI: getting-started/install.md
 #    - Demo: getting-started/demo.md
@@ -141,7 +144,7 @@ nav:
 #    - Events: architecture/events.md
 #    - Security: architecture/security.md
 #    - Caching: architecture/caching.md
-  - FAQ: faq/index.md
+  - FAQ: faq/faq.md
 
 # Google Analytics
 google_analytics:

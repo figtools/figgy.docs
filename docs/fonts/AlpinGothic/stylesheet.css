@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'alpinGothicRegular';
+    src: url('alpinGothicRegular-webfont.eot');
+    src: url('alpinGothicRegular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('alpinGothicRegular-webfont.woff') format('woff'),
+         url('alpinGothicRegular-webfont.ttf') format('truetype'),
+         url('alpinGothicRegular-webfont.svg#alpin_gothic_cg_no3regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+} 
+
+

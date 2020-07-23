@@ -1,0 +1,132 @@
+/* FIGGY OVERRIDES */
+/* all theme overrides here in one place */
+
+/* 
+MASTHEAD 
+*/
+/* make header transparent */
+.md-header {
+    background-color: #282F35;
+}
+/* make tab strip transparent */
+.md-tabs {
+    background: transparent;
+}
+/* logo */
+.md-logo svg {display:none !important;} /* start by hiding the mkdocs logo */
+.md-logo {
+    width:40px;
+    height: 40px;
+    background-image: url("../images/logos/figgysymbol-mint.svg");
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: 24px 24px;
+}
+/* main nav */
+.md-tabs__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left:2.5px;
+    padding-right:2.5px;
+}
+.md-tabs__link {
+    margin-top: 0rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 24px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.md-tabs__link--active {
+    color: var(--brandmint)!important;
+    opacity: .99!important; /* this is a needed hack...not sure why...still hunting this one down */
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--brandmint);
+    border-radius: 12px;
+}
+
+/* 
+SIDEBARS 
+*/
+/* drawer */
+.md-sidebar--primary .md-nav__title, 
+.md-sidebar--primary .md-nav__list {
+        /* background-color: var(--gray-700)!important; */
+        background:transparent!important;
+}
+.md-sidebar--primary .md-nav__source {
+    background-color: var(--gray-800)!important;
+}
+@media screen and (max-width: 76.1875em) {
+    .md-nav {
+        background-color: var(--gray-700)!important;
+    }
+}
+/* sidebar nav */
+nav.md-nav--secondary, nav.md-nav--secondary nav.md-nav {
+    background:transparent;
+}
+/* sidebar links */
+.md-nav__item {
+    color:#ffffff;
+}
+.md-nav__link--active, 
+.md-nav__item--active > .md-nav__link {
+    color: var(--brandmint)!important;
+}
+.md-nav__link:hover {
+    color: var(--primary-300)!important;
+}
+.md-nav__link[data-md-state=blur] {
+    color: var(--primary-700);
+}
+
+.md-nav__title {
+    color: white!important;
+    font-weight: 700!important;
+}
+
+/* footer */
+.md-footer {
+    color: var(--md-footer-fg-color);
+    background-color: var(--gray-800);
+}
+.md-footer-meta {
+    background-color: var(--gray-800);
+}
+/* footer copyright link */
+.md-footer-copyright a {
+    color: var(--brandmint)!important;
+}
+
+/* text color */
+.md-typeset h1 {
+    color:white;
+}
+.md-typeset a {
+    color: var(--brandmint);
+}
+.md-typeset a:focus, .md-typeset a:hover {
+    color: var(--primary-300);
+}
+
+li {
+    color:white;
+}
+/* code display */
+.md-typeset code {
+    background: transparent;
+}
+.md-typeset code, .md-typeset pre, .md-typeset kbd {
+    color: white;
+    padding-right: 45px;
+}
+.md-clipboard, .md-clipboard:hover {
+    color: var(--brandmint)!important;
+}
+/* search results */
+.md-search-result__title {
+    color: var(--gray-700);
+}

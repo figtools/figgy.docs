@@ -1,197 +1,208 @@
 <!--
-  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
+  FIGGY HOME
 -->
 
-{% extends "overrides/main.html" %}
+{% extends "homebase.html" %}
 
 <!-- Render hero under tabs -->
 {% block tabs %}
   {{ super() }}
 
-  <!-- Additional styles for landing page -->
-  <style>
-
-    /* Application header should be static for the landing page */
-    .md-header {
-      position: initial;
-    }
-
-    /* Remove spacing, as we cannot hide it completely */
-    .md-main__inner {
-      margin: 0;
-    }
-
-    /* Hide main content for now */
-    .md-content {
-      display: none;
-    }
-
-    /* Gradient background + blob */
-    .tx-container {
-      padding-top: 1rem;
-      background:
-        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: white' /></svg>") no-repeat bottom,
-        linear-gradient(
-          to bottom,
-          var(--md-primary-fg-color),
-          hsla(280, 67%, 55%, 1) 99%,
-          white 99%
-        );
-    }
-
-    /* Set inverted text color on hero */
-    .tx-hero {
-      margin: 0 .8rem;
-      color: var(--md-primary-bg-color);
-    }
-
-    /* Make main headline thicker */
-    .tx-hero h1 {
-      margin-bottom: 1rem;
-      color: currentColor;
-      font-weight: 700;
-    }
-
-    /* Ensure that blob doesn't overlap buttons */
-    .tx-hero__content {
-      padding-bottom: 6rem;
-    }
-
-    /* Adjust spacing of buttons and invert them */
-    .tx-hero .md-button {
-      margin-top: .5rem;
-      margin-right: .5rem;
-      color: var(--md-primary-bg-color);
-    }
-
-    /* Invert primary button */
-    .tx-hero .md-button--primary {
-      background-color: var(--md-primary-bg-color);
-      color: hsla(280deg, 37%, 48%, 1);
-      border-color: var(--md-primary-bg-color);
-    }
-
-    /* Invert hover and focus button states */
-    .tx-hero .md-button:hover,
-    .tx-hero .md-button:focus {
-      background-color: var(--md-accent-fg-color);
-      color: var(--md-default-bg-color);
-      border-color: var(--md-accent-fg-color);
-    }
-
-    /* [mobile portrait -]: Adjust headline */
-    @media screen and (max-width: 30em) {
-
-      /* Make main headline smaller */
-      .tx-hero h1 {
-        font-size: 1.4rem;
-      }
-    }
-
-    /* [tablet landscape +]: Display content and image next to each other */
-    @media screen and (min-width: 60em) {
-
-      /* Hide table of contents */
-      .md-sidebar--secondary {
-        display: none;
-      }
-
-      /* Use flex layout to align items */
-      .tx-hero {
-        display: flex;
-        align-items: stretch;
-      }
-
-      /* Increase bottom spacing and set dimensions */
-      .tx-hero__content {
-        max-width: 19rem;
-        margin-top: 3.5rem;
-        padding-bottom: 14vw;
-      }
-
-      /* Swap with teaser and set dimensions */
-      .tx-hero__image {
-        width: 38rem;
-        order: 1;
-        transform: translateX(4rem);
-      }
-    }
-
-    /* [screen +]: Adjust spacing */
-    @media screen and (min-width: 76.25em) {
-
-      /* Hide navigation */
-      .md-sidebar--primary {
-        display: none;
-      }
-
-      /* Ensure the image aligns with the repository information */
-      .tx-hero__image {
-        transform: translateX(8rem);
-      }
-    }
-  </style>
-
-  <!-- Hero for landing page -->
-  <section class="tx-container">
-    <div class="md-grid md-typeset">
-      <div class="tx-hero">
-
-        <!-- Hero image -->
-        <div class="tx-hero__image">
-          <img
-            src="assets/images/illustration.png"
-            alt=""
-            width="1659"
-            height="1200"
-            draggable="false"
-          >
-        </div>
-
-        <!-- Hero content -->
-        <div class="tx-hero__content">
-          <h1>Figgy11 documentation that just works</h1>
-          <p>{{ config.site_description }}. Set up in 5 minutes.</p>
-          <a
-            href="{{ page.next_page.url | url }}"
-            title="{{ page.next_page.title | striptags }}"
-            class="md-button md-button--primary"
-          >
-            Get started
-          </a>
-          <a
-            href="{{ config.repo_url }}"
-            title="{{ lang.t('source.link.title') }}"
-            class="md-button"
-          >
-            Go to GitHub
-          </a>
-        </div>
-      </div>
+  <!-- Section - Intro -->
+  <section class="sec-intro">
+    <div class="jm-grid">
+      <div class="fnt-title clr-white">See the forest <span class="fnt-regular text-italic">and</span> the trees.</div>
+      <h2 class="clr-white">Open-source, cloud-native configuration &amp; secret management.</h2>
     </div>
   </section>
 {% endblock %}
 
-<!-- Content -->
-{% block content %}{% endblock %}
+<!-- Home Page Body Content -->
+{% block content %}
+  <!-- section - USPs -->
+  <section class="sec-usps sec-padding-tb">
+    <div class="jm-grid">
+      <!-- simple -->
+      <div class="usp">
+        <div class="usp-inner">
+          <!-- icon -->
+          <div class="usp-icon usp-icon-compass"></div>
+          <h2 class="fnt-xbold">Super simple.</h2>
+          <h4 class="fnt-light">Follow Figgy’s laid-out path for config management. It’s AWS native, compatible with all AWS services, and follows AWS best practices.</h4>
+        </div>
+      </div>
+      <!-- config like a boss -->
+      <div class="usp">
+        <div class="usp-inner">
+          <!-- icon -->
+          <div class="usp-icon usp-icon-settings"></div>
+          <h2 class="fnt-xbold">Config like a boss.</h2>
+          <h4 class="fnt-light">Detect and remedy misconfigurations before deployment rather than scrambling after the alarm bells are going off.</h4>
+        </div>
+      </div>
+      <!-- all knowing -->
+      <div class="usp">
+        <div class="usp-inner">
+          <!-- icon -->
+          <div class="usp-icon usp-icon-know"></div>
+          <h2 class="fnt-xbold">All knowing.</h2>
+          <h4 class="fnt-light">Figgy audits every event: the who,  what, where and when.  You can roll back configurations to any point-in-time in the past–even to the second.</h4>
+        </div>
+      </div>
+      <!-- secrets -->
+      <div class="usp">
+        <div class="usp-inner">
+          <!-- icon -->
+          <div class="usp-icon usp-icon-spy"></div>
+          <h2 class="fnt-xbold">Secret ownership done right.</h2>
+          <h4 class="fnt-light">Teams of secret owners can securely track, manage, and rotate their secrets in their team’s secure space. Share secrets directly with the applications that need them–without going through a middle-man.</h4>
+        </div>
+      </div>
+      <!-- serverless -->
+      <div class="usp">
+        <div class="usp-inner">
+          <!-- icon -->
+          <div class="usp-icon usp-icon-magic"></div>
+          <h2 class="fnt-xbold">Serverless AWS integrations.</h2>
+          <h4 class="fnt-light">Figgy Cloud deploys directly into your AWS environment. There are no servers to patch or maintain, no overlap of existing AWS functionality, and no dependency on 3rd parties.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- section position statement -->
+  <section class="sec-position sec-padding-tb">
+    <div class="jm-grid">
+      <div class="jm-col">
+        <img src="images/undraw/managing-settings.svg" class="img-managing-settings img-responsive">
+      </div>
+      <div class="jm-col">
+        <h2>For engineering teams looking to embrace modern cloud-native application design, FIGGY is a scalable application configuration and secret management tool that follows security best practices–all without the overhead of complex in-house or third party solutions like Hashicorp Vault and Hashicorp Consul.</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- section features -->
+  <section class="sec-features sec-padding-tb">
+    <div class="fnt-title m-b-20">Features</div>
+    <!-- row -->
+    <div class="jm-grid">
+      <!-- CLI -->
+      <div class="jm-col">
+        <div class="jm-col-inner">
+          <h2 class="fnt-xbold m-b-20">Figgy CLI</h2>
+          <h5 class="jm-bullet-primary">A custom built CLI on top of AWS ParameterStore that addresses many ParameterStore limitations.</h5> 
+          <h5 class="jm-bullet-primary">Add / Update / Delete / Edit configurations and more.</h5>
+          <h5 class="jm-bullet-primary">Promote configs from lower to higher environments.</h5>
+          <h5 class="jm-bullet-primary">Share secrets directly to the code that needs them. No more handing DB credentials to some middle man so they can go put them "somewhere".</h5>
+          <h5 class="jm-bullet-primary">Browse a log that tracks all config changes over time, even for deleted configs.</h5>
+          <h5 class="jm-bullet-primary">Roll back any configuration, or hierarchy of configurations to any point in time (to the second) in the past.</h5>
+          <h5 class="jm-bullet-primary">Combat config sprawl. Figgy will tell you if you have a config in ParameterStore that you aren't using anymore.</h5>
+        </div>
+      </div>
+      <div class="jm-col">
+        <img src="images/undraw/terminal.svg" class="img-terminal img-responsive">
+      </div>
+    </div>
+    <!-- row -->
+    <div class="jm-grid jm-grid-wrap-reverse">
+      <!-- simplify -->
+      <div class="jm-col">
+        <img src="images/undraw/workflow.svg" class="img-workflow img-responsive">
+      </div>
+      <div class="jm-col">
+        <div class="jm-col-inner">
+          <h2 class="fnt-xbold m-b-20">Simplify your development workflow.</h2>
+          <h5 class="jm-bullet-primary">Easily integrate your CICD process with Figgy.</h5> 
+          <p class="jm-bullet-secondary">Add / Update / Delete / Edit configurations and more.</p>
+          <p class="jm-bullet-secondary">Give Developers confidence their code bootstraps properly if Figgy gives the thumbs-up.</p>
+
+          <h5 class="jm-bullet-primary">Make configuration clear.</h5> 
+          <p class="jm-bullet-secondary">Following Figgy best-practices means you'll quickly know what configurations your app is using at any point-in-time.</p>
+
+          <h5 class="jm-bullet-primary">Let your code inform your configuration.</h5> 
+          <p class="jm-bullet-secondary">Figgy shared libraries can auto-generate your 'configuration' tree from your application code.</p>
+        </div>
+      </div>
+    </div>
+    <!-- row -->
+    <div class="jm-grid">
+      <!-- CLI -->
+      <div class="jm-col">
+        <div class="jm-col-inner">
+          <h2 class="fnt-xbold m-b-20">Security</h2>
+
+          <h5 class="jm-bullet-primary">SSO Integrations with Google Admin Console, OKTA, and AWS</h5> 
+          <p class="jm-bullet-secondary">MFA support for all SSO Types.</p>
+
+          <h5 class="jm-bullet-primary">Figgy ONLY uses temporary credentials. Abandon all AWS access keys!</h5>
+
+          <h5 class="jm-bullet-primary">Easy to manage role-based access control (RBAC).</h5>
+          <p class="jm-bullet-secondary">Easily assign different user types access to different sections of your ParameterStore tree.</p>
+
+          <h5 class="jm-bullet-primary">Securely share secrets between config trees.</h5>
+          <h5 class="jm-bullet-primary">Provision and allocate access to as many KMS encryption keys as you want. Figgy will hide the complexity and simplify secret encryption.</h5>
+          <h5 class="jm-bullet-primary">Get more visibility into your configuration stack. Know what's being changed, where, and when.</h5>
+          <h5 class="jm-bullet-primary">Abandon long-lived AWS Access Keys, all sessions are temporary.</h5>
+        </div>
+      </div>
+      <div class="jm-col">
+        <img src="images/undraw/security.svg" class="img-security img-responsive">
+      </div>
+    </div>
+    <!-- row -->
+    <div class="jm-grid jm-grid-wrap-reverse">
+      <!-- simplify -->
+      <div class="jm-col">
+        <img src="images/undraw/serverless.svg" class="img-serverless img-responsive">
+      </div>
+      <div class="jm-col">
+        <div class="jm-col-inner">
+          <h2 class="fnt-xbold m-b-20">No 3rd Parties</h2>
+          <h5 class="jm-bullet-primary">Figgy is free, open source, and installs directly in your environment.</h5> 
+          
+          <h5 class="jm-bullet-primary">No SaaS or 3rd parties here, just a serverless application deployed directly in your AWS account.</h5>  
+        </div>
+      </div>
+    </div>
+    <!-- row -->
+    <div class="jm-grid">
+      <!-- CLI -->
+      <div class="jm-col">
+        <div class="jm-col-inner">
+          <h2 class="fnt-xbold m-b-20">The Figgy Vault</h2>
+
+          <h5 class="jm-bullet-primary">Figgy only generates temporary sessions to AWS, encrypts them, and stores them in a local "Figgy Vault"</h5> 
+
+          <h5 class="jm-bullet-primary">These temporary credentials can be used for local development by decrypting & pulling them from the "Figgy Vault"</h5>
+
+        </div>
+      </div>
+      <div class="jm-col">
+        <img src="images/undraw/vault.svg" class="img-vault img-responsive">
+      </div>
+    </div>
+    <!-- row -->
+    <div class="jm-grid jm-grid-wrap-reverse">
+      <!-- simplify -->
+      <div class="jm-col">
+        <img src="images/logos/slack.svg" class="img-slack img-responsive">
+      </div>
+      <div class="jm-col">
+        <div class="jm-col-inner">
+          <h2 class="fnt-xbold m-b-20">Slack integration</h2>
+          <h5 class="jm-bullet-primary">Get automated Slack notifications when secrets are changed or updated, and know who made them.</h5> 
+          
+          <h5 class="jm-bullet-primary">Other integrations to come!</h5>  
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+{% endblock %}
+<!--end: Home Page Body Content -->
 <!-- Application footer -->
-{% block footer %}{% endblock %}
+{% block footer %}
+  {% include "partials/footer.html" %}
+{% endblock %}

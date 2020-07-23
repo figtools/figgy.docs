@@ -1,0 +1,55 @@
+<!--
+  FIGGY HOME
+-->
+
+{% extends "overrides/main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Hero for landing page -->
+  <section class="tx-container">
+    <div class="md-grid md-typeset">
+      <div class="tx-hero">
+
+        <!-- Hero image -->
+        <div class="tx-hero__image">
+          <img
+            src="assets/images/illustration.png"
+            alt=""
+            width="1659"
+            height="1200"
+            draggable="false"
+          >
+        </div>
+
+        <!-- Hero content -->
+        <div class="tx-hero__content">
+          <h1>Figgy101 documentation that just works</h1>
+          <p>{{ config.site_description }}. Set up in 5 minutes.</p>
+          <a
+            href="{{ page.next_page.url | url }}"
+            title="{{ page.next_page.title | striptags }}"
+            class="md-button md-button--primary"
+          >
+            Get started
+          </a>
+          <a
+            href="{{ config.repo_url }}"
+            title="{{ lang.t('source.link.title') }}"
+            class="md-button"
+          >
+            Go to GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}{% endblock %}
