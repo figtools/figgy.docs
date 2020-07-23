@@ -124,6 +124,17 @@
         {% endif %}
       {% endblock %}
       <main class="jm-home-body-container">
+        {% block site_nav %}
+          {% if nav %}
+            <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                  {% include "partials/nav.html" %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endblock %}
         {% block content %}      
           {{ page.content }}
         {% endblock %}

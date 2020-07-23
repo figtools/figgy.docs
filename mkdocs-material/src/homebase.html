@@ -236,8 +236,29 @@
         {% endif %}
       {% endblock %}
 
+
       <!-- Main Body Area -->
       <main class="jm-home-body-container" >
+
+          <!-- Navigation -->
+        {% block site_nav %}
+
+          <!-- Main navigation -->
+          {% if nav %}
+            <div
+              class="md-sidebar md-sidebar--primary"
+              data-md-component="navigation"
+            >
+              <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                  {% include "partials/nav.html" %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+        {% endblock %}
+
         <!-- Content -->
         {% block content %}      
 

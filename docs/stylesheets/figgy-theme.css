@@ -158,7 +158,15 @@ LANDING PAGE
 /* 
 RESPONSIVE BREAKPOINTS 
 */
-/* MK-docs main breakpoint */
+/* MK-docs main breakpoint (greater than 1220px) */
+@media (min-width: 1220px) { 
+    /* hide primary nav on homepage */
+    .jm-home-body-container .md-sidebar {
+        display: none;
+    }
+    
+}
+/* MK-docs main breakpoint (less than 1220px) */
 @media (max-width: 1219.98px) { 
     /* custom inner container */
     .jm-grid {
@@ -178,7 +186,7 @@ RESPONSIVE BREAKPOINTS
     /* landing-page > section-intro */
     .sec-intro {
         margin-top:-15px;
-        background-position: center bottom, center bottom, center top;
+        background-position: center bottom, center bottom -1px, center top;
         background-repeat: no-repeat, no-repeat, no-repeat;
         background-size: 50%, contain, cover;
     }
@@ -200,6 +208,15 @@ RESPONSIVE BREAKPOINTS
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
+    /* global */
+    .jm-col {
+        padding: 30px 10px;
+        text-align: left;
+        margin: 5px;
+        width: 300px;
+        flex-basis: 300px;
+        flex-grow: 1;
+    }
     /* landing-page > section-intro */
     .sec-intro {
         background-size: 75%, contain, cover;
