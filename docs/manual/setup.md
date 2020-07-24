@@ -5,7 +5,7 @@ A working Figgy installation has two main parts:
     
 Setup in your organization requires setting up Figgy Cloud *first*. If you're still evaluating Figgy and don't want to
 go through the trouble of installing Figgy Cloud, you can experiment with Figgy through our
-free [Sandbox](/docs/getting-started/sandbox). The Sandbox is a hosted Figgy Cloud installation designed for public
+free [Sandbox](/getting-started/sandbox). The Sandbox is a hosted Figgy Cloud installation designed for public
 experimentation and consumption. Once you're ready to adopt Figgy, continue below:
     
     
@@ -17,14 +17,14 @@ configuration backup and restoration. Deploying Figgy starts with deploying Figg
 decide what type of Figgy Cloud deployment makes the most sense for your organization. Below you'll find explanations of 
 the different deployment options. 
 
-[I'm ready to pick the right Figgy Cloud for me!](/docs/manual/figgy-cloud/index.md)
+[I'm ready to pick the right Figgy Cloud for me!](/manual/figgy-cloud/index.md)
 
     
 ## Figgy CLI
 
 The FiggyCLI is a CLI utility that integrates with your SSO provider and Figgy Cloud installation to provide users
 with fundamental Figgy functionality needed for users day-to-day workflow. FigglyCLI is 
-[simple to install](/docs/getting-started/install.md) but requires a Figgy Cloud backend for to work
+[simple to install](/getting-started/install.md) but requires a Figgy Cloud backend for to work
 in your organization. 
 
 
@@ -35,7 +35,7 @@ Configuring the Figgy CLI is as simple as running.
     
     
 You will be guided through configuration. Before running `--configure` you'll need to know what type of authentication 
-you'll be using: Bastion, Google SSO, or OKTA SSO. See [Figgy Deployment](/docs/manual/figgy-cloud/index/)
+you'll be using: Bastion, Google SSO, or OKTA SSO. See [Figgy Deployment](/manual/figgy-cloud/index/)
 
 <br/>
 

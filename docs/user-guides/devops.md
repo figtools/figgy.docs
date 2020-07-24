@@ -6,17 +6,17 @@ than what this guide can cover.
 
 Below you will find a collection of docs that may be helpful for DevOps engineers.
 
-1. [Deploying Figgy](/docs/manual/figgy-cloud/index/)
-1. [Creating & Sharing Secrets](/docs/user-guides/how-to/share-secrets/)
-1. [Configuring CICD Validation](/docs/user-guides/how-to/cicd-validation/)
+1. [Deploying Figgy](/manual/figgy-cloud/index/)
+1. [Creating & Sharing Secrets](/user-guides/how-to/share-secrets/)
+1. [Configuring CICD Validation](/user-guides/how-to/cicd-validation/)
 1. [Example Dockerized Application](https://github.com/figtools/figgy.python-reference)
-1. [Managing Application Configs](/docs/user-guides/how-to/manage-application-configs/)
-1. [IAM Cookbook](/docs/manual/configuration/iam-cookbook/)
+1. [Managing Application Configs](/user-guides/how-to/manage-application-configs/)
+1. [IAM Cookbook](/manual/configuration/iam-cookbook/)
 
 
 #### Commonly used commands:
 
-1. [get](/docs/commands/config/get/)
+1. [get](/commands/config/get/)
 1. [put](/docs/commands/config/put/)
 1. [delete](/docs/commands/config/delete/)
 1. [edit](/docs/commands/config/edit/)

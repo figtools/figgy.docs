@@ -2,7 +2,7 @@
 
 Command:
 
-    $   figgy iam restore
+    figgy iam restore
     
 
 Figgy will not overwrite existing long-lived IAM access keys in your `~/.aws/credentials` file. Instead of overwriting 

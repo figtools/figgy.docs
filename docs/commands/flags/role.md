@@ -4,7 +4,7 @@
 Example: 
 
 ```console
-    $   figgy config share --role dba
+    figgy config share --role dba
 ```
 
 Allows the user to swap-roles from their default configured role (configure with `figgy --configure`) to another role

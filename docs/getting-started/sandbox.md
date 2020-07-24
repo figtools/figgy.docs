@@ -16,7 +16,7 @@ we grow a new beautiful Sandbox Fig Orchard every night :satisfied:.
 !!! hint "Don't forget: [Install Figgy First](/docs/getting-started/install/)"
 
 ## Login to the Sandbox
-    $   figgy login sandbox
+    figgy login sandbox
 
 Follow the prompts, select your user role:
 
@@ -38,7 +38,7 @@ Have fun, all changes you make in the Figgy Sandbox will be broadcast to all peo
 !!! note "You can always run `figgy --help` or `figgy config --help` to see what Figgy can do"
 
 ### Basics 1: Get a fig
-    $   figgy config get --env dev
+    figgy config get --env dev
 
 Get a config, any config, from our DEV environment. Depending on the config you select you may or may-not have access
 to that configuration. 
@@ -49,7 +49,7 @@ to that configuration.
 
 
 ### Basics 2: Store a fig
-    $   figgy config put --env dev
+    figgy config put --env dev
     
 Store a new configuration in our DEV environment. 
     
@@ -58,7 +58,7 @@ Store a new configuration in our DEV environment.
 <br/>
 
 ### Basics 3: Browse the Fig Orchard
-    $   figgy config browse --env stage    
+    figgy config browse --env stage    
 
 Browse the Fig Orchard to see what's out there. 
 

@@ -1,13 +1,11 @@
-Figgy is an cloud native, serverless, open-source framework that simplifies and accelerates your development workflow 
-by protecting you from common mistakes that lead to security breaches, failed deployments, lost data, or application downtime. 
-Figgy is built on AWS ParameterStore and leverages native AWS constructs such as AWS IAM, KMS, DynamoDB, and Lambda to ensure a simple 
-integration with your environment. Figgy does not overlap with any existing AWS services, instead it builds on them, 
-providing added functionality and an improved user experience.
-
 Figgy is a management framework for configurations stored in AWS ParameterStore. It helps your teams safely manage
 the SSM keyspace, preventing misconfigured deployments and supporting least-privilege access. Figgy natively works with
-multiple AWS accounts and maintains a global audit log, which gives operators the ability to do global
+multiple AWS accounts and maintains a global audit log, giving operators the ability to do global point-in-time restorations
+for any configuration or hierarchy of configurations.
 
+Figgy is layered on AWS ParameterStore and leverages native AWS constructs such as AWS IAM, KMS, DynamoDB, and
+Lambda to ensure a simple integration with your environment. Figgy does not overlap with any existing AWS services, instead it builds on them, 
+providing added functionality and an improved user experience.
 <br/>
 
 <video controls autoplay loop muted class="video"><source src="/images/videos/walkthrough.mp4" type="video/mp4"></video>
@@ -63,9 +61,9 @@ focus on the ideal user experience regardless if you're a developer, a member of
 a database administrator, or someone else.
 
 
-Want to dip your toes in and test out the waters? Try out our free [Sandbox](/docs/getting-started/sandbox/)
+Want to dip your toes in and test out the waters? Try out our free [Sandbox](/getting-started/sandbox/)
 
 Depending on who you are, your Figgy Docs experience may differ. If your organization already uses's Figgy and you're looking
-to install the CLI and get started, then I recommend you skip over to [Install](/docs/getting-started/install/)
-then browse one of the [User Guides](/docs/user-guides/dev/)
+to install the CLI and get started, then I recommend you skip over to [Install](/getting-started/install/)
+then browse one of the [User Guides](/user-guides/dev/)
 

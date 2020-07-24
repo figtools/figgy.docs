@@ -1,4 +1,4 @@
-site_name: Figgy Docs
+site_name: Figgy
 site_description: >-
   Figgy is an cloud native, serverless, open-source framework that simplifies and accelerates your development workflow
   by protecting you from common mistakes that lead to security breaches, failed deployments, lost data, or application downtime.
@@ -71,9 +71,9 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - What's Figgy: 'whats-figgy.md'
-  - Features: 'features.md'
   - Getting Started:
+    - What's Figgy: 'whats-figgy.md'
+    - Features: 'features.md'
     - Installing FiggyCLI: getting-started/install.md
     - Demo: getting-started/demo.md
     - Sandbox: getting-started/sandbox.md

@@ -1,4 +1,4 @@
-This page should serve as a reference only. Please follow the appropriate FiggyCLoud [deployment guide](/docs/manual/figgy-cloud/) first.
+This page should serve as a reference only. Please follow the appropriate FiggyCLoud [deployment guide](/manual/figgy-cloud/) first.
 
 
 Configuring FiggyCloud requires modifying 2-3 Terraform files based on your selected deployment strategy. All configuration files 
@@ -142,7 +142,7 @@ namespace by default.
 
 One required Figgy convention is specifying a "service namespace". All application configurations and secrets
 will be stored under this namespace. Every service you deploy will pull its configurations from this namespace. More 
-specifically, it will pull its configurations from its [Twig](/docs/getting-started/concepts/#twig). 
+specifically, it will pull its configurations from its [Twig](/getting-started/concepts/#twig). 
 
 Your selection here must map to one of the namespaces specified under `root_namespaces`
 
@@ -186,7 +186,7 @@ to not make any typos.
     auth_type = "bastion"
 ```
 
-Select the appropriate authentication type based on your selected [deployment type](/docs/manual/figgy-cloud/)
+Select the appropriate authentication type based on your selected [deployment type](/manual/figgy-cloud/)
 
 ---
 #### replication_key_access_envs
@@ -206,7 +206,7 @@ against to this list.
 
 ## `02_configure_bastion.tf`
 
-This file must be configured if you are using the [Bastion](/docs/manual/figgy-cloud/bastion/) deployment type.
+This file must be configured if you are using the [Bastion](/manual/figgy-cloud/bastion/) deployment type.
 
 ---
 #### bastion_account_number

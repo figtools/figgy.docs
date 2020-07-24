@@ -11,7 +11,7 @@ In our example, we have a Database Administrator, Steve, who needs to securely s
 First, Steve will will need to securely store and encrypt his secret with Figgy. 
 
 ```console
-    $   figgy config put --env prod
+    figgy config put --env prod
 ```
 
 <br/>![DBA Store PW](/images/gifs/dba-put-password.gif)<br/>
@@ -26,7 +26,7 @@ Now we want to share it with the data-changer service without handing it directl
 data-changer. The fewer people who know this secret the better!
 
 ```console
-    $   figgy config share --env prod
+    figgy config share --env prod
 ```
 
 <br/>![DBA Share PW](/images/gifs/dba-share-password.gif)<br/>
@@ -34,7 +34,7 @@ data-changer. The fewer people who know this secret the better!
 
 We can verify the secret was successfully shared with the `get` command. You will notice that this secret cannot be 
 decrypted by the user. This secret may _only_ be decrypted by the application using this secret, or a super-admin who
-has been granted access to the [Replication Key](/docs/advanced/confidentiality/).
+has been granted access to the [Replication Key](/advanced/confidentiality/).
 
 
 <br/>![DBA Share PW](/images/gifs/dba-get-password.gif)<br/>
@@ -65,12 +65,12 @@ As you can see, this replication config declaratively defines what secrets need 
 
 Now our DBA user can simply use the sync command, like this:
 
-    $   figgy config sync --env dev --config data-changer.json --replication-only
+    figgy config sync --env dev --config data-changer.json --replication-only
 
 This will prompt them to store & share these secrets in the *dev* environment. They can then follow up and do it again
 in the **stage** environment.
 
-    $   figgy config sync --env stage --config data-changer.json --replication-only
+    figgy config sync --env stage --config data-changer.json --replication-only
     
     
 And so on for every higher environment. This expands on the declarative design of managing configurations.

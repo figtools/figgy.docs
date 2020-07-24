@@ -26,7 +26,7 @@ Secrets Manager is also built on top of ParameterStore and as such is completely
 
 Figgy is independent but compatible with AWS K8s deployments and offers some distinct advantages over ConfigMaps and K8s Secrets. 
 
-[Learn More](/docs/manual/integrations/k8s/)
+[Learn More](/manual/integrations/k8s/)
 
 ---
 

@@ -1,14 +1,14 @@
 
 ## Figgy Basics
 Figgy does a lot, but lets start with the simple parts. At its core, Figgy is a configuration management framework built
-on top of AWS ParameterStore. ParameterStore is a great AWS service for managing application configurations, but it 
-isn't without its usability faults. Figgy is designed to build on the great foundation ParameterStore offers to add more 
-functionality, enforce best practicies, and simplify the user experience.
+on AWS ParameterStore. ParameterStore is a great AWS service for managing application configurations, but it 
+isn't without its usability faults. Figgy is designed to build on the great foundation ParameterStore offers by adding more 
+functionality, enforcing best practices, and simplifying the user experience.
 
 You don't have to use _all_ Figgy has to offer. So let's start with the basics. With Figgy installed, you can use
 the CLI to interact with AWS ParameterStore across many different accounts. 
 
-There's a free <a href="https://www.figgy.dev/docs/getting-started/sandbox/" target="_blank">Figgy Sandbox</a> 
+There's a free <a href="https://www.figgy.dev/getting-started/sandbox/" target="_blank">Figgy Sandbox</a> 
 you can use to experiment with Figgy. Go ahead, click that Sandbox link, let's have some fun!  
 <br/>
  
@@ -23,11 +23,12 @@ I'll just *restore* my figs to how they were at some in time - to the second - i
 <br/>
 
 ## Declarative Configuration
-'GitOps' is about defining the _desired state_ of your infrastructure in a versioned Git repository. Figgy's goal is to
+'GitOps' is about defining the _desired state_ of your infrastructure in a versioned Git repository. Inspired by GitOps, Figgy's goal is to
 bring this same approach to application config management. Git repositories aren't the place for loads of Key/Value
-pairs though, so with Figgy, you will first 'declare' what your application needs to run. Next you'll use the
-Figgy CLI to ensure your configs are where they need to be. Finally your CICD pipeline can perform additional validation
-at deployment time. This declarative definition can be dynamically generated through static code analysis or reflection. 
+pairs though, so with Figgy, first you will 'declare' what your application needs to run. Next you'll use the
+Figgy CLI to ensure your configs are where they need to be and add any missing defined configurations. 
+Finally your CICD pipeline can perform additional validation at deployment time. This declarative definition can be 
+dynamically generated through static code analysis or reflection. 
 In other words, let your code tell your CICD process what configurations it needs. 
 
 
@@ -40,15 +41,15 @@ By declaratively defining (or generating) required configurations for a particul
 you can feel confident you didn't forget that last pesky configuration you service needs to run.
 
 Figgy accomplishes this through a `figgy.json` file that defines the required configurations for a codebase. Before developers
-check-in their code, or before a PR is merged, users (or automation) can run the [sync](/docs/commands/config/sync/) command
-to validate the defined configurations all exist in the targeted environment. Figgy will give you confidence
+check-in their code, or before a PR is merged, users (or automation) can run the [sync](/commands/config/sync/) command
+to validate the defined configurations exist in the targeted environment. Figgy will give you confidence
 that you aren't rolling out a new release and missing a required configuration.
 <br/>
 
 
 ## Twigs - An application's sole configuration provider
 While Figgy doesn't enforce this policy, we **strongly recommend** you store all configurations for each service under
-a **twig** (See: [Figgy Concepts](/docs/getting-started/concepts/)). For instance, for service 
+a **twig** (See: [Figgy Concepts](/getting-started/concepts/)). For instance, for service 
 `message-fetcher` all configurations would exist under the following namespace: `/app/message-fetcher`. 
 The `/app` namespace is optional, you can call it `/svc`, or whatever you want.
 
@@ -65,8 +66,8 @@ Here are some example configurations under the `twig`: `/app/message-fetcher`
 `/app/message-fetcher` is the *twig*. 
 
 One great thing about **twigs** is that we can look at a **twig** and know _everything_ there is to know about that 
-service's configuration. This is can be very helpful when trying to answer the question `What does the message-fetcher 
-talk to?"`.
+service's configuration. This is can be very helpful when trying to answer the question "What does the message-fetcher 
+talk to?". :thinking:
 
 It also GREATLY simplifies IAM access control for our service. `message-fetcher` will need an IAM policy as simple as this:
 ```json
@@ -108,7 +109,7 @@ one place.
 
 !!! hint "As with all Figgy concepts, the `/shared` tree convention is a recommendation. It is not enforced by Figgy."
 
-*Config replication* is how Figgy accomplishes sharing configurations from a *source* to one or more *destinations*.
+**Config replication** is how Figgy accomplishes sharing configurations from a *source* to one or more *destinations*.
 Figgy will keep the destination in sync with the source. Whenever the source is updated, events will trigger to 
 automatically update all destinations within about 1 second.
 
@@ -125,7 +126,7 @@ Declarative configuration provides a definitive answer on whether or not a *fig*
 By following Figgy best practices and defining your service configurations under **twigs**,  you will gain the benefit 
 of being notified when you have a *fig* out there that is no longer used by your service.
 
-The [sync](/docs/commands/config/sync/) and [prune](/docs/commands/config/prune/) commands will detect and
+The [sync](/commands/config/sync/) and [prune](/commands/config/prune/) commands will detect and
 prompt you to clean-up unused configurations to prevent unused config sprawl. 
 
 
@@ -134,15 +135,15 @@ That's it, you now know the basic features of Figgy.
 
 **DevOps / Software Architects:**
 
-1. [Installation](/docs/getting-started/install/)
-1. [Deploying Figgy](/docs/manual/figgy-cloud/index/)
-1. [Advanced Figgy](/docs/advanced/confidentiality/)
-1. [Architecture](/docs/architecture/ecosystem/)
+1. [Installation](/getting-started/install/)
+1. [Deploying Figgy](/manual/figgy-cloud/)
+1. [Advanced Figgy](/advanced/confidentiality/)
+1. [Architecture](/architecture/ecosystem/)
 
 <br/>
 **Figgy Users:**
 
-1. [Figgy Playground](/docs/getting-started/sandbox/)
-1. [Installation](/docs/getting-started/install/)
-1. [Commands](/docs/commands/config/index/)
-1. [User Guides](/docs/user-guides/index/)
+1. [Figgy Sandbox](/getting-started/sandbox/)
+1. [Installation](/getting-started/install/)
+1. [Commands](/commands/config/get/)
+1. [User Guides](/user-guides/dev/)

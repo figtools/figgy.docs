@@ -3,7 +3,7 @@
 
 ## Figgy Standard
 
-If you've already read through [Selecting a Deployment Type](/docs/manual/figgy-cloud/index/) and you understand what you're giving up 
+If you've already read through [Selecting a Deployment Type](/manual/figgy-cloud/index/) and you understand what you're giving up 
 when using Figgy standard, continue reading here. No judgement here, let's get you set-up. 
 
 The Figgy AWS Standard deployment by far the simplest deployment configuration. Figgy offloads all user-management to you.
@@ -21,7 +21,7 @@ Let's get started.
 - Make a private fork of <a href="https://github.com/figtools/figgy/tree/master" target="_blank">Figgy</a> and clone it locally. 
 
 ```console
-    $   git clone https://github.com/your-org/figgy.git
+    git clone https://github.com/your-org/figgy.git
 ```
 
 Next change directory into `figgy/terraform/`
@@ -115,9 +115,9 @@ You get the drift!
 
 #### If you don't have the AWS CLI installed, install it: 
 
-    $   pip install awscli
+    pip install awscli
             -or-
-    $   brew install awscli
+    brew install awscli
 
 In each account you should see new groups that have been created, each named `figgy-{ROLE_TYPE}` where ROLE_TYPE is the 
 name of the role you selected when you filled out [01_configure_figgy](#configure-figgy)
@@ -129,7 +129,7 @@ Let's assume you're logged into your DEV account. If you don't have AWS access k
 Next, run: 
 
 ```console
-    $   aws configure --profile dev
+    aws configure --profile dev
 ```
 
 Follow the prompts. This will configure your AWS CLI installation with a "profile" for your DEV account. You may repeat
@@ -138,12 +138,12 @@ this step as may time and across as many accounts as you like.
 
 ## Test Figgy
 
-[Install Figgy](/docs/getting-started/install/)
+[Install Figgy](/getting-started/install/)
 
 For each account, test your access by running:
 
 ```console
-    $   figgy config get --profile {PROFILE}
+    figgy config get --profile {PROFILE}
 ```
 
 for each `profile` you selected earlier. 

@@ -54,8 +54,8 @@ resource "aws_iam_role_policy_attachment" "s3_read_all_roles" {
 
 That's it! Now your Figgy users can export IAM credentials with S3Read access!
 
-    $   figgy iam export --env dev
-    $   aws s3 ls s3://
+    figgy iam export --env dev
+    aws s3 ls s3://
     
 This is a simplistic example, but you can easily expand this example across specific roles or accounts to expand your own
 IAM RBAC. 

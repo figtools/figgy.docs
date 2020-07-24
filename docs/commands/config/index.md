@@ -5,29 +5,29 @@ The `config` resource is the primary resource Figgy users should be operating ag
 configurations provisioned in the targeted AWS account. 
 
 ```
-    $   figgy config {command} --env {env}
+    figgy config {command} --env {env}
 ```
 
 #### CRUD Operations: 
 
-- [Get](/docs/commands/config/get/)
-- [Put](/docs/commands/config/put/)
-- [Delete](/docs/commands/config/delete/)
-- [Edit](/docs/commands/config/edit/)
+- [Get](/commands/config/get/)
+- [Put](/commands/config/put/)
+- [Delete](/commands/config/delete/)
+- [Edit](/commands/config/edit/)
 
 #### Views: 
 
-- [Browse](/docs/commands/config/browse/)
-- [List](/docs/commands/config/list/)
+- [Browse](/commands/config/browse/)
+- [List](/commands/config/list/)
 
 #### Bulk Operations: 
 
-- [Promote](/docs/commands/config/promote/)
-- [Dump](/docs/commands/config/dump/)
+- [Promote](/commands/config/promote/)
+- [Dump](/commands/config/dump/)
 
 #### State Synchronization & Management: 
 
-- [Sync](/docs/commands/config/sync/)
+- [Sync](/commands/config/sync/)
 - [Cleanup](/docs/commands/config/cleanup/)
 - [Validate](/docs/commands/config/validate/)
 

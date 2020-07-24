@@ -9,6 +9,19 @@ MASTHEAD
 .md-header {
     background-color: #282F35;
 }
+
+.md-header-nav__title {
+    padding-left: 0;
+}
+
+.md-header-nav__topic {
+    font-family: var(--font-family-sans-alt);
+    font-size: var(--h5);
+    font-weight: var(--bold);
+    letter-spacing:-1px;
+}
+
+
 /* make tab strip transparent */
 .md-tabs {
     background: transparent;
@@ -141,7 +154,11 @@ li {
     border-color: var(--info-500) !important;
 }
 
-summary::before {
+.note .admonition-title::before {
+    background-color: var(--info-500) !important;
+}
+
+.md-typeset .note > .admonition-title::before, .md-typeset .note > summary::before{
     background-color: var(--info-500) !important;
 }
 

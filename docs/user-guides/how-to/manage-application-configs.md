@@ -21,13 +21,13 @@ that specific commit to the exact configurations your application needs to run.
 - More to come, please consider contributing!
 
 Language isn't supported yet? No worries! This is a nice-to-have and will save you time but is NOT required to use Figgy. 
-You can also write your own withou too much trouble. See our [Python](https://github.com/figtools/figgy.python.lib) library
+You can also write your own without too much trouble. See our [Python](https://github.com/figtools/figgy.python.lib) library
 for reference.
 
 By keeping a versioned `figgy.json` in your repository, you'll get these great features:
 
-- Easily break CICD builds before the deploy step by detecting missing configurations
-- Promote sets of configurations to higher environments (no more tedious copy-pasta).
+- Easily break CICD builds before the deploy step by detecting missing configurations.
+- Conveniently add and delete groups of configurations by synchronizing your `figgy.json` file.
 - Application dependency mapping is clear, making it easy to answer "What does this application talk to?"
 - Combat config sprawl. Never have unneeded secrets or configs floating out in the ether again. 
 
@@ -42,10 +42,10 @@ needs to run. The FiggyCLI will parse this file to support lots of great functio
 
 !!! hint  
     
-    For a reference on all supported `figgy.json` options, see: [Declarative Configuration](/docs/advanced/delcarative-configuration/)
+    For a reference on all supported `figgy.json` options, see: [Declarative Configuration](/advanced/delcarative-configuration/)
 
 
-### [Sync](/docs/commands/config/sync/)
+### [Sync](/commands/config/sync/)
 
 The `sync` command synchronizes your locally declared configuration state (in your figgy.json file) with the current remote
 state with the targeted environment. For instance, suppose you run:
@@ -57,37 +57,37 @@ state with the targeted environment. For instance, suppose you run:
 Figgy will look-up your currently defined state and compare it to the configuration state in your `dev` environment. Next, Figgy
 will prompt you to add any Parameter Store configurations that are missing. Sync will also tell you if there are 
 stray configurations in Parameter Store that your code doesn't appear to need anymore. Finally, sync will set up 
-[config replication](/docs/getting-started/basics/#the-solution-config-replication) for any global parameters 
+[config replication](/getting-started/basics/#the-solution-config-replication) for any global parameters 
 your service needs and ensures sure they'll always be available to your service in its namespace.
 
 If your sync succeeds and displays no errors you can feel confident your application will run 
 without configuration issues in the targeted environment.
 
-### [Cleanup](/docs/commands/config/cleanup/)
+### [Prune](/commands/config/prune/)
 
-Sync will notify you of stray configurations in Parameter Store but [cleanup](/docs/commands/config/cleanup/) 
+Sync will notify you of stray configurations in Parameter Store but [prune](/commands/config/prune/) 
 will will walk you through them one-by-one and ask you if you'd like to delete them.
 
 ```console
     figgy config cleanup --config figgy.json --env dev
 ```
 
-Combat unneeded config sprawl with Sync + Cleanup!
+Combat unneeded config sprawl with Sync + Prune!
 
-### [Validate](/docs/commands/config/validate/)
+### [Validate](/commands/config/validate/)
 
 The validate command can be easily integrated into your CICD build process to break your build before deployment if your
 defined configuration state is not in sync with the current remote configuration state. Validate will exit with a 
 non 0 exit code if any configurations are missing application needs to run.
 
-Bonus: Integrate `validate` into your git pre-commit hook! [Example](https://github.com/figtools/figgy.python-reference/blob/master/pre-commit.hook)
+> Bonus: Integrate `validate` into your git pre-commit hook!  --> [Example HEre](https://github.com/figtools/figgy.python-reference/blob/master/pre-commit.hook)
 
 ```console
     figgy config validate --config figgy.json --env dev
 ```
 <br/>
 
-### See in action!
+### See it in action!
 
-Follow our [Getting Started Demo](/docs/getting-started/index/) to do **all of these things** in under 15 minutes!
+Follow our [Getting Started Demo](/getting-started/demo/) to do **all of these things** in under 15 minutes!
 

@@ -61,7 +61,7 @@ Files are located in `REPO_ROOT/terraform/figgy/` directory.
 ### Configure Terraform
 
 If you have any familiarity with [Terraform](https://www.terraform.io/) this should be a cinch. All you need to do is configure this file 
-as you normally would any other [Terraform AWS provider](https://www.terraform.io/providers/aws/index/). 
+as you normally would any other [Terraform AWS provider](https://www.terraform.io/docs/providers/aws/index.html). 
 One important distinction is that this code base is a Terraform multi-environment codebase. We will be using this same Terraform configuration to deploy Figgy across
 every account you want to integrate with Figgy. Keep that in mind -- hard-coding a single profile or access key is
 probably not a good idea.
@@ -256,7 +256,7 @@ exception back then you have successfully configured your Federated access!
 ## Step 8: Configure Figgy CLI
 Prep: 
 
-- Make sure you have the Figgy CLI [installed locally](/docs/getting-started/install/).
+- Make sure you have the Figgy CLI [installed locally](/getting-started/install/).
 - A [while ago](#step-2-add-the-aws-app-to-okta) I asked you to save your OKTA App Embed URL. Get that handy.
 
 Configure:
@@ -301,7 +301,7 @@ Please select a default account. All commands without the specified `--env` para
 
 After configuring, test the CLI is working by running:
 ```console
-    $   figgy config get
+    figgy config get
 ```
 
 
@@ -309,4 +309,4 @@ After configuring, test the CLI is working by running:
 Now that you have your App Embed Link, you can set it in a generic Figgy config file and 
 distribute it to all of your users. This will save them the trouble of having to manage this url themselves.
 
-To do this: See [Distributing Figgy](/docs/getting-started/install/#distributing-figgy)
+To do this: See [Distributing Figgy](/getting-started/install/#distributing-figgy)

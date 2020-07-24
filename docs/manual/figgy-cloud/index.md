@@ -16,7 +16,7 @@ accounts through temporary AWS STS sessions to gain access to manage their confi
 There is no limit to the number of accounts you can integrate with your Bastion account. Users will be provided
 a single long-lived AWS Keypair to authenticate with the bastion account. From there, MFA can be enabled and users
 will be required input an MFA token when generating temporary sessions in other accounts.
-[Sign me up!](/docs/manual/figgy-cloud/bastion/)
+[Sign me up!](/manual/figgy-cloud/bastion/)
 <br/>
 <br/>
 
@@ -30,7 +30,7 @@ and you already leverage Google Apps this can be an elegant solution to managain
 
 <br/>![Google Auth](/images/deployment/google-sso-2.png)<br/>
 
-To read about this solution check out the docs! [Sign me up!](/docs/manual/figgy-cloud/google/)
+To read about this solution check out the docs! [Sign me up!](/manual/figgy-cloud/google/)
 
 <br/>
 <br/>
@@ -44,7 +44,7 @@ highly recommend you select this integration.
 <br/>![Okta Auth](/images/deployment/okta-sso-2.png)<br/>
 
 To read about this solution check out the below docs!
-[Sign me up!](/docs/manual/figgy-cloud/okta/)
+[Sign me up!](/manual/figgy-cloud/okta/)
 
 
 ### Standard AWS IAM
@@ -72,5 +72,5 @@ Standard AWS authentication essentially bypasses the following Figgy security an
 Instead this integration relies *entirely* on the user's locally configured AWS profiles. This integration was originally
 designed to simplify and support CICD pipeline deployments. 
 
-[I understand that this isn't ideal, but Sign me up!](/docs/manual/figgy-cloud/standard/)
+[I understand that this isn't ideal, but Sign me up!](/manual/figgy-cloud/standard/)
 

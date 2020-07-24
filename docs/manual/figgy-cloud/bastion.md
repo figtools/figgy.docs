@@ -5,7 +5,7 @@ a Bastion configuration will provision the following resources across your AWS A
 
 Resources Provisioned:
 
-- [Standard Figgy Stack](/docs/getting-started/figgy-footprint/)
+- [Standard Figgy Stack](/getting-started/figgy-footprint/)
 
 Plus some extra resources in your selected Bastion account:
 
@@ -149,13 +149,13 @@ If you don't have the AWS CLI installed, install it: `pip install awscli` or `br
 
 Configure your new access keys as a local AWS profile:
 
-    $   aws configure --profile bastion
+    aws configure --profile bastion
     
 Enter your Access Key / Secret Key / Region / etc.
 
 Now run:
 
-    $   figgy --configure
+    figgy --configure
     
 Follow the prompts. When you are prompted to enter your AWS profile, put in `bastion` (or whatever you used in the previous command under --profile)
 

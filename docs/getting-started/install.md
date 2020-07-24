@@ -23,13 +23,13 @@ Installing Figgy is _easy_.
 ### Package manager installs
 **MacOs**
 
-    $    brew install figtools/figgy/figgy
+    brew install figtools/figgy/figgy
             
 
 
 **Windows, Linux, or Mac** (requires Python 3.7 - not recommended, but good for CICD)
 
-    $    pip3 install figgy-cli
+    pip3 install figgy-cli
 
 
 ### Manual install        

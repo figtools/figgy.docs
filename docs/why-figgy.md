@@ -36,4 +36,4 @@ focus on the ideal user experience regardless if you're a developer, a member of
 a database administrator, or something else.
 
 
-Still skeptical? Try out our free [Sandbox](/docs/getting-started/sandbox/)
+Still skeptical? Try out our free [Sandbox](/getting-started/sandbox/)

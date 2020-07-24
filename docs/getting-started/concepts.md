@@ -3,8 +3,8 @@
 
 Application config management is best managed through hierarchies of key-value pairs stored in a configuration tree. 
 [AWS ParameterStore](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store/)
-is a simple security-focused K/V store that natively supports managing access to hierarchies of 
-configurations through IAM policies. Figgy is a suite of tools built on top of AWS ParameterStore that add
+is a simple, security-focused K/V store that natively supports managing access to hierarchies of 
+configurations through IAM policies. Figgy is a suite of tools built on top of AWS ParameterStore that adds
 additional functionality without affecting the great AWS native integrations that ParameterStore offers.
 
 In the Figgy documentation you may see the following nomenclature when referencing configurations and configuration 
@@ -46,7 +46,9 @@ A single configuration stored `/under/a/named/path` and on a **Twig**
   
 These namespaces are all examples. You can name your Figs / Twigs / Trees, and Orchards however you like!
 
-### So for these configurations:
+
+**So for these configurations:**
+
         /app/bird-feeder/log-level
         /app/bird-feeder/food-type
         /app/data-cruncher/batch-size

@@ -1,7 +1,7 @@
 name: 'Continuous Integration'
 on:
   push:
-    branches: [asdf1234]
+    branches: [master]
     paths-ignore:
       - '.github/**'
       - '!.github/workflows/**'
@@ -10,7 +10,7 @@ on:
       - 'README.md'
       - 'LICENSE'
   pull_request:
-    branches: [asdf134]
+    branches: [master]
 
 jobs:
   ci:

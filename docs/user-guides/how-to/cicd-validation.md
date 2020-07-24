@@ -1,9 +1,9 @@
 ## Configuring CICD Validation
 
 With Figgy you can easily setup build-time validation of application configurations to ensure services cannot be deployed
-if they are missing a require configuration in their destined environment. 
+if they are missing a required configuration in their destined environment. 
 
-The [validate](/docs/commands/config/validate/) command with the [--profile flag](/docs/commands/flags/profile/)
+The [validate](/commands/config/validate/) command with the [--profile flag](/commands/flags/profile/)
 is the secret to configuring CICD build validation.
 
 To set-up CICD validation you'll want to write out a hydrated `~/.aws/credentials` and matching `~/.aws/config` file
@@ -37,14 +37,12 @@ region = us-east-1
 output = json
 ```
 
-With these two files in place, run validate against the appropriate environment. 
-> If validation fails, figgy will exit with a non-0 exit code.
+With these two files in place, run validate against the appropriate environment. <ins>If validation fails, figgy will exit with a non-0 exit code.</ins>
 
 ```console
-    $   figgy config validate --env dev --config path/to/figgy.json --profile dev   <-- your profile name here
+    figgy config validate --env dev --config path/to/figgy.json --profile dev   <-- your profile name here
 ```
 
-You will get output something like this:
 
 ### Successful Validation
 <br/>![Validate](/images/gifs/validate-success.gif)<br/>
@@ -54,6 +52,8 @@ You will get output something like this:
 ### Validation Failure
 <br/>![Validate](/images/gifs/validate-fail.gif)<br/>
 
+
+### Live examples
 
 [Example Validation with Github Action](https://github.com/figtools/figgy.python-reference/blob/master/.github/workflows/validate-cicd.yml)
 

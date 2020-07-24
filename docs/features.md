@@ -47,4 +47,5 @@ Microservices are great, but your growing service footprint means configuration 
 
 ### **Figgy integrations**
 - Get automated Slack notifications when secrets are changed or updated, and know who made them.
+- SSO Integrations with Google, OKTA, and AWS with more to come!
 - And more to come!

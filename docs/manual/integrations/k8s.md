@@ -21,7 +21,7 @@ EKS, we strongly recommend you look into the [AWS IAM + K8s Service Account inte
 You may also leverage tools like [kube2iam](https://github.com/jtblin/kube2iam) or [kiam](https://github.com/uswitch/kiam) to
 provide appropriate access to your K8s services. 
 
-For an AWS IAM policy reference, see the [IAM Cookbook](/docs/manual/configuration/iam-cookbook).
+For an AWS IAM policy reference, see the [IAM Cookbook](/manual/configuration/iam-cookbook).
 
 
 Got ideas of how to improve K8s and Figgy integrations? Let us know on [Github](https://github.com/figtools/figgy)!

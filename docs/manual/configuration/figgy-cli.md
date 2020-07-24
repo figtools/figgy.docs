@@ -1,4 +1,4 @@
-The FiggyCLI can walk the user through configuration with the [Configure](/docs/commands/other/configure/) command.
+The FiggyCLI can walk the user through configuration with the [Configure](/commands/other/configure/) command.
 This is great for many use-cases but may not be ideal when distributing Figgy across your organization. Below you will 
 find a reference file for auto-configuring the FiggyCLI for users. Users will _still_ need to run `figgy --configure` to
 setup Figgy on their local machine to select some user-specific options. 

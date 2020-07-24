@@ -3,7 +3,7 @@
 
 Command:
 
-    $   figgy --upgrade
+    figgy --upgrade
         
 Upgrades the user's version of `figgy` to the latest version. 
 
