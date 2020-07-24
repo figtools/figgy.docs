@@ -1,6 +1,6 @@
 
 .video {
     max-width: 100%;
-    /*border: var(--info-200) 1px solid;*/
-    /*border-radius: 10px;*/
+    border: var(--gray-200) 1px solid;
+    border-radius: 5px;
 }
