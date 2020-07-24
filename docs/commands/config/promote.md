@@ -9,6 +9,8 @@ each value so can eaisly omit promotion of any values you wish to avoid.
 
 You can only promote values you have access to both retrieve and decrypt.
 
-<br/>![Promote](/images/gifs/promote.gif)<br/>
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/promote.mp4" type="video/mp4"></video>
+<br/>
 
 

@@ -58,11 +58,19 @@ Store a new configuration in our DEV environment.
 <br/>
 
 ### Basics 3: Browse the Fig Orchard
-    figgy config browse --env stage    
+    figgy config browse --env dev    
 
 Browse the Fig Orchard to see what's out there. 
 
 <br/>
 <video autoplay loop muted class="video"><source src="/images/videos/browse.mp4" type="video/mp4"></video>
 <br/>
+
+### Basics 4: Slice & Dice the Fig Orchard
+    figgy config list --env dev
+    
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/list.mp4" type="video/mp4"></video>
+<br/>
+
 And so much more. See our [Commands](/docs/commands/config/get) section to see all figgy can offer!

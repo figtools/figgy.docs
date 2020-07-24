@@ -14,9 +14,9 @@ Target a single parameter and select from a history of values. Select the value 
     figgy config restore --env dev
 ```
 
-<br/>![Restore](/images/gifs/restore.gif)<br/>
-
-
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/restore-single.mp4" type="video/mp4"></video>
+<br/>
 
 ## Restoring to a point-in-time.
 
@@ -36,4 +36,6 @@ Typically, it is recommended that administrators or power-users perform large-sc
 ```console
     figgy config restore --env dev --point-in-time
 ```
-<br/>![Restore](/images/gifs/restore-pit.gif)<br/>
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/restore-pit.mp4" type="video/mp4"></video>
+<br/>

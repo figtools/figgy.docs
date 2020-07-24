@@ -3,4 +3,6 @@
 
 Delete a value from ParameterStore
 
-<br/>![Delete](/images/gifs/delete.gif)<br/>
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/delete.mp4" type="video/mp4"></video>
+<br/>

@@ -17,12 +17,26 @@ for a `figgy.json` file automatically.
 
 For details on how to configure your figgy.json, see: [Declarative Configuration](/advanced/declarative-configuration/)
 
-Sync success.
-<br/>![SyncSuccess](/images/gifs/sync-success.gif)<br/>
+### Sync success.
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/sync-success.mp4" type="video/mp4"></video>
+<br/>
+---
 
-Sync detecting missing parameters.
-<br/>![SyncUpdate](/images/gifs/sync-update.gif)<br/>
+### Sync detecting missing parameters.
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/sync-update.mp4" type="video/mp4"></video>
+<br/>
+---
 
+### Sync notifying of unused parameters.
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/sync-stray.mp4" type="video/mp4"></video>
+<br/>
+---
 
-Sync notifying of unused parameters.
-<br/>![SyncOrphan](/images/gifs/sync-stray.gif)<br/>
+### Sync with --replication-only flag.
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/sync-replication.mp4" type="video/mp4"></video>
+<br/>
+

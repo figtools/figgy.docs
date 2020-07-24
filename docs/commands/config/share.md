@@ -6,4 +6,6 @@ Configure [replication](/getting-started/basics/#the-solution-config-replication
 destinations. The destinations will remain in sync with the source value until intentionally deleted by a party with
 sufficient permissions.
 
-<br/>![Share](/images/gifs/share.gif)<br/>
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/share.mp4" type="video/mp4"></video>
+<br/>

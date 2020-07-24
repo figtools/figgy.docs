@@ -7,4 +7,6 @@ delete stray configurations (configs that exist in AWS but do not exist in your 
 
 Pruning is essential to maintaining a healthy Fig tree!
 
-<br/>![Prune](/images/gifs/prune.gif)<br/>
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/prune.mp4" type="video/mp4"></video>
+<br/>

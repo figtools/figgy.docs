@@ -10,9 +10,12 @@ This command is extra-useful when accompanied by the [--profile](/commands/flags
 
 
 #### Successful Validation
-<br/>![Validate](/images/gifs/validate-success.gif)<br/>
-
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/validate-success.mp4" type="video/mp4"></video>
+<br/>
 
 
 #### Validation Failure
-<br/>![Validate](/images/gifs/validate-fail.gif)<br/>
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/validate-failure.mp4" type="video/mp4"></video>
+<br/>

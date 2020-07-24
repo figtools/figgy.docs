@@ -3,4 +3,6 @@
 
 Retrieve a value from ParameterStore
 
-<br/>![Get](/images/gifs/get.gif)<br/>
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/get.mp4" type="video/mp4"></video>
+<br/>
