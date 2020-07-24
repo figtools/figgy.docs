@@ -2,19 +2,22 @@
 
 If you're a secret owner and want to securely store a secret then you've come to the right place. 
 
-Depending on your user role the commands you might execute may differ. For instance, in this example I will be demonstrating
+Depending on your role, the commands you execute may slightly differ. For instance, in this example I will be demonstrating
 storing and sharing a secret as the "DBA" role.
 
 ### Step 1: Store the secret
-In our example, we have a Database Administrator, Steve, who needs to securely store a DB User / Password with Figgy.
+In our example, we have a Database Administrator, Steve, who needs to securely store a DB User & Password with Figgy.
 
 First, Steve will will need to securely store and encrypt his secret with Figgy. 
-
+ogin
 ```console
     figgy config put --env prod
 ```
 
-<br/>![DBA Store PW](/images/gifs/dba-put-password.gif)<br/>
+<br/>
+<video controls loop muted class="video"><source src="/images/videos/dba-put-password.mp4" type="video/mp4"></video>
+<br/>
+
 
 Sweet! Steve has now successfully stored a secret in ParameterStore!
 
@@ -29,7 +32,10 @@ data-changer. The fewer people who know this secret the better!
     figgy config share --env prod
 ```
 
-<br/>![DBA Share PW](/images/gifs/dba-share-password.gif)<br/>
+<br/>
+<video controls loop muted class="video"><source src="/images/videos/dba-share-password.mp4" type="video/mp4"></video>
+<br/>
+
 
 
 We can verify the secret was successfully shared with the `get` command. You will notice that this secret cannot be 
@@ -37,7 +43,10 @@ decrypted by the user. This secret may _only_ be decrypted by the application us
 has been granted access to the [Replication Key](/advanced/confidentiality/).
 
 
-<br/>![DBA Share PW](/images/gifs/dba-get-password.gif)<br/>
+<br/>
+<video controls loop muted class="video"><source src="/images/videos/dba-get-password.mp4" type="video/mp4"></video>
+<br/>
+
 
 ## Managing secrets at scale
 
@@ -75,4 +84,6 @@ in the **stage** environment.
     
 And so on for every higher environment. This expands on the declarative design of managing configurations.
 
-<br/>![DBA Sync](/images/gifs/dba-sync-repl-only.gif)<br/>
+<br/>
+<video controls loop muted class="video"><source src="/images/videos/dba-sync-repl-only.mp4" type="video/mp4"></video>
+<br/>

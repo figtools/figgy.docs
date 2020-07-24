@@ -7,42 +7,43 @@
 If you have not yet read [Figgy Concepts](/getting-started/concepts/), please do so before continuing.
 
 Your `figgy.json` file is parsed by the 
-[sync](/docs/commands/config/sync/),
-[cleanup](/docs/commands/config/cleanup/).
-and [validate](/docs/commands/config/validate/) commands. This file is necessary to support many advanced Figgy features 
+[sync](/commands/config/sync/),
+[cleanup](/commands/config/cleanup/).
+and [validate](/commands/config/validate/) commands. This file is necessary to support many advanced Figgy features 
 such as breaking-builds for missing parameters. 
  
 **Right now the following properties are supported:**
 
-- [twig](/docs/advanced/declarative-configuration/#twig)
-- [app_figs](/docs/advanced/declarative-configuration/#app_figs)
-- [replicate_figs](/docs/advanced/declarative-configuration/#replicate_figs)
-- [shared_figs](/docs/advanced/declarative-configuration.html#shared_figs)
-- [merge_figs](/docs/advanced/declarative-configuration.html#merge_figs)
-- [replicate_from](/docs/advanced/declarative-configuration.html#replicate_from)
+- [twig](/advanced/declarative-configuration/#twig)
+- [app_figs](/advanced/declarative-configuration/#app_figs)
+- [replicate_figs](/advanced/declarative-configuration/#replicate_figs)
+- [shared_figs](/advanced/declarative-configuration.html#shared_figs)
+- [merge_figs](/advanced/declarative-configuration.html#merge_figs)
+- [replicate_from](/advanced/declarative-configuration.html#replicate_from)
 
-All other properties are OPTIONAL.
 Here are the purposes of each property:
 
-### twig
+## **twig**
 
 **The `twig` property is required**
 
 This property should be set to your service's **twig**. I.E. `/app/your-service-name` or `/svc/your-service-name`
 
-!!! hint: ""
+```json
+   "twig": "/app/message-processor"
+```
+
+!!! note ""
     If you set the twig property, you may omit your twig's prefix (I.E. `/app/service-name` from your `app_figs` values.
 
 
-<br/><br/>
-### app_figs
+---
+## **app_figs**
 **The `app_figs` property is optional.**
 
 Here you will define the figs your app requires to operate. These fig names will always begin with **twig** namespace.
 
 An example `fig` might be: `/app/message-processor/log-level`. 
-
-If you do not have the `twig` property set, you must provide the full `fig` path in the `app_figs` block. 
 
 Sample `app_figs` config block:
 
@@ -66,9 +67,8 @@ Sample `app_figs` config block:
    ] 
 ```
 
-<br/><br/>
- 
-## replicate_figs
+--- 
+## **replicate_figs**
 
 **`replicate_figs` is an optional property.**
 
@@ -96,8 +96,12 @@ automagically. To replicate parameters into your **twigs** namespace, run
 
     figgy config sync --config figgy.json
 
-<br/><br/>
-## shared_figs
+
+Once configured, replication is automatic. Any updates to the SOURCE will automatically trigger updates to all downstream
+destinations.
+
+
+## **shared_figs**
 
 **The `shared_figs` property is optional.**
  
@@ -121,8 +125,8 @@ Sample shared_figs config block:
 The validate command can be used to validate these shared values exist before allowing the CICD build to complete. 
 This will prevent inadvertent deployments destined to fail.
 
-<br/><br/>
-## merge_figs
+---
+## **merge_figs**
 
 **The `merged_figs` property is optional.** 
 
@@ -163,14 +167,14 @@ all of the configurations that it depends on.
 <img src="/images/advanced/merge-template.png" style="max-width:800px; display: block;" alt="Merge Template">
 
 <br/><br/>
-## replicate_from
+## **replicate_from**
 
 **The `replicate_from` property is optional.**
 
 This block enables users to replicate a series of parameters from another namespace 
 **under the same [Fig Tree](/docs/getting-started/concepts/#fig-tree)**. 
 
-This is useful for when you might want to deploy a single service multiple times into the same environment with 
+This is particularly useful when you might want to deploy a single service multiple times into the same environment with 
 slightly differing configurations (perhaps multiple feature branches?) 
 
 For instance, suppose you want to deploy application `message-processor` under a new name of `message-processor-test` 

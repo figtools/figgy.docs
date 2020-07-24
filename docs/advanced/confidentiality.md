@@ -8,11 +8,19 @@ Figgy manages the confidentiality of configurations in two main ways.
 ### Access Control
 
 With Figgy you can create as many arbitrary user types as you'd like. We recommend you consider the different user stories
-you have in your organization first before defining them. In most cases, you'll have at least three:
+you have in your organization first before defining them. In most cases, you'll have at least three or four:
 
 * Developers
 * Ops / Devops
-* DBA's / Uber-admins
+* DBA's
+* Super Admins
+
+Other common roles:
+
+* SRE
+* Data Scientist
+* Data Engineer
+* Support
 
 With user types (also known as `roles`), you can carve up access however you like and across as many **fig trees** as you want. In
 an example basic configuration, access looks like this:
@@ -39,11 +47,11 @@ an example basic configuration, access looks like this:
     
 ### Encryption
 
-Within these roles, each type may have access to leverage 1 or ore KMS keys for encrypting their secrets. For demonstrative
-purposes, here are some _minimum_ recommended default keys:
+Within these roles, each type may have access to leverage 1 or more KMS keys for encrypting their secrets. For demonstrative
+purposes, here are some _minimum_ recommended default encryption keys:
 
 * app
-* devops
+* devops / ops
 * dba
 
 As you can see, in this _minimum_ example, each key maps to a single user-group. It's easy, tidy, and adds an extra
@@ -61,26 +69,30 @@ and password Jim needs. First Mariah stores the values in the `/devops` namespac
 
 >  Mariah stores these values
   
-    /devops/secrets/services/message-fetcher/rabbitmq/user
-    /devops/secrets/services/message-fetcher/rabbitmq/password
+    /devops/secrets/rabbitmq/message-fetcher/user
+    /devops/secrets/rabbitmq/message-fetcher/password
 
 <br/>
 
 ## **Store the value**
-<br/><img src="/images/gifs/basics-put.gif" alt="Basic Put" class="gif"><br/>
 <br/>
+<video autoplay loop muted class="video"><source src="/images/videos/basics-put.mp4" type="video/mp4"></video>
+<br/>
+
 
 Next Mariah will share the value directly to Jim's `message-fetcher` service. Jim will not have access to this
 secret in higher environments, but the `message-fetcher` will. 
 
 ## **Share the value**
-<br/><img src="/images/gifs/basics-share.gif" alt="Basic Share" class="gif"><br/>
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/basics-share.mp4" type="video/mp4"></video>
+<br/>
 
 **The secret will now be shared**
 
 <dl>
 <dt><b>From</b></dt>
-<dd>/devops/secrets/services/message-fetcher/rabbitmq/user</dd>
+<dd>/devops/secrets/rabbitmq/message-fetcher/password</dd>
 <dt><b>To</b></dt>
 <dd>/app/message-fetcher/replicated/rabbitmq/password</dd>
 </dl>

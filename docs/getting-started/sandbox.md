@@ -32,7 +32,7 @@ Have fun, all changes you make in the Figgy Sandbox will be broadcast to all peo
 ### Login 
  
 <br/>
-<video autoplay loop muted class="video"><source src="/images/videos/login.mp4" type="video/mp4"></video>
+<video autoplay loop muted class="video"><source src="/images/videos/login-sandbox.mp4" type="video/mp4"></video>
 <br/>
 
 !!! note "You can always run `figgy --help` or `figgy config --help` to see what Figgy can do"

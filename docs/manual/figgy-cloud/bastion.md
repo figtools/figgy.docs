@@ -5,7 +5,7 @@ a Bastion configuration will provision the following resources across your AWS A
 
 Resources Provisioned:
 
-- [Standard Figgy Stack](/getting-started/figgy-footprint/)
+- [Standard Figgy Stack](/manual/footprint/)
 
 Plus some extra resources in your selected Bastion account:
 
@@ -16,10 +16,10 @@ Plus some extra resources in your selected Bastion account:
 
 
 Users will authenticate with your bastion account through some low-power IAM Credentials stored in their `~/.aws/credentials` file.
-With these credentials + their MFA token (if you enable MFA), users will be able to "hop" into other environments and
+With these credentials and their MFA token (if you enable MFA), users will be able to "hop" into other environments and
 interact with Figgy normally.
 
-To simplify user management, after you have Figgy configured, you may optionally remove all other IAM users and 
+To simplify user management you may optionally remove all other IAM users and 
 leverage the Figgy provisioned users & roles as a basis for all user authentication across all AWS accounts.
 
 ## Prep:
@@ -64,7 +64,7 @@ Depend on your selected Terraform configuration these commands might differ slig
 
 ## Step 2: Configure Figgy
 Open up your `01_configure_figgy.tf` file. There are some important options in here. The comments in the file
-should make it fairly clear what each option means.
+should make it fairly clear what each option means. If you get confused, check the [reference](/manual/configuration/figgy-cloud/) for clarity.
 
 !!! warning ""
     Be sure to take extra care when mapping up your `roles` to `/namespaces`. If you make a typo you're going to experience
@@ -80,10 +80,9 @@ Remember that list of accounts I asked you to 'coalesce' earlier? Back when you 
 "I'm surprised he used the word coalesce in this context, and why is it italicised?". Yeah, that was intentional, and you remembered. Now grab that list.
 Here you will need to map each account you want to integrate with Figgy alongside its AWS account id.
 
-**Important**
-
-The name you give each account in the map is how your users will reference accounts when running commands like 
-`figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
+!!! note "Important!"
+    The name you give each account in the map is how your users will reference accounts when running commands like 
+    `figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
 
 Next, wire up your `bastion_users` and the roles they should have access to. As you give more users access to Figgy going forward 
 you will return to this file, add the user, wire up their roles, and then re-run `terraform apply`
@@ -94,22 +93,20 @@ Regardless, if you look in the `vars/` directory you will see sample `.tfvars` f
 will be one `.tfvars` file for each account you are integrating. If there are extras, delete them.
 
 !!! tip ""
-    Don't forget to set  `create_deploy_bucket = false` in `01_configure_figgy.tf`, if you're using your own bucket. 
+    Don't forget to set  `create_deploy_bucket = false` in `01_configure_figgy.tf`, if you're using your own S3 bucket. 
     You will want to put the appropriate bucket name in each of the vars/* files for each account.
 
 **env_alias** must match to the environment names you set in your `02_configure_bastion` file in the `env -> accountId` map.
 
 **webhook_url** is optional, but if you want you can add a Slack webhook url where Figgy can post notifications for configuration changes.
 
-==You may want to rename some of these files so they appropriately match your selected environment names.==
+> You may want to rename some of these files so they appropriately match your selected environment names.
 
 ## Deploy Figgy
-The order you deploy these configurations to each account does not matter. But for the sake of this walk-through, lets start
+The order you deploy these configurations to each account does not matter, but for the sake of this walk-through lets start
 with the `bastion` account.
 
 You'll want to run `terraform apply` for each environment. Each environment is associated with a `vars/env-name.tfvars` file. 
-
-Here's what a workflow would look like:
 
 **Here's what a workflow would look like:**
 
@@ -140,7 +137,7 @@ Here's what a workflow would look like:
 You get the drift!
 ## Last step, lets login with Figgy!
 
-Once Figgy is deployed to all the accounts you want to associate it with, we need just need to login. Find the account
+Once Figgy is deployed to all the accounts you want to associate it with, we just need to login. Find the account
 that you selected as your `bastion` account. Log-in to that account, and generate an ACCESS KEY and SECRET KEY for
 the user you want to try authenticating with. This user should be one of the user names you enumerated in the 
 `02_configure_bastion.tf` file.

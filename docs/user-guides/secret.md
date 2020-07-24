@@ -20,11 +20,11 @@ Below you will find a collection of docs and examples that may be helpful for se
 1. [put](/commands/config/put/)
 1. [delete](/commands/config/delete/)
 1. [edit](/commands/config/edit/)
-1. [sync](/docs/commands/config/sync/) (with --replication-only flag)
-1. [share](/docs/commands/config/share/)
-1. [browse](/docs/commands/config/browse/)
+1. [sync](/commands/config/sync/) (with --replication-only flag)
+1. [share](/commands/config/share/)
+1. [browse](/commands/config/browse/)
 
 
 #### Important to know:
 
-1. [upgrade](/docs/commands/other/upgrade/)
+1. [upgrade](/commands/other/upgrade/)

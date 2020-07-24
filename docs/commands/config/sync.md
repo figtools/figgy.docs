@@ -17,25 +17,25 @@ for a `figgy.json` file automatically.
 
 For details on how to configure your figgy.json, see: [Declarative Configuration](/advanced/declarative-configuration/)
 
-### Sync success.
+### Success
 <br/>
 <video autoplay loop muted class="video"><source src="/images/videos/sync-success.mp4" type="video/mp4"></video>
 <br/>
 ---
 
-### Sync detecting missing parameters.
+### Add Missing Parameters
 <br/>
 <video autoplay loop muted class="video"><source src="/images/videos/sync-update.mp4" type="video/mp4"></video>
 <br/>
 ---
 
-### Sync notifying of unused parameters.
+### Detect Stray Figs
 <br/>
 <video autoplay loop muted class="video"><source src="/images/videos/sync-stray.mp4" type="video/mp4"></video>
 <br/>
 ---
 
-### Sync with --replication-only flag.
+### Sync with --replication-only
 <br/>
 <video autoplay loop muted class="video"><source src="/images/videos/sync-replication.mp4" type="video/mp4"></video>
 <br/>

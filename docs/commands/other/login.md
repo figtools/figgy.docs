@@ -9,11 +9,11 @@ Generates and caches STS sessions with authorized accounts and stores them in th
 the `login` command may be useful for reducing the number of MFA prompts a user would receive while using Figgy 
 throughout the day. 
 
-![Login](/images/gifs/login.gif)
-
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/login.mp4" type="video/mp4"></video>
 <br/><br/>
 
-### Login Sandbox
+## Login Sandbox
 
     figgy login sandbox
     
@@ -27,5 +27,6 @@ before running `figgy login sandbox`
         ~/.figgy/config
         ~/.figgy/cache/others/defaults.json
         
-![Login Sandbox](/images/gifs/login-sandbox.gif)
 <br/>
+<video autoplay loop muted class="video"><source src="/images/videos/login-sandbox.mp4" type="video/mp4"></video>
+<br/><br/>

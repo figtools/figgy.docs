@@ -8,21 +8,21 @@ Below you will find a collection of docs and examples that may be helpful for de
 1. [Figgy Basics](/getting-started/basics/) (Optional)
 1. [Dockerized Figgy Demo](https://github.com/figtools/figgy.python-reference)
 1. [Managing Application Configs](/user-guides/how-to/manage-application-configs/)
-1. [Declarative Configuration](/docs/advanced/declarative-configuration/)
+1. [Declarative Configuration](/advanced/declarative-configuration/)
 
 
 #### Commonly used commands:
-1. [get](/docs/commands/config/get/)
-1. [put](/docs/commands/config/put/)
-1. [delete](/docs/commands/config/delete/)
-1. [edit](/docs/commands/config/edit/)
-1. [sync](/docs/commands/config/sync/)
-1. [cleanup](/docs/commands/config/cleanup/)
-1. [browse](/docs/commands/config/browse/)
-1. [list](/docs/commands/config/list/)
-1. [export](/docs/commands/iam/export/)
+1. [get](/commands/config/get/)
+1. [put](/commands/config/put/)
+1. [delete](/commands/config/delete/)
+1. [edit](/commands/config/edit/)
+1. [sync](/commands/config/sync/)
+1. [cleanup](/commands/config/cleanup/)
+1. [browse](/commands/config/browse/)
+1. [list](/commands/config/list/)
+1. [export](/commands/iam/export/)
 
 
 #### Important to know:
 
-1. [upgrade](/docs/commands/other/upgrade/)
+1. [upgrade](/commands/other/upgrade/)

@@ -19,6 +19,7 @@ providing added functionality and an improved user experience.
 - Give you peace of mind through high availability and resiliency, versioned configurations, audit logs, and easy rollbacks or restores.
 - Keep secrets with their owners by cutting out the middle-man and establishing a strong framework of least-privilege. 
 - Avoid 3rd party lock-in or external dependencies -- Figgy deploys serverlessly into your AWS environments
+- Keep your configuration store tidy. No more unused or stray configurations causing ongoing confusion.
 
 ## Why Figgy?
 
@@ -39,13 +40,13 @@ Detect and remedy misconfigurations before deployment rather than scrambling aft
 Figgy establishes a framework for teams of secret owners to securely track, manage, and rotate their secrets in their 
 team’s secure space. From that space they can share secrets directly with the applications that need them -- 
 without going through a middle-man. No more LastPass, one-time urls, secrets sent over Slack, email, encrypted files, 
-or any of those annoying secret management hoops. In a few weeks, when your coworker “Bill” finds new employment, 
-don’t ask yourself, “What secrets passed through Bill that we need to rotate now?”
+or any of those annoying secret management hoops. In a few weeks, when your coworker "Bill" finds new employment, 
+don’t ask yourself, "What secrets passed through Bill that we need to rotate now?"
 
 ---
 #### Easily manage and maintain least privilege
-Figgy makes it easy to give both users and applications, the exact amount of access they need and nothing more. Figgy's 
-primary features make it easy to scalably maintain and enforce least privilege. By following Figgy best
+Figgy makes it easy to give both users and applications the exact amount of access they need and nothing more, and provides
+a framework for scalably maintaining and enforcing least privilege. By following Figgy best
 practices you can easily maintain appropriate access for users and services while keeping your IAM policies short and sweet.
 
 ---

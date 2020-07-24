@@ -1,6 +1,6 @@
 
 .video {
-    max-width: 97%; /* More than 97% breaks right border */
+    max-width: 96%; /* More than 97% breaks right border */
     border: var(--gray-200) 1px solid;
     border-radius: 5px;
 }

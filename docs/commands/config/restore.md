@@ -29,7 +29,7 @@ Limitations:
 - Users may only restore parameter hierarchies they have access to
 - Parameters that are replication destinations (so their source of truth is elsewhere) will be skipped. Instead the
 source-of-truth should be restored.
-- Users performing restores must have access to the access keys used for each restored parameter. 
+- Users performing restores must have access to the KMS keys used for each restored parameter. 
 
 Typically, it is recommended that administrators or power-users perform large-scale hierarchical restorations. 
 

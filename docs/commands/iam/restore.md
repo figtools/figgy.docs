@@ -11,3 +11,7 @@ profile under `~/.aws/credentials` has long-lived access keys, Figgy will rename
 before writing new temporary keys to `[default]` The `iam restore` command will restore these backed-up 
 credentials and overwrite the temporary figgy-generated access keys that were written to the `[default]` 
 profile by `figgy iam export`. 
+
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/iam-restore.mp4" type="video/mp4"></video>
+<br/>

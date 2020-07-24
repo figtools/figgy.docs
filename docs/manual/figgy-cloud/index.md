@@ -1,8 +1,8 @@
 ## Deploying Figgy
 
-Before deploying Figgy Cloud into your environment an appropriate authentication strategy must be selected. Figgy Cloud currently
-supports four different authentication strategies. Below you will find a list of all support authentication strategies 
-supported by Figgy. Once you have selected the best-fit, continue to the associated setup guide based on your selection.
+Figgy Cloud supports four different authentication strategies, each of which slightly change the deployment footprint in
+your AWS environment. Below you will find a list of all support authentication strategies supported by Figgy. 
+Once you have selected the best fit, continue to the associated setup guide based on your selection.
 
 ### Bastion Authentication
 
@@ -13,9 +13,9 @@ accounts through temporary AWS STS sessions to gain access to manage their confi
 
 <br/>![Bastion Auth](/images/deployment/bastion-auth-2.png)<br/>
 
-There is no limit to the number of accounts you can integrate with your Bastion account. Users will be provided
-a single long-lived AWS Keypair to authenticate with the bastion account. From there, MFA can be enabled and users
-will be required input an MFA token when generating temporary sessions in other accounts.
+There is no limit to the number of accounts you can integrate with your bastion account. Users will be provided
+a single long-lived AWS keypair to authenticate with the bastion account. From there, multi-factor authentication can 
+be enabled and users will be required input an MFA token when generating temporary sessions in other accounts.
 [Sign me up!](/manual/figgy-cloud/bastion/)
 <br/>
 <br/>
@@ -26,7 +26,7 @@ will be required input an MFA token when generating temporary sessions in other 
 
 Figgy can integrate directly with Google Admin Console to provide Federated access to your AWS accounts through 
 SAML based authentication with Google as your identity provider (IDP). If you don't want to manage any AWS user accounts
-and you already leverage Google Apps this can be an elegant solution to managaing AWS access for your organization. 
+and  already leverage Google Apps, this can be an elegant solution to managaing AWS access for your organization. 
 
 <br/>![Google Auth](/images/deployment/google-sso-2.png)<br/>
 
@@ -67,7 +67,7 @@ Standard AWS authentication essentially bypasses the following Figgy security an
 - SSO authentication
 - Temporary session credentials for all sessions
 - MFA support
-- Figgy Vault
+- Figgy Lockbox
 
 Instead this integration relies *entirely* on the user's locally configured AWS profiles. This integration was originally
 designed to simplify and support CICD pipeline deployments. 

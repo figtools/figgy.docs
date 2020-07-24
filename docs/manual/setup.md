@@ -17,14 +17,14 @@ configuration backup and restoration. Deploying Figgy starts with deploying Figg
 decide what type of Figgy Cloud deployment makes the most sense for your organization. Below you'll find explanations of 
 the different deployment options. 
 
-[I'm ready to pick the right Figgy Cloud for me!](/manual/figgy-cloud/index.md)
+[I'm ready to pick the right Figgy Cloud for me!](/manual/figgy-cloud/)
 
     
 ## Figgy CLI
 
 The FiggyCLI is a CLI utility that integrates with your SSO provider and Figgy Cloud installation to provide users
-with fundamental Figgy functionality needed for users day-to-day workflow. FigglyCLI is 
-[simple to install](/getting-started/install.md) but requires a Figgy Cloud backend for to work
+with fundamental Figgy functionality needed for their day-to-day workflow. FiggyCLI is 
+[simple to install](/getting-started/install/) but requires a Figgy Cloud backend for to work
 in your organization. 
 
 
@@ -35,7 +35,7 @@ Configuring the Figgy CLI is as simple as running.
     
     
 You will be guided through configuration. Before running `--configure` you'll need to know what type of authentication 
-you'll be using: Bastion, Google SSO, or OKTA SSO. See [Figgy Deployment](/manual/figgy-cloud/index/)
+you'll be using: Bastion, Google SSO, or OKTA SSO. See [Figgy Deployment](/manual/figgy-cloud/)
 
 <br/>
 
@@ -43,7 +43,7 @@ you'll be using: Bastion, Google SSO, or OKTA SSO. See [Figgy Deployment](/manua
 
 If you are rolling Figgy out across an organization it might be easiest to auto-configure some sane defaults for users.
 Sane defaults can be written to the figgy defaults file: `~/.figgy/config`. Users will be presented with options to 
-keep or override any defaults defined in the `~/.figgy/config` file when running `figgy --configure`. Without this *optional* 
+keep or override any defaults defined in the `~/.figgy/config` file when running `figgy --configure`. Without this **optional** 
 defaults file, users will be prompted to manually enter all configurations required by your selected 
 Figgy Cloud installation below:
 
