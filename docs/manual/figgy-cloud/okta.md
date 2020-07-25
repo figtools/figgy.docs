@@ -1,25 +1,24 @@
 
 ## Okta as your Identity Provider
 
-[OKTA](https://okta.com) is an industry leading Identity Provider that supports Federated authentication with hundreds
+[OKTA](https://okta.com) is an industry leading Identity Provider with support for Federated authentication across hundreds
 of services, including [AWS](https://help.okta.com/en/prod/Content/Topics/DeploymentGuides/AWS/connect-okta-multiple-aws-groups.htm).
 
-Figgy works with the standard [OKTA AWS Application](https://help.okta.com/en/prod/Content/Topics/DeploymentGuides/AWS/connect-okta-multiple-aws-groups.htm) and
+Figgy leverages the standard [OKTA AWS Application](https://help.okta.com/en/prod/Content/Topics/DeploymentGuides/AWS/connect-okta-multiple-aws-groups.htm) and
 requires minimal extra configuration. We strongly recommend you select **Connect OKTA to multiple Amazon Web Services Instances** as the single-account alternative has not been tested.
 
 Although this process is well documented in the OKTA documentation, which can serve as a great reference, we will walk you
 through the entire integration process here. We are assuming you are starting from an OKTA account that has not already
-been integrated with AWS. If you have already integrated OKTA with AWS, you can skip parts #2, #5, and #6.
+been integrated with AWS. If you have already integrated OKTA with AWS, you can skip parts 2, 5, and 6.
 
-**This is an advanced installation and will take a minimum of ~2-3 hours**
+**This is an advanced installation and will take a minimum of 2-3 hours**
 
 
 ## Step 1: Fork Figgy
 
 - Make a private fork of <a href="https://github.com/figtools/figgy/tree/master" target="_blank">Figgy</a> and clone it locally. 
-- Take notice of the figgy/terraform/figgy/saml directory. You will need to place a file here shortly. 
+- Take notice of the figgy/terraform/saml directory. You will need to place a file here shortly. 
 
-<br/>
 
 ## Step 2: Add the AWS App to Okta
 
@@ -31,7 +30,7 @@ been integrated with AWS. If you have already integrated OKTA with AWS, you can 
 1. Under (2) Sign-On Options
     - Select SAML 2.0 if it is not selected (it should be already selected)
     - Download your IDP metadata.xml file. Right click the `Identity Provider metadata` link and download the contents.
-    - **Store this in the `REPO_ROOT/terraform/figgy/saml/` directory and named as `metadata.xml`**
+    - **Store this in the `figgy/terraform/saml/` directory and named as `metadata.xml`**
     
     <img src="/images/deployment/okta/metadata.png" style="max-width: 800px" alt="Metadata">
     
@@ -45,7 +44,7 @@ been integrated with AWS. If you have already integrated OKTA with AWS, you can 
 
 Open your `AWS Account Federation` application. Under the General Tab, find the `App Embed Link`. Copy it and set it aside, you will need it later.
 
-<img src="/images/deployment/okta/embed-url.png" style="max-width: 800px" alt="Embed Url">
+<img src="/images/deployment/okta/embed-url.png" style="max-width: 710px" alt="Embed Url">
 
 <br/>
 
@@ -53,17 +52,20 @@ Open your `AWS Account Federation` application. Under the General Tab, find the 
 
 **To prepare Figgy for deployment you're going to need to these files:**
 
-Files are located in `REPO_ROOT/terraform/figgy/` directory. 
+Files are located in `figgy/terraform/` directory. 
+
 1. 00_main.tf
 1. 01_configure_figgy.tf
 1. vars/{env}.tfvars files
 
 ### Configure Terraform
 
+Starting with: `00_main.tf`
+
 If you have any familiarity with [Terraform](https://www.terraform.io/) this should be a cinch. All you need to do is configure this file 
 as you normally would any other [Terraform AWS provider](https://www.terraform.io/docs/providers/aws/index.html). 
-One important distinction is that this code base is a Terraform multi-environment codebase. We will be using this same Terraform configuration to deploy Figgy across
-every account you want to integrate with Figgy. Keep that in mind -- hard-coding a single profile or access key is
+One important distinction is that this code base is a Terraform multi-environment codebase. You will be using this same Terraform configuration to deploy Figgy Cloud to
+every AWS account you want to integrate with Figgy. Keep that in mind -- hard-coding a single profile or access key is
 probably not a good idea.
 
 Once your main.tf is configured you should be able to do something like this:
@@ -73,16 +75,19 @@ terraform workspace new dev
 terraform workspace select dev
 ``` 
 
-Depend on your selected Terraform configuration these commands might differ slightly.
+These commands might differ slightly depending on your selected Terraform configurations.
 
 ### Configure Figgy
 
+Working on: `01_configure_figgy.tf`
+
 Open up your `01_configure_figgy.tf` file. There are some important options in here. The comments in the file
-should make it fairly clear what each option means.
+should make it fairly clear what each option means. If you need more clarity, see our 
+[configuration reference](/manual/configuration/figgy-cloud/).
 
-Once you selected your Figgy role types, copy those types and set them aside:
+Once you have selected your Figgy role types, copy those types and set them aside:
 
-Default role types are these. You may choose as many or few as make sense to you.
+Default role types are these. You may choose as many or few as makes sense to you.
 ```terraform
     role_types = ["devops", "data", "dba", "sre", "dev"]
 ```
@@ -92,29 +97,28 @@ Don't forget to set:
     auth_type = "okta"
 ```
 
-Next, look in your `vars/` directory. There are some `*.tfvars` files already in this directory that can serve as a template.
-You will need 1 var file configured for each account you wish to deploy to. If you are using Terraform Cloud or 
+Next, look in your `vars/` directory. There are some `*.tfvars` files in this directory that can serve as a template.
+You will need 1 var file configured for each account you wish to integrate with Figgy. If you are using Terraform Cloud or 
 remote variable storage, you will not need these files and will know what to do here.
 
 !!! tip "Don't forget to set  `create_deploy_bucket = false` in `01_configure_figgy.tf`, if you're using your own bucket. You will want to put the appropriate bucket name in each of the vars/* files for each account."
 
-**env_alias**
+**env_alias**:
 This is the environment name users will be referencing your account by when running commands like 
 `figgy config get --env dev`, so it's a good idea to select short aliases for each environment. 
 
 **webhook_url** is optional, but if you want you can add a Slack webhook url where Figgy can post notifications for configuration changes.
 
-==You may want to rename some of these files so they appropriately match your selected environment names.==
+> You may want to rename some of these files so they appropriately match your selected environment names.
 
 <br/>
 
 ## Step 4: Deploy Figgy
 
-The order you deploy these configurations to each account does not matter. But for the sake of this walk-through, lets start
+The order you deploy these configurations to each account does not matter, but for the sake of this walk-through lets start
 with the `dev` environment.
 
 You'll want to run `terraform apply` for each environment. Each environment is associated with a `vars/env-name.tfvars` file. 
-
 
 **Here's what a workflow would look like:**
 
@@ -145,7 +149,7 @@ You'll want to run `terraform apply` for each environment. Each environment is a
 You get the drift!
 
 For each deployed account, you will see a new "Identity Provider" show up with the name of 'okta':
-![Okta IDP](/images/deployment/okta/aws-idp-okta.png)
+<img src="/images/deployment/okta/aws-idp-okta.png" style="max-width: 700px" alt="OKTA IDP">
 
 This establishes a trust with OKTA based on that metadata file you downloaded.
 
@@ -167,12 +171,12 @@ AWS Account Federation app.
     - Click Test integration.
     - Under the `Provisioning` tab, under `To App`, enable "Create Users" & "Update User Attributes"
     
-    <img src="/images/deployment/okta/okta-api-integration.png" style="max-width: 700px" alt="API Integration">
+<img src="/images/deployment/okta/okta-api-integration.png" style="max-width: 700px" alt="API Integration">
     
 
 ## Step 6: Configure Groups
 
-The following steps will depend on how you have OKTA configured as your IDP. If you are using OKTA to manage your
+The following steps may vary depending on how you have OKTA configured as your IDP. If you are using OKTA to manage your
 users and groups and do not use something like Active Directory, then the following steps will work fine. Otherwise, you
 may need to perform these steps in Active Directory instead. 
 
@@ -183,7 +187,7 @@ If you get stuck, reference these [OKTA Docs](https://help.okta.com/en/prod/Cont
 Fair warning, this might be a bit tedious if you have a lot of AWS accounts, but once it's done it will be easy to maintain. If you get 
 annoyed or demotivated, you aren't alone.. I've had to write the same figgy deployment guide 3 times over now -- one for each auth type. 
 
-1. First collect a list of all your AWS AccountIds you just deployed to and their associated environment aliases. 
+1. First collect a list of associated AWS account ids for accounts you just deployed Figgy Cloud to, and their associated environment aliases. 
 1. Next, retrieve your list of roles I asked you to set aside earlier.
 
 For instance, suppose you have these these accounts and roles.
@@ -201,7 +205,8 @@ For instance, suppose you have these these accounts and roles.
 | 3333333333 | prod  | dev |
 
 You will need to create a group for each row in this table. So you will have Accounts * Roles groups in your OKTA directory.
-Adding any OKTA user to one of these groups will automatically grant them access AWS. 
+Adding any OKTA user to one of these groups will automatically grant them access AWS in the associated account with with 
+the matching IAM role.
 
 
 1. Open up OKTA -> Directory -> Groups
@@ -309,4 +314,4 @@ After configuring, test the CLI is working by running:
 Now that you have your App Embed Link, you can set it in a generic Figgy config file and 
 distribute it to all of your users. This will save them the trouble of having to manage this url themselves.
 
-To do this: See [Distributing Figgy](/getting-started/install/#distributing-figgy)
+To do this: See [Distributing Figgy](/manual/setup/#distributing-figgy)

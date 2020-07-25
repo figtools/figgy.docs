@@ -1,6 +1,6 @@
 While Figgy does require AWS at this time, organizations running Kubernetes in AWS can still take full advantage of 
 Figgy's feature suite. Currently there is no cross-platform support for other cloud providers, so if your organization
-intends to run multi-cloud K8s clusters, Figgy is not the right choice. However,
+intends to run multi-cloud K8s clusters, Figgy is not a good fit at this time. However,
 if you are content with AWS and do not have immediate plans to run K8s across multiple clouds, Figgy can offer
 distinct advantages over native K8s components for configuration and secret management.
 
@@ -13,6 +13,12 @@ distinct advantages over native K8s components for configuration and secret mana
 - K8s lacks the secret-sharing features that Figgy offers.
 - Any user with root access on any K8s node can read any secret.
 - Subjectively, K8s ConfigMaps and Secrets are more complex to manage than using a service like AWS ParameterStore.
+
+#### Still Determined to K8s Secrets?
+
+ParameterStore can be used to elegantly hydrate K8s secrets.
+
+- [AWS SSM to K8s Secrets](https://github.com/cmattoon/aws-ssm)
 
 
 Since Figgy is built on AWS ParameterStore, each service deployed in K8s will need access to its 

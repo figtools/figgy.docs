@@ -9,7 +9,7 @@ referenced here are from our public [Figgy Cloud repository](https://github.com/
 This must be updated for all Figgy deployments.
 
 This is a standard terraform configuration file that links your FiggyCloud deployment to targeted AWS accounts. 
-Generally you will want to configure one Terraform "Workspace" for each AWS Account you intend to integrate with Figgy.
+Generally you will want to configure one Terraform "qorkspace" for each AWS Account you intend to integrate with Figgy.
 
 Reference Docs:
 
@@ -31,8 +31,8 @@ Options:
     create_deploy_bucket = true
 ```
 
-Set to 'true' if you want to Figgy to create an S3 bucket to support its deployment. The bucket-name must be configured
-in the associated `.tfvars` file for each AWS Account / Terraform Workspace.
+Set to **true** if you want to Figgy to create an S3 bucket to support its deployment. The bucket-name must be configured
+in the associated `.tfvars` file for each AWS Account / Terraform workspace.
 
 ---
 #### configure_cloudtrail
@@ -41,8 +41,8 @@ in the associated `.tfvars` file for each AWS Account / Terraform Workspace.
 ```
 
 Figgy requires [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) to be enabled on every integrated AWS account. Figgy Cloud
-deploys [Lambda](https://aws.amazon.com/lambda/) functions in each AWS account that consume CloudTrail events. If you already have
-AWS CloudTrail enabled with events logging to an S3 bucket then you can stop here. If you want to enable CloudTrail yourself,
+deploys [Lambda](https://aws.amazon.com/lambda/) functions in each integrated AWS account that depend on accessing these events. 
+If you already have AWS CloudTrail enabled with and logging to an S3 bucket, you can stop here. If you want to enable CloudTrail yourself,
 you will need to have a minimum policy like this associated with your CloudTrail Bucket:
  
 ```json
@@ -85,14 +85,22 @@ References:
 #### role_types
 
 ```terraform
-  role_types = ["devops", "data", "dba", "sre", "dev"]
+  role_types = ["admin", "devops", "data", "dba", "sre", "dev"]
 ```
 
 Each user that authenticates with Figgy must authenticate as a designated _role_. Each role specified 
-directly corresponds to a provisioned IAM role in each Figgy-integrated AWS Account. Roles allow you to carve
+corresponds to a provisioned IAM role in each Figgy-integrated AWS Account. Roles allow operators to carve
 up access across different ParameterStore namespaces around boundaries that map to specific user stories.
-The FiggyCLI seamlessly swaps between different roles so don't be afraid to have users with more than 1 role if it
+The FiggyCLI supports seamless swaps between different roles, so don't be afraid to have users with more than 1 role if it
 makes sense from a security standpoint. 
+
+In the above example, roles correspond to these user types:
+* Administrators
+* DevOps Enginers
+* Data Scientists / Data Engineers
+* Database Administrators
+* Site Reliability Engineers
+* Developers
 
 ---
 #### encryption_keys
@@ -107,11 +115,15 @@ Each named encryption key specified will result in Figgy Cloud provisioning 1 KM
 per account, per key, so if you have 5 accounts and 3 keys, you're looking at 15.00/mo indefinitely. Deprovisioning keys can 
 be challenging once they have already been used to encrypt and store data, so avoid needlessly over-provisioning keys here.
 
-As a best practice, you will want at least 1 KMS encryption key per type of "SecretOwner" you have. For instance, in the 
-above example you these secret owner types: DevOps, DBA, SREs, and Data Engineers + Developers who have their own
-application level secrets. In this case, it's a good idea to have a different key for DevOps / SRE / DBAs, and a shared 
-encryption key between Developers / Data Engineers since they typically maintain application-specific secrets. Your use
-case may be _complete different_ and that's totally O.K! 
+As a best practice, you will want at least 1 KMS encryption key per type of "secret owner" in your organization. For instance, in the 
+above example you there are six roles: Admins, DevOps, DBA, SREs, Data Scientists, and Developers.
+
+In this case, it's a good idea to have a different key for DevOps / SRE / DBAs, and a shared 
+encryption key between Developers / Data Scientists since they collaborate and typically share application-specific secrets.
+Your use case may be _complete different_ and that's totally O.K! 
+
+Administrators are super-admins, they are not *secret owners* and do not require their own encryption key; however, they
+should be granted to most if not all encryption keys to support broad disaster recovery efforts.
 
 So in total that would make 4 keys: `["app", "devops", "dba", "sre"]`
 
@@ -120,6 +132,11 @@ So in total that would make 4 keys: `["app", "devops", "dba", "sre"]`
          Terraform to destroy and reprovision other keys. The _last_ thing you want is to destroy a KMS key by accident.
          Consider any added key permanent. Be extremely careful if you intend to delete a provisioned KMS key.
          
+         
+If you accidentally delete a KMS key, breathe a sign of relief. AWS only marks keys for deletion. You have a minimum 
+window of 7 days to restore any deleted KMS key. That being said, be careful!
+
+
 ---
 #### root_namespaces
 
@@ -268,12 +285,12 @@ only be provisioned in your designated [bastion account](#bastion_account_number
 If you are using [Terraform Cloud](https://app.terraform.io/) (which is great!) then you will need to save these values as
 variables in Terraform Cloud instead of specifying them here.
 
-These `tfvars` files enable you to deploy FiggyCloud across many disparate accounts with a lot of copy-pasta. You will need
+These `tfvars` files enable you to deploy FiggyCloud across many disparate accounts without a lot of copy-pasta. You will need
 to create 1 `tfvars` file for each Figgy-integrated AWS account. The values in each file should be self explanatory.
 
 #### env_alias
 
-Short for "run environment". Each "run envionment" maps to a specific AWS account. When users run commands like:
+Short for "environment alias". Each environment alias maps to a specific AWS account. When users run commands like:
 
 ```console
     figgy config get --env dev

@@ -18,15 +18,15 @@ While Figgy is principally designed as a config management solution, we recogniz
 and a core tenant of the software is secure management of temporary AWS sessions. This makes Figgy an ideal solution for providing
 temporary access credentials to your team. For this reason Figgy already supports the `iam export` command. This command will 
 authenticate with your SSO provider and write temporary credentials to the user's `~/.aws/credentials` file. 
-These temporary credentails can be picked up like any other AWS access keys stored in this file with the 
+These temporary credentials can be picked up like any other AWS keys stored in this file with the 
 added benefit of auto-expiration. By making Figgy your local IAM access provider, you can reduce credential exposure 
 and abandon all long live AWS Access Keys your users may be using. 
 
 The default IAM policies configured by a standard Figgy deployment are least privilege and are not of any use outside the specific 
 use-case that Figgy supports. However you may want to add more IAM roles or expand the existing default 
-Figgy IAM policies in your Forked Figgy repository. 
+Figgy IAM policies in your forked Figgy repository. 
 
-To support updates from the root Figgy repository we recommend you make these any changes in **new** terraform files 
+To simplify updates from the root Figgy repository we recommend you make any changes in **new** terraform files 
 rather than editing existing Figgy deployments. 
 
 For instance, suppose you wanted to grant all Figgy users S3 ReadOnly access to all S3 resources across all accounts, 
@@ -164,4 +164,6 @@ data "aws_iam_policy_document" "aws_iam_policy_document" {
 }
 ```
 
+From these templates you can easily write a simple module in Terraform that will dynamically provision
+least privilege IAM policies to your services based on their name. 
 

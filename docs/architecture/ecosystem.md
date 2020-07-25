@@ -7,10 +7,8 @@ links to OKTA, Google, and AWS as identity providers. You'll only need to choose
 for your own Figgy deployment. 
 
 Your _ecosystem_ depends on how you configure Figgy. Every Figgy deployment will require the following
-resources to be provisioned in each integrated AWS account. As always, you can and **should** look over the Terraform
-code in our public repository to see what to expect. You can find it here: 
-<a href="https://github.com/figtools/figgy/tree/master/terraform" target="_blank">Figgy Infrastructure Code</a>
-
+resources to be provisioned in each integrated AWS account. For a more detailed look at what Figgy Cloud deploys
+into your AWS accounts, see the [Figgy Footprint](/manual/footprint/) page.
 
 <br/>![Figgy Ecosystem](/images/deployment/figgy-ecosystem.png)<br/>
 

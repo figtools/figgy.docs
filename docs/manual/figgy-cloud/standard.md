@@ -3,7 +3,7 @@
 
 ## Figgy Standard
 
-If you've already read through [Selecting a Deployment Type](/manual/figgy-cloud/index/) and you understand what you're giving up 
+If you've already read through [Selecting a Deployment Type](/manual/figgy-cloud/) and you understand what you're giving up 
 when using Figgy standard, continue reading here. No judgement here, let's get you set-up. 
 
 The Figgy AWS Standard deployment by far the simplest deployment configuration. Figgy offloads all user-management to you.
@@ -21,7 +21,7 @@ Let's get started.
 - Make a private fork of <a href="https://github.com/figtools/figgy/tree/master" target="_blank">Figgy</a> and clone it locally. 
 
 ```console
-    git clone https://github.com/your-org/figgy.git
+git clone https://github.com/your-org/figgy.git
 ```
 
 Next change directory into `figgy/terraform/`
@@ -35,11 +35,11 @@ Next change directory into `figgy/terraform/`
 ### Configure Terraform
 Lets' start with `00_main.tf`
 
-If you have any familiarity with Terraform this should be a cinch. All you need to do is configure this file 
-as you normally would for any other Terraform workspace. One important distinction is that this code base is a Terraform 
-multi-environment codebase. We will be using this same Terraform configuration to deploy Figgy across
-every account you want to integrate with Figgy. Keep that in mind -- hard-coding a single profile or access key is
-probably not a good idea unless you are deploying Figgy to a single account.
+If you have any familiarity with [Terraform](https://www.terraform.io/) this should be a cinch. All you need to do is configure this file 
+as you normally would any other [Terraform AWS provider](https://www.terraform.io/docs/providers/aws/index.html). 
+One important distinction is that this code base is a Terraform multi-environment codebase. You will be using this same Terraform configuration to deploy Figgy Cloud to
+every AWS account you want to integrate with Figgy. Keep that in mind -- hard-coding a single profile or access key is
+probably not a good idea.
 
 Once your main.tf is configured you should be able to do something like this:
 ```
@@ -47,18 +47,19 @@ terraform init
 terraform workspace new dev
 terraform workspace select dev
 ``` 
-Depend on your selected Terraform configuration these commands might differ slightly.
+These commands might differ slightly depending on your selected Terraform configurations.
 
 ### Configure Figgy
 Open up your `01_configure_figgy.tf` file. There are some important options in here. The comments in the file
-should make it fairly clear what each option means. Since you're doing the "Standard Deployment", make sure to set
+should make it fairly clear what each option means. If you need more clarity, see our 
+[configuration reference](/manual/configuration/figgy-cloud/). Since you're doing the "Standard Deployment", make sure to set:
 
 ```terraform
     auth_type = "standard"
 ```
 
 **Be sure to take extra care when mapping up your `roles` to `/namespaces`. If you make a typo you're going to experience
-issues with Figgy*
+issues with Figgy**
 
 
 ### Fill out vars/ files
@@ -74,7 +75,7 @@ This is the environment name users will be referencing your account by when runn
 
 **webhook_url** is optional, but if you want you can add a Slack webhook url where Figgy can post notifications for configuration changes.
 
-==You may want to rename some of these files so they appropriately match your selected environment names.==
+> You may want to rename some of these files so they appropriately match your selected environment names.
 
 ## Deploy Figgy
 
@@ -123,27 +124,27 @@ In each account you should see new groups that have been created, each named `fi
 name of the role you selected when you filled out [01_configure_figgy](#configure-figgy)
 
 Add your user to one or more of these groups. Keep in mind, if your user is in multiple groups it will be granted access to the 
-sum of all access across both groups. There is no concept of "impersonating" different roles with the Standard installation.
+sum of all access across both groups. There is no concept of "impersonating" different roles with the standard installation.
 
 Let's assume you're logged into your DEV account. If you don't have AWS access keys generated yet, you'll want to go ahead and do that. 
 Next, run: 
 
 ```console
-    aws configure --profile dev
+aws configure --profile dev
 ```
 
 Follow the prompts. This will configure your AWS CLI installation with a "profile" for your DEV account. You may repeat
-this step as may time and across as many accounts as you like. 
+this step as may times and across as many accounts as you like. 
 
 
 ## Test Figgy
 
-[Install Figgy](/getting-started/install/)
+If you don't have the FiggyCLI installed, [install it](/getting-started/install/)
 
 For each account, test your access by running:
 
 ```console
-    figgy config get --profile {PROFILE}
+figgy config get --profile {PROFILE}
 ```
 
 for each `profile` you selected earlier. 
@@ -153,4 +154,6 @@ of authentication and replaces the `--env` parameter.
 
 Below is an example of what you should see:
 
-<br/>![Edit](/images/gifs/get-with-profile.gif)<br/>
+<br/>
+<video autoplay loop muted class="video"><source src="/images/videos/demo-profile.mp4" type="video/mp4"></video>
+<br/>
