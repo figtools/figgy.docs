@@ -325,6 +325,9 @@
   [data-md-color-primary=black] .md-nav__source {
     background-color: rgba(0, 0, 0, 0.87);
   }
+  [data-md-color-primary=black] .md-nav__slack {
+    background-color: rgba(0, 0, 0, 0.87);
+  }
 }
 @media screen and (min-width: 60em) {
   [data-md-color-primary=black] .md-search__input {

@@ -8,7 +8,7 @@ Lambda to ensure a simple integration with your environment. Figgy does not over
 providing added functionality and an improved user experience.
 <br/>
 
-<video controls autoplay loop muted class="video"><source src="/images/videos/walkthrough.mp4" type="video/mp4"></video>
+<video controls autoplay loop muted class="video"><source src="/images/videos/walkthrough-2.mp4" type="video/mp4"></video>
 
 
 **Figgy will help you:**

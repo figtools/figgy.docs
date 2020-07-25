@@ -158,3 +158,108 @@
     }
   }
 }
+
+
+
+// Slack container
+.md-slack {
+  display: block;
+  font-size: px2rem(13px);
+  line-height: 1.2;
+  white-space: nowrap;
+  // Hack: reduce jitter
+  backface-visibility: hidden;
+  transition: opacity 250ms;
+
+  // Hovered source container
+  &:hover {
+    opacity: 0.7;
+  }
+
+  // Repository platform icon
+  &__icon {
+    display: inline-block;
+    width: px2rem(24px);
+    height: px2rem(24px);
+    vertical-align: middle;
+
+    // Align with margin only (as opposed to normal button alignment)
+    svg {
+      margin-top: px2rem(12px);
+      margin-left: px2rem(12px);
+
+      // Adjust for right-to-left languages
+      [dir="rtl"] & {
+        margin-right: px2rem(12px);
+        margin-left: initial;
+      }
+    }
+
+    // Correct alignment, if icon is present
+    + .md-source__repository {
+      margin-left: px2rem(-40px);
+      padding-left: px2rem(40px);
+
+      // Adjust for right-to-left languages
+      [dir="rtl"] & {
+        margin-right: px2rem(-40px);
+        margin-left: initial;
+        padding-right: px2rem(40px);
+        padding-left: initial;
+      }
+    }
+  }
+
+  // Repository name
+  &__repository {
+    display: inline-block;
+    max-width: calc(100% - #{px2rem(24px)});
+    margin-left: px2rem(12px);
+    overflow: hidden;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
+
+  // Source facts (statistics etc.)
+  &__facts {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: px2rem(11px);
+    list-style-type: none;
+    opacity: 0.75;
+
+    // Show after the data was loaded
+    [data-md-state="done"] & {
+      animation: md-source__facts--done 250ms ease-in;
+    }
+  }
+
+  // Fact
+  &__fact {
+    float: left;
+
+    // Adjust for right-to-left languages
+    [dir="rtl"] & {
+      float: right;
+    }
+
+    // Show after the data was loaded
+    [data-md-state="done"] & {
+      animation: md-source__fact--done 400ms ease-out;
+    }
+
+    // Middle dot before fact
+    &::before {
+      margin: 0 px2rem(2px);
+      content: "\00B7";
+    }
+
+    // Remove middle dot on first fact
+    &:first-child::before {
+      display: none;
+    }
+  }
+}

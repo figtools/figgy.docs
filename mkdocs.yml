@@ -10,6 +10,7 @@ theme:
   name: material
   custom_dir: mkdocs-material/material
   language: en
+  favicon: images/logos/favicon/favicon.ico
   font:
     text: Roboto Mono
     code: Roboto Mono
@@ -79,6 +80,8 @@ nav:
     - Sandbox: getting-started/sandbox.md
     - Concepts: getting-started/concepts.md
     - Basics: getting-started/basics.md
+    - FAQ: faq/faq.md
+
   - Commands:
     - Config:
       - Get: commands/config/get.md
@@ -138,13 +141,13 @@ nav:
       - Integrations:
           - Slack: manual/integrations/slack.md
           - Kubernetes: manual/integrations/k8s.md
+      - License: manual/license.md
   - Architecture:
     - Figgy Ecosystem: architecture/ecosystem.md
     - Authentication: architecture/authentication.md
     - Events: architecture/events.md
     - Security: architecture/security.md
     - Caching: architecture/caching.md
-  - FAQ: faq/faq.md
 
 # Google Analytics
 google_analytics:

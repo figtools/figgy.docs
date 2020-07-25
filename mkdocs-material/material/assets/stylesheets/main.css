@@ -2122,6 +2122,82 @@ html .md-nav__link[for=__toc] ~ .md-nav {
   display: none;
 }
 
+.md-slack {
+  display: block;
+  font-size: 0.65rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: opacity 250ms;
+}
+.md-slack:hover {
+  opacity: 0.7;
+}
+.md-slack__icon {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: middle;
+}
+.md-slack__icon svg {
+  margin-top: 0.6rem;
+  margin-left: 0.6rem;
+}
+[dir=rtl] .md-slack__icon svg {
+  margin-right: 0.6rem;
+  margin-left: initial;
+}
+.md-slack__icon + .md-source__repository {
+  margin-left: -2rem;
+  padding-left: 2rem;
+}
+[dir=rtl] .md-slack__icon + .md-source__repository {
+  margin-right: -2rem;
+  margin-left: initial;
+  padding-right: 2rem;
+  padding-left: initial;
+}
+.md-slack__repository {
+  display: inline-block;
+  max-width: calc(100% - 1.2rem);
+  margin-left: 0.6rem;
+  overflow: hidden;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+.md-slack__facts {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 0.55rem;
+  list-style-type: none;
+  opacity: 0.75;
+}
+[data-md-state=done] .md-slack__facts {
+  -webkit-animation: md-source__facts--done 250ms ease-in;
+          animation: md-source__facts--done 250ms ease-in;
+}
+.md-slack__fact {
+  float: left;
+}
+[dir=rtl] .md-slack__fact {
+  float: right;
+}
+[data-md-state=done] .md-slack__fact {
+  -webkit-animation: md-source__fact--done 400ms ease-out;
+          animation: md-source__fact--done 400ms ease-out;
+}
+.md-slack__fact::before {
+  margin: 0 0.1rem;
+  content: "·";
+}
+.md-slack__fact:first-child::before {
+  display: none;
+}
+
 .md-tabs {
   width: 100%;
   overflow: auto;
