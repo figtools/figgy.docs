@@ -54,13 +54,14 @@ body {
     background-repeat:no-repeat;
     background-position: left top -7px;
     margin-bottom:15px;
+    margin-top: 15px;
 }
 .jm-bullet-secondary {
     padding-left:65px;
     background-image: url("../images/bullet-secondary.svg");
     background-repeat:no-repeat;
     background-position: left 20px top -7px;
-    margin-bottom:25px;
+    margin-bottom:10px;
 }
 
 /* 
