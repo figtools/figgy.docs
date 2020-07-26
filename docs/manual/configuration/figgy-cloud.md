@@ -1,4 +1,4 @@
-This page should serve as a reference only. Please follow the appropriate FiggyCLoud [deployment guide](/manual/figgy-cloud/) first.
+This page should serve as a reference only. Please follow the appropriate FiggyCloud [deployment guide](/manual/figgy-cloud/) first.
 
 
 Configuring FiggyCloud requires modifying 2-3 Terraform files based on your selected deployment strategy. All configuration files 
