@@ -3,7 +3,7 @@ Simple, declarative, configuration & secret management that just works
 AWS native configuration & secret management.
 
 
-Microservices are great, but your growing service footprint means configuration management just got a lot harder. Figgy is for teams looking to embrace modern cloud-native application design but avoid the complexity and management burden of complex in-house or 3rd party tools. 
+Microservices are great, but your growing service footprint means configuration management just got a lot harder. Figgy is for teams looking to embrace modern cloud-native application design but avoid the complexity and management burden in-house or 3rd party tools. 
 
 
 
