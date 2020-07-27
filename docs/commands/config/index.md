@@ -28,15 +28,15 @@ configurations provisioned in the targeted AWS account.
 #### State Synchronization & Management: 
 
 - [Sync](/commands/config/sync/)
-- [Cleanup](/docs/commands/config/cleanup/)
-- [Validate](/docs/commands/config/validate/)
+- [Cleanup](/commands/config/cleanup/)
+- [Validate](/commands/config/validate/)
 
 #### Remote Operations: 
 
-- [Share](/docs/commands/config/share/)
+- [Share](/commands/config/share/)
 
 
 #### Data integrity / Visibility: 
 
-- [Audit](/docs/commands/config/audit/)
-- [Restore](/docs/commands/config/restore/)
+- [Audit](/commands/config/audit/)
+- [Restore](/commands/config/restore/)

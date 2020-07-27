@@ -95,7 +95,7 @@ The problem with having all configurations stored under twigs is that it assumes
     
     If each service only has access to its twig, for example: `/app/foo/*`  for the `foo` service 
     and `/app/bar/*` for the `bar` service. What do we do about shared configurations? What if both foo and bar 
-    need a value named `db-hostname`. Where would that live?
+    need a value named `db-hostname`? Where would that live?
     
     We certainly don’t want to duplicate `db-hostname` it in both twigs - that would be hard to maintain. 
     Instead we store the **source of truth** of these shared configurations in a global, shared space, and sync them 

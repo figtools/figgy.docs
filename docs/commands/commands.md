@@ -9,9 +9,9 @@ In this example the resource is the "noun", or the thing being operated against,
 
 At this time there are two main resources.
 
-- [config](/docs/commands/config/index/)
-- [iam](/docs/commands/iam/index/)
-- [--optional-parameters](/docs/commands/flags/index/)
+- [config](/commands/config/get/)
+- [iam](/commands/iam/export/)
+- [--optional-parameters](/commands/flags/env/)
 
 
 This convention is not absolute. There are a few exceptions, including `figgy --configure` or `figgy --version`.  These

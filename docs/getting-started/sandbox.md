@@ -5,15 +5,15 @@
 ## Figgy Sandbox
 
 The Figgy sandbox is the perfect place to have a *fling* with Figgy without the *long-term* commitment so many tools
-require :smirk:. The Figgy sandbox is configured as a [Bastion](/docs/manual/figgy-cloud/) deployment across 5 different AWS accounts. 
+require :smirk:. The Figgy sandbox is configured as a [Bastion](/manual/figgy-cloud/) deployment across 5 different AWS accounts. 
 
-The Figgy sandbox has been pre-populated with Fig Trees (See - [Figgy Concepts](/docs/getting-started/concepts/)).
+The Figgy sandbox has been pre-populated with Fig Trees (See - [Figgy Concepts](/getting-started/concepts/)).
 Feel free take Figgy for a nice long walk through our Fig Orchard :palm_tree:. Get to know Figgy, our Fig Trees, and all
 the little Figs you can find across our sandbox AWS accounts. Don't worry, you can't hurt Figgy or the Fig Orchard, 
 we grow a new beautiful Sandbox Fig Orchard every night :satisfied:.
 
 
-!!! hint "Don't forget: [Install Figgy First](/docs/getting-started/install/)"
+!!! hint "Don't forget: [Install Figgy First](/getting-started/install/)"
 
 ## Login to the Sandbox
     figgy login sandbox
@@ -73,4 +73,4 @@ Browse the Fig Orchard to see what's out there.
 <video autoplay loop muted class="video"><source src="/images/videos/list.mp4" type="video/mp4"></video>
 <br/>
 
-And so much more. See our [Commands](/docs/commands/config/get) section to see all figgy can offer!
+And so much more. See our [Commands](/commands/config/get/) section to see all figgy can offer!

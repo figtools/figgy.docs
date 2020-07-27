@@ -172,7 +172,7 @@ all of the configurations that it depends on.
 **The `replicate_from` property is optional.**
 
 This block enables users to replicate a series of parameters from another namespace 
-**under the same [Fig Tree](/docs/getting-started/concepts/#fig-tree)**. 
+**under the same [Fig Tree](/getting-started/concepts/#fig-tree)**. 
 
 This is particularly useful when you might want to deploy a single service multiple times into the same environment with 
 slightly differing configurations (perhaps multiple feature branches?) 
