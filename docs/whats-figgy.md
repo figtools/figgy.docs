@@ -55,16 +55,10 @@ Figgy maintains a history of every event that has ever occurred in your configur
 installed Figgy. Know what happened, where, when, and by who. Then, roll back any configuration, 
 or hierarchy of configurations, to any point-in-time in the past, to the second.
 
----
-#### A tool everyone can get behind
-Perhaps the  question isn't "Why Figgy", it's "Why not?". Figgy is free, opensource, and principally designed with a 
-focus on the ideal user experience regardless if you're a developer, a member of the DevOps or Security teams, 
-a database administrator, or someone else.
-
 
 Want to dip your toes in and test out the waters? Try out our free [Sandbox](/getting-started/sandbox/)
 
-Depending on who you are, your Figgy Docs experience may differ. If your organization already uses's Figgy and you're looking
+Depending on who you are, your Figgy Docs experience may differ. If your organization already uses Figgy and you're looking
 to install the CLI and get started, then I recommend you skip over to [Install](/getting-started/install/)
 then browse one of the [User Guides](/user-guides/dev/)
 
