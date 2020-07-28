@@ -1,6 +1,6 @@
 Figgy is a management framework for configurations stored in AWS ParameterStore. It helps your teams safely manage
 the SSM keyspace, preventing misconfigured deployments and supporting least-privilege access. Figgy natively works with
-multiple AWS accounts and maintains a global audit log, giving operators the ability to do global point-in-time restorations
+multiple AWS accounts and maintains a global audit log, giving operators the ability to perform global point-in-time restorations
 for any configuration or hierarchy of configurations.
 
 Figgy is layered on AWS ParameterStore and leverages native AWS constructs such as AWS IAM, KMS, DynamoDB, and
