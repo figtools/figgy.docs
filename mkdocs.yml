@@ -1,7 +1,9 @@
 site_name: Figgy
 site_description: >-
-  Figgy is an cloud native, serverless, open-source framework that simplifies and accelerates your development workflow
-  by protecting you from common mistakes that lead to security breaches, failed deployments, lost data, or application downtime.
+  Figgy is a serverless, cloud-native configuration management framework designed to simplify and accelerate managing application
+  configurations and secrets at any scale. Figgy is ideal for teams looking to standardize on a single tool, but want
+  to avoid the complexity of standing up and managing in-house or third party software.
+
 
 site_url: https://www.figgy.dev/
 
