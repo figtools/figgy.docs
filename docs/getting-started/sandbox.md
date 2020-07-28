@@ -26,7 +26,7 @@ Follow the prompts, select your user role:
 
 No single role can do everything, so feel free to try different roles! 
 
-!!! warning "Beware! :wink:"
+!!! warning "Beware!"
     To demonstrate the event-driven nature of Figgy, changes you make in the Figgy Sandbox will be broadcast to people browsing this page!
  
  
@@ -36,7 +36,7 @@ No single role can do everything, so feel free to try different roles!
 <video autoplay loop muted class="video"><source src="/images/videos/login-sandbox.mp4" type="video/mp4"></video>
 <br/>
 
-!!! note "You can always run `figgy --help` or `figgy config --help` to see what Figgy can do"
+!!! note "You can always run  `figgy --help`  or  `figgy config --help`  to see what Figgy can do"
 
 ### Basics 1: Get a fig
     figgy config get --env dev
@@ -50,7 +50,7 @@ to that configuration.
 
 
 ### Basics 2: Store a fig
-    figgy config put --env dev
+    figgy config put --env qa
     
 Store a new configuration in our DEV environment. 
     
@@ -59,7 +59,7 @@ Store a new configuration in our DEV environment.
 <br/>
 
 ### Basics 3: Browse the Fig Orchard
-    figgy config browse --env dev    
+    figgy config browse --env stage    
 
 Browse the Fig Orchard to see what's out there. 
 
@@ -68,7 +68,7 @@ Browse the Fig Orchard to see what's out there.
 <br/>
 
 ### Basics 4: Slice & Dice the Fig Orchard
-    figgy config list --env dev
+    figgy config list --env prod
     
 <br/>
 <video autoplay loop muted class="video"><source src="/images/videos/list.mp4" type="video/mp4"></video>
