@@ -26,7 +26,8 @@ Follow the prompts, select your user role:
 
 No single role can do everything, so feel free to try different roles! 
 
-Have fun, all changes you make in the Figgy Sandbox will be broadcast to all people perusing this page!
+!!! warning "Beware! :wink:"
+    To demonstrate the event-driven nature of Figgy, changes you make in the Figgy Sandbox will be broadcast to people browsing this page!
  
  
 ### Login 
