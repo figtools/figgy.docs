@@ -4,7 +4,7 @@ Installing Figgy is _easy_.
 
 ### One-liner installs per platform
 
-**MacOs**
+**MacOs** (Requires OSX Mojave / Catalina)
 ```bash
     bash <(curl -sL "https://raw.githubusercontent.com/figtools/figgy-cli/master/scripts/install-mac.sh")
 ```
@@ -21,7 +21,7 @@ Installing Figgy is _easy_.
 <br/>
 
 ### Package manager installs
-**MacOs**
+**MacOs** (Requires OSX Mojave / Catalina)
 
     brew install figtools/figgy/figgy
             
