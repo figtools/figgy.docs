@@ -11,7 +11,18 @@ providing added functionality and an improved user experience.
 <video controls autoplay loop muted class="video"><source src="/images/videos/walkthrough-2.mp4" type="video/mp4"></video>
 
 
-**Figgy will help you:**
+**A working Figgy installation has two main parts:**
+
+- [x] Figgy Cloud
+- [x] Figgy CLI
+    
+Setup in your organization requires setting up Figgy Cloud *first*. If you're still evaluating Figgy and don't want to
+go through the trouble of installing Figgy Cloud, you can experiment with Figgy through our
+free [Sandbox](/getting-started/sandbox). The Sandbox is a hosted Figgy Cloud installation designed for public
+experimentation and consumption.
+    
+
+**Figgy Cloud + FiggyCLI will help you:**
 
 - Establish secure best practices from the start
 - Prevent failed deployments and application downtime due to configuration mismanagmeent
@@ -20,6 +31,7 @@ providing added functionality and an improved user experience.
 - Keep secrets with their owners by cutting out the middle-man and establishing a strong framework of least-privilege. 
 - Avoid 3rd party lock-in or external dependencies -- Figgy deploys serverlessly into your AWS environments
 - Keep your configuration store tidy. No more unused or stray configurations causing ongoing confusion.
+
 
 ## Why Figgy?
 
