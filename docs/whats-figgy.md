@@ -18,7 +18,7 @@ providing added functionality and an improved user experience.
     
 Setup in your organization requires setting up Figgy Cloud *first*. If you're still evaluating Figgy and don't want to
 go through the trouble of installing Figgy Cloud, you can experiment with Figgy through our
-free [Sandbox](/getting-started/sandbox). The Sandbox is a hosted Figgy Cloud installation designed for public
+free [Sandbox](/getting-started/sandbox/). The Sandbox is a hosted Figgy Cloud installation designed for public
 experimentation and consumption.
     
 
