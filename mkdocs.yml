@@ -144,6 +144,7 @@ nav:
           - Slack: manual/integrations/slack.md
           - Kubernetes: manual/integrations/k8s.md
       - License: manual/license.md
+      - Support: manual/support.md
   - Architecture:
     - Figgy Ecosystem: architecture/ecosystem.md
     - Authentication: architecture/authentication.md
