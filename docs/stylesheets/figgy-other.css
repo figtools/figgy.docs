@@ -4,3 +4,20 @@
     border: var(--gray-200) 2px solid;
     border-radius: 5px;
 }
+
+.terminal-overlay {
+    position: absolute;
+    color: var(--gray-700);
+    z-index: 1000;
+    background: var(--gray-700);
+    width: 386px;
+    height: 231px;
+    margin-left: 2px;
+    margin-top: 17px;
+}
+
+
+.video-overlay {
+    position: absolute;
+    height: 231px;
+}
