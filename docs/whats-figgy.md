@@ -69,8 +69,3 @@ or hierarchy of configurations, to any point-in-time in the past, to the second.
 
 
 Want to dip your toes in and test out the waters? Try out our free [Sandbox](/getting-started/sandbox/)
-
-Depending on who you are, your Figgy Docs experience may differ. If your organization already uses Figgy and you're looking
-to install the CLI and get started, then I recommend you skip over to [Install](/getting-started/install/)
-then browse one of the [User Guides](/user-guides/dev/)
-

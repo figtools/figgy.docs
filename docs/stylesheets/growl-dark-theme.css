@@ -165,15 +165,15 @@
 }
 
 .growl-notification--warning:before {
-    background: var(--warn-700)
+    background: var(--warning-600)
 }
 
 .growl-notification--warning .growl-notification__progress {
-    background: var(--warn-700)
+    background: var(--warning-600)
 }
 
 .growl-notification--warning .growl-notification__progress-bar {
-    background: var(--warn-700)
+    background: var(--warning-600)
 }
 
 .growl-notification--danger:before, .growl-notification--error:before {
