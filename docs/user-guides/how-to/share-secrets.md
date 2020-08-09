@@ -9,7 +9,7 @@ storing and sharing a secret as the "DBA" role.
 In our example, we have a Database Administrator, Steve, who needs to securely store a DB User & Password with Figgy.
 
 First, Steve will will need to securely store and encrypt his secret with Figgy. 
-ogin
+
 ```console
     figgy config put --env prod
 ```
