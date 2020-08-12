@@ -15,7 +15,7 @@ Microservices are great, but your growing service footprint means configuration 
 ### **Simplify your Development Workflow**
 - Easily integrate your CICD process with Figgy
     - Break your CICD build if the deploying application is missing a required config in its targeted environment. 
-    - Give Developers confidence their apps will properly deploy and boostrap if Figgy gives the :+1:.
+    - Give Developers confidence their apps will properly deploy and bootstrap if Figgy gives the :+1:.
 - Cultivate configuration clarity. 
     - Following Figgy best-practices means you'll easily know what configurations your services are using at any point-in-time.
     - Figgy's configuration trees clarify application dependencies
@@ -30,11 +30,11 @@ Microservices are great, but your growing service footprint means configuration 
     - MFA supported for all SSO integrations
 - Easy to manage role-based access control (RBAC)
     - Easily assign different user types access to different sections of your ParameterStore tree.
-    - Figgy makes it easy to properly scope IAM policies for your applications secrets and configurations
+    - Figgy makes it easy to properly scope IAM policies for your applications' secrets and configurations
 - Securely maintain, rotate, and share secrets to applications
 - Provision and allocate access to as many KMS encryption keys as you want. Figgy will hide the complexity and simplify secret encryption.
 - Get more visibility into your configuration stack. Know what's being changed, where, and when.
-- Abandon long-lived AWS Access Keys, all sessions are temporary,and Figgy can help you generate temporary credentails for local development.
+- Abandon long-lived AWS Access Keys, all sessions are temporary, and Figgy can help you generate temporary credentials for local development.
 - No more LastPass, one-time urls, secrets sent over Slack, email, encrypted files, or any of those annoying or insecure secret management hoops
     
 ### **No 3rd Parties**
