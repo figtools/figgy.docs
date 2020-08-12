@@ -8,7 +8,7 @@ The Figgy sandbox is the perfect place to have a *fling* with Figgy without the 
 require :smirk:. The Figgy sandbox is configured as a [Bastion](/manual/figgy-cloud/) deployment across 5 different AWS accounts. 
 
 The Figgy sandbox has been pre-populated with Fig Trees (See - [Figgy Concepts](/getting-started/concepts/)).
-Feel free take Figgy for a nice long walk through our Fig Orchard :palm_tree:. Get to know Figgy, our Fig Trees, and all
+Feel free to take Figgy for a nice long walk through our Fig Orchard :palm_tree:. Get to know Figgy, our Fig Trees, and all
 the little Figs you can find across our sandbox AWS accounts. Don't worry, you can't hurt Figgy or the Fig Orchard, 
 we grow a new beautiful Sandbox Fig Orchard every night :satisfied:.
 
