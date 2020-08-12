@@ -2,7 +2,7 @@
 
 ## Restore
 
-Restore any arbitrary ParameterStore value or hierarchy of values to a point-in time in the past.
+Restore any arbitrary ParameterStore value or hierarchy of values to a point in time in the past.
 
 
 
@@ -18,11 +18,11 @@ Target a single parameter and select from a history of values. Select the value 
 <video autoplay loop muted class="video"><source src="/images/videos/restore-single.mp4" type="video/mp4"></video>
 <br/>
 
-## Restoring to a point-in-time.
+## Restoring to a point in time.
 
 Figgy enables restoring a single parameter or hierarchy of parameters to a specific point in time. Parameters that have
-differing state between now and the targeted point-in-time will be deleted and rebuilt from scratch. To 
-ensure proper version history, all parameter change events will be replayed up until targeted point-in-time. 
+differing state between now and the targeted point in time will be deleted and rebuilt from scratch. To 
+ensure proper version history, all parameter change events will be replayed up until targeted point in time. 
 
 Limitations:
 
