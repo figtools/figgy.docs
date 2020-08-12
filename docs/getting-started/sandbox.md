@@ -41,7 +41,7 @@ No single role can do everything, so feel free to try different roles!
 ### Basics 1: Get a fig
     figgy config get --env dev
 
-Get a config, any config, from our DEV environment. Depending on the config you select you may or may-not have access
+Get a config, any config, from our DEV environment. Depending on the config you select you may or may not have access
 to that configuration. 
 
 <br/>
