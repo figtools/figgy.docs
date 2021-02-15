@@ -73,6 +73,12 @@ UTILS
     height: auto;
 }
 
+.iframe-responsive {
+    display:block;
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* 
 LANDING PAGE
@@ -93,7 +99,9 @@ LANDING PAGE
 .sec-intro .jm-grid h2 {width:50%;}
 
 /* sec-usps */
-.sec-usps {}
+.sec-usps {
+    padding-bottom: 30px;
+}
 
 .usp {
     padding: 30px 10px;
@@ -123,7 +131,8 @@ LANDING PAGE
 
 /* sec-position */
 .sec-position {
-    display: flex;
+    /*display: flex;*/
+    padding-top: 120px;
     align-items: center;
     min-height: 800px;
     background: rgb(4,131,132);
@@ -137,6 +146,7 @@ LANDING PAGE
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 650px;
 }
 
 /* sec-features */
